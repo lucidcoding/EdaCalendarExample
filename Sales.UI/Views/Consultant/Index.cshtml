@@ -1,0 +1,32 @@
+﻿@model Sales.UI.ViewModels.ConsultantViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+@section Links
+{
+    <link rel='stylesheet' type='text/css' href='@Url.Content("~/Content/fullcalendar.css")'/>
+    <link rel='stylesheet' type='text/css' href='@Url.Content("~/Content/fullcalendar.print.css")' media='print'/>
+}
+@section JavaScript
+{
+    <script type='text/javascript' src='@Url.Content("~/Scripts/fullcalendar.js")'></script>
+    <script type="text/javascript" src='@Url.Content("~/Scripts/Consultant.js")'></script>
+}
+<h2>Consultant</h2>
+<div class="row">
+    <div class="cell">
+        Consultants:
+    </div>
+    <div class="cell">
+        @Html.DropDownListFor(m => m.ConsultantId, Model.Consultants, "-- Select Option --")
+    </div>
+</div>
+<div class="row">
+    <div class="cell">
+        <a href="@Url.Action("Book", "Appointment", new { consultantId = Model.ConsultantId })" id="BookAppointment">Book Appointment</a>
+    </div>
+</div>
+<div class="row">
+    <div id="calendar"></div>
+</div>

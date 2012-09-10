@@ -1,0 +1,45 @@
+2012-08-14 16:55:06,052 [1] INFO  NHibernate.Cfg.Environment [(null)] <(null)> - NHibernate 3.0.0.4000 (3.0.0.4000)
+2012-08-14 16:55:06,136 [1] INFO  NHibernate.Cfg.Environment [(null)] <(null)> - hibernate-configuration section not found in application configuration file
+2012-08-14 16:55:06,138 [1] INFO  NHibernate.Cfg.Environment [(null)] <(null)> - Bytecode provider name : lcg
+2012-08-14 16:55:06,141 [1] INFO  NHibernate.Cfg.Environment [(null)] <(null)> - Using reflection optimizer
+2012-08-14 16:55:06,680 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - Searching for mapped documents in assembly: HumanResources.Data
+2012-08-14 16:55:06,684 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - Mapping resource: HumanResources.Data.Mappers.TimeAllocation.hbm.xml
+2012-08-14 16:55:07,949 [1] INFO  NHibernate.Dialect.Dialect [(null)] <(null)> - Using dialect: NHibernate.Dialect.MsSqlCeDialect
+2012-08-14 16:55:08,080 [1] INFO  NHibernate.Cfg.XmlHbmBinding.Binder [(null)] <(null)> - Mapping class: HumanResources.Domain.Entites.TimeAllocation -> TimeAllocation
+2012-08-14 16:55:08,186 [1] INFO  NHibernate.Cfg.XmlHbmBinding.Binder [(null)] <(null)> - Mapping joined-subclass: HumanResources.Domain.Entites.Holiday -> Holiday
+2012-08-14 16:55:08,207 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - Mapping resource: HumanResources.Data.Mappers.Employee.hbm.xml
+2012-08-14 16:55:08,225 [1] INFO  NHibernate.Dialect.Dialect [(null)] <(null)> - Using dialect: NHibernate.Dialect.MsSqlCeDialect
+2012-08-14 16:55:08,226 [1] INFO  NHibernate.Cfg.XmlHbmBinding.Binder [(null)] <(null)> - Mapping class: HumanResources.Domain.Entites.Employee -> Employee
+2012-08-14 16:55:08,258 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - checking mappings queue
+2012-08-14 16:55:08,260 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - processing one-to-many association mappings
+2012-08-14 16:55:08,264 [1] INFO  NHibernate.Cfg.XmlHbmBinding.Binder [(null)] <(null)> - mapping collection: HumanResources.Domain.Entites.Employee.TimeAllocations -> TimeAllocation
+2012-08-14 16:55:08,272 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - processing one-to-one association property references
+2012-08-14 16:55:08,274 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - processing foreign key constraints
+2012-08-14 16:55:08,281 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - processing filters (second pass)
+2012-08-14 16:55:08,320 [1] INFO  NHibernate.Dialect.Dialect [(null)] <(null)> - Using dialect: NHibernate.Dialect.MsSqlCeDialect
+2012-08-14 16:55:08,351 [1] INFO  NHibernate.Exceptions.SQLExceptionConverterFactory [(null)] <(null)> - Using dialect defined converter
+2012-08-14 16:55:08,354 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Generate SQL with comments: disabled
+2012-08-14 16:55:08,372 [1] INFO  NHibernate.Connection.ConnectionProviderFactory [(null)] <(null)> - Initializing connection provider: NHibernate.Connection.DriverConnectionProvider
+2012-08-14 16:55:08,375 [1] INFO  NHibernate.Connection.ConnectionProvider [(null)] <(null)> - Configuring ConnectionProvider
+2012-08-14 16:55:08,400 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Transaction factory: NHibernate.Transaction.AdoNetWithDistributedTransactionFactory
+2012-08-14 16:55:08,403 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Optimize cache for minimal puts: False
+2012-08-14 16:55:08,405 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Connection release mode: auto
+2012-08-14 16:55:08,407 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Default batch fetch size: 1
+2012-08-14 16:55:08,409 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - echoing all SQL to stdout
+2012-08-14 16:55:08,410 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Statistics: disabled
+2012-08-14 16:55:08,412 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Deleted entity synthetic identifier rollback: disabled
+2012-08-14 16:55:08,414 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Query translator: NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory
+2012-08-14 16:55:08,418 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Query language substitutions: {}
+2012-08-14 16:55:08,421 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - cache provider: NHibernate.Cache.NoCacheProvider, NHibernate, Version=3.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+2012-08-14 16:55:08,425 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Batcher factory: NHibernate.AdoNet.NonBatchingBatcherFactory, NHibernate, Version=3.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+2012-08-14 16:55:08,426 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Default entity-mode: Poco
+2012-08-14 16:55:08,428 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Named query checking : enabled
+2012-08-14 16:55:08,454 [1] INFO  NHibernate.Impl.SessionFactoryImpl [(null)] <(null)> - building session factory
+2012-08-14 16:55:09,525 [1] INFO  NHibernate.Impl.SessionFactoryObjectFactory [(null)] <(null)> - no name configured
+2012-08-14 16:55:10,161 [1] INFO  NServiceBus.Licensing [(null)] <(null)> - Checking available license...
+2012-08-14 16:55:10,165 [1] INFO  NServiceBus.Licensing [(null)] <(null)> - Could not find license file: F:\Experimental\EdaCalendarExample\HumanResources.Application\bin\Debug\License\License.xml
+2012-08-14 16:55:10,179 [1] WARN  NServiceBus.Licensing [(null)] <(null)> - No valid license file was found. The host will be limited to 1 worker thread.
+2012-08-14 16:55:10,268 [1] INFO  NServiceBus.Hosting.Roles.RoleManager [(null)] <(null)> - Role NServiceBus.AsA_Server configured
+2012-08-14 16:55:10,296 [1] WARN  MessageForwardingInCaseOfFault [(null)] <(null)> - Could not find configuration section 'MessageForwardingInCaseOfFaultConfig'. Going to try to find the error queue defined in 'MsmqTransportConfig'.
+2012-08-14 16:55:10,366 [1] INFO  NServiceBus.Host [(null)] <(null)> - Going to activate profile: NServiceBus.Production, NServiceBus.Host, Version=3.2.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c
+2012-08-14 16:55:10,369 [1] INFO  NServiceBus.Host [(null)] <(null)> - Going to activate profile: NServiceBus.PerformanceCounters, NServiceBus.Host, Version=3.2.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c

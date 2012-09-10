@@ -1,0 +1,7 @@
+F:\Experimental\EdaCalendarExample\HumanResources.Messages\bin\Debug\HumanResources.Messages.dll
+F:\Experimental\EdaCalendarExample\HumanResources.Messages\bin\Debug\HumanResources.Messages.pdb
+F:\Experimental\EdaCalendarExample\HumanResources.Messages\bin\Debug\NServiceBus.dll
+F:\Experimental\EdaCalendarExample\HumanResources.Messages\bin\Debug\log4net.dll
+F:\Experimental\EdaCalendarExample\HumanResources.Messages\obj\Debug\ResolveAssemblyReference.cache
+F:\Experimental\EdaCalendarExample\HumanResources.Messages\obj\Debug\HumanResources.Messages.dll
+F:\Experimental\EdaCalendarExample\HumanResources.Messages\obj\Debug\HumanResources.Messages.pdb

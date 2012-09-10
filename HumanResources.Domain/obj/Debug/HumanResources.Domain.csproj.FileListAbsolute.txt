@@ -1,0 +1,5 @@
+F:\Experimental\EdaCalendarExample\HumanResources.Domain\bin\Debug\HumanResources.Domain.dll
+F:\Experimental\EdaCalendarExample\HumanResources.Domain\bin\Debug\HumanResources.Domain.pdb
+F:\Experimental\EdaCalendarExample\HumanResources.Domain\obj\Debug\ResolveAssemblyReference.cache
+F:\Experimental\EdaCalendarExample\HumanResources.Domain\obj\Debug\HumanResources.Domain.dll
+F:\Experimental\EdaCalendarExample\HumanResources.Domain\obj\Debug\HumanResources.Domain.pdb

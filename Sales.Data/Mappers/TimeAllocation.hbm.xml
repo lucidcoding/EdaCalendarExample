@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   namespace="Sales.Domain.Entities"
+                   assembly="Sales.Domain">
+  <class name="TimeAllocation" table="`TimeAllocation`">
+    <id name="Id" column="Id" type="guid">
+      <generator class="assigned"/>
+    </id>
+    <property name="Start" column="`Start`" type="DateTime"/>
+    <property name="End" column="`End`" type="DateTime"/>
+    <many-to-one name="Consultant" class="Consultant" column="ConsultantId" />
+
+    <joined-subclass name="Appointment" table="Appointment">
+      <key column="Id"/>
+      <property name="LeadName"/>
+      <property name="Address"/>
+    </joined-subclass>
+  </class>
+</hibernate-mapping>

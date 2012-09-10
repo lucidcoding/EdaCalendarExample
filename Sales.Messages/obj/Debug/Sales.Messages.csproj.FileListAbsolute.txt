@@ -1,0 +1,7 @@
+F:\Experimental\EdaCalendarExample\Sales.Messages\bin\Debug\Sales.Messages.dll
+F:\Experimental\EdaCalendarExample\Sales.Messages\bin\Debug\Sales.Messages.pdb
+F:\Experimental\EdaCalendarExample\Sales.Messages\bin\Debug\NServiceBus.dll
+F:\Experimental\EdaCalendarExample\Sales.Messages\bin\Debug\log4net.dll
+F:\Experimental\EdaCalendarExample\Sales.Messages\obj\Debug\ResolveAssemblyReference.cache
+F:\Experimental\EdaCalendarExample\Sales.Messages\obj\Debug\Sales.Messages.dll
+F:\Experimental\EdaCalendarExample\Sales.Messages\obj\Debug\Sales.Messages.pdb

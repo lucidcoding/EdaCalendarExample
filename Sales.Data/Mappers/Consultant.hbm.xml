@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   namespace="Sales.Domain.Entities"
+                   assembly="Sales.Domain">
+  <class name="Consultant" table="Consultant">
+    <id name="Id" column="Id" type="guid">
+      <generator class="assigned"/>
+    </id>
+    <property name="Forename" />
+    <property name="Surname" />
+    
+    <bag name="TimeAllocations" table="TimeAllocation" inverse="true" cascade="all" >
+      <key column="ConsultantId"></key>
+      <one-to-many class="TimeAllocation" />
+    </bag>
+  </class>
+</hibernate-mapping>

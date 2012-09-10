@@ -1,0 +1,15 @@
+F:\Experimental\EdaCalendarExample\Sales.Data\bin\Debug\Sales.Data.dll
+F:\Experimental\EdaCalendarExample\Sales.Data\bin\Debug\Sales.Data.pdb
+F:\Experimental\EdaCalendarExample\Sales.Data\bin\Debug\Antlr3.Runtime.dll
+F:\Experimental\EdaCalendarExample\Sales.Data\bin\Debug\Castle.Core.dll
+F:\Experimental\EdaCalendarExample\Sales.Data\bin\Debug\Castle.DynamicProxy2.dll
+F:\Experimental\EdaCalendarExample\Sales.Data\bin\Debug\Iesi.Collections.dll
+F:\Experimental\EdaCalendarExample\Sales.Data\bin\Debug\log4net.dll
+F:\Experimental\EdaCalendarExample\Sales.Data\bin\Debug\NHibernate.ByteCode.Castle.dll
+F:\Experimental\EdaCalendarExample\Sales.Data\bin\Debug\NHibernate.dll
+F:\Experimental\EdaCalendarExample\Sales.Data\bin\Debug\Sales.Domain.dll
+F:\Experimental\EdaCalendarExample\Sales.Data\bin\Debug\StructureMap.dll
+F:\Experimental\EdaCalendarExample\Sales.Data\bin\Debug\Sales.Domain.pdb
+F:\Experimental\EdaCalendarExample\Sales.Data\obj\Debug\ResolveAssemblyReference.cache
+F:\Experimental\EdaCalendarExample\Sales.Data\obj\Debug\Sales.Data.dll
+F:\Experimental\EdaCalendarExample\Sales.Data\obj\Debug\Sales.Data.pdb

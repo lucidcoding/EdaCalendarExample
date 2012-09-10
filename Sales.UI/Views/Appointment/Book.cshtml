@@ -1,0 +1,64 @@
+﻿@model Sales.UI.ViewModels.BookAppointmentViewModel
+
+@{
+    ViewBag.Title = "Book";
+}
+
+<h2>Book</h2>
+<form method="POST" action="@Url.Action("Book", "Appointment")" >
+    @Html.ValidationSummary("The following validation errors occured:")
+    @Html.HiddenFor(m => m.ConsultantId)
+    <div class="row">
+        <div class="cell">
+            Start:
+        </div>
+        <div class="cell">
+            @Html.EditorFor(m => m.Date)
+        </div>
+        <div class="cell">
+            dd/mm/yyyy
+        </div>
+    </div>
+    <div class="row">
+        <div class="cell">
+            Start Time:
+        </div>
+        <div class="cell">
+            @Html.EditorFor(m => m.StartTime)
+        </div>
+        <div class="cell">
+            hh:mm:ss
+        </div>
+    </div>
+    <div class="row">
+        <div class="cell">
+            End Time:
+        </div>
+        <div class="cell">
+            @Html.EditorFor(m => m.EndTime)
+        </div>
+        <div class="cell">
+            hh:mm:ss
+        </div>
+    </div>
+    <div class="row">
+        <div class="cell">
+            Lead Name:
+        </div>
+        <div class="cell">
+            @Html.EditorFor(m => m.LeadName)
+        </div>
+    </div>
+    <div class="row">
+        <div class="cell">
+            Address:
+        </div>
+        <div class="cell">
+            @Html.EditorFor(m => m.Address)
+        </div>
+    </div>
+    <div class="row">
+        <button type="submit">Book</button>
+        <input type="button" onclick="window.location='@Url.Action("Index", "Employee")'" value="Cancel"></input>
+    </div>
+</form>

@@ -1,0 +1,48 @@
+﻿@model HumanResources.UI.ViewModels.EmployeeViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+@section Links
+{
+    <link rel='stylesheet' type='text/css' href='@Url.Content("~/Content/fullcalendar.css")'></link>
+    <link rel='stylesheet' type='text/css' href='@Url.Content("~/Content/fullcalendar.print.css")' media='print'></link>
+}
+@section JavaScript
+{
+    <script type='text/javascript' src='@Url.Content("~/Scripts/fullcalendar.js")'></script>
+    <script type="text/javascript" src='@Url.Content("~/Scripts/Employee.js")'></script>
+}
+<h2>Employee</h2>
+<div class="row">
+    <div class="cell">
+        Employees:
+    </div>
+    <div class="cell">
+        @Html.DropDownListFor(m => m.EmployeeId, Model.Employees, "-- Select Option --")
+    </div>
+</div>
+<div class="row">
+    <div class="cell">
+        Holiday Entitlement:
+    </div>
+    <div class="cell">
+        @Model.HolidayEntitlement
+    </div>
+</div>
+<div class="row">
+    <div class="cell">
+        Remianing Holiday:
+    </div>
+    <div class="cell">
+        @Model.RemainingHoliday
+    </div>
+</div>
+<div class="row">
+    <div class="cell">
+        <a href="@Url.Action("Book", "Holiday", new { employeeId = Model.EmployeeId })" id="BookHoliday">Book Holiday</a>
+    </div>
+</div>
+<div class="row">
+    <div id="calendar"></div>
+</div>

@@ -1,0 +1,5 @@
+F:\Experimental\EdaCalendarExample\Sales.Domain\bin\Debug\Sales.Domain.dll
+F:\Experimental\EdaCalendarExample\Sales.Domain\bin\Debug\Sales.Domain.pdb
+F:\Experimental\EdaCalendarExample\Sales.Domain\obj\Debug\ResolveAssemblyReference.cache
+F:\Experimental\EdaCalendarExample\Sales.Domain\obj\Debug\Sales.Domain.dll
+F:\Experimental\EdaCalendarExample\Sales.Domain\obj\Debug\Sales.Domain.pdb

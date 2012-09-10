@@ -1,0 +1,66 @@
+﻿<RecentFiles>
+  <RecentFiles>
+    <File id="EBD06220-2A7F-426C-920D-DBB22AE71E99/f:Global.asax.cs" caret="0" fromTop="0" />
+    <File id="AD735CA4-F617-40CC-A1F1-DE3F608A6C9D/d:Common/f:ApplicationRegistry.cs" caret="0" fromTop="0" />
+    <File id="FC922F61-B802-4447-A97F-EDAB255E1258/d:Common/f:StructureMapControllerActivator.cs.cs" caret="0" fromTop="0" />
+    <File id="FC922F61-B802-4447-A97F-EDAB255E1258/d:Views/d:Shared/f:_Layout.cshtml" caret="0" fromTop="0" />
+    <File id="AD735CA4-F617-40CC-A1F1-DE3F608A6C9D/d:Contracts/f:IConsultantService.cs" caret="0" fromTop="0" />
+    <File id="EBD06220-2A7F-426C-920D-DBB22AE71E99/d:Helpers/f:DateHelper.cs" caret="0" fromTop="0" />
+    <File id="EBD06220-2A7F-426C-920D-DBB22AE71E99/d:ViewModels/f:ConsultantViewModel.cs" caret="0" fromTop="0" />
+    <File id="FC922F61-B802-4447-A97F-EDAB255E1258/d:ViewModels/f:EmployeeViewModel.cs" caret="0" fromTop="0" />
+    <File id="AD735CA4-F617-40CC-A1F1-DE3F608A6C9D/d:Requests/f:BookAppointmentRequest.cs" caret="0" fromTop="0" />
+    <File id="0F39916A-A264-4412-BC4C-E8B4551599D9/d:Requests/f:BookHolidayRequest.cs" caret="0" fromTop="0" />
+    <File id="FC922F61-B802-4447-A97F-EDAB255E1258/f:hibernate.cfg.xml" caret="0" fromTop="0" />
+    <File id="EBD06220-2A7F-426C-920D-DBB22AE71E99/d:Common/f:UiRegistry.cs" caret="0" fromTop="0" />
+    <File id="6693ECEC-BC88-49CE-9E40-9A70AB0C954E/d:Events/f:HolidayBookedEvent.cs" caret="0" fromTop="0" />
+    <File id="9A2441B1-F3BA-4E9E-A21D-2D0DB61E86EA/d:Events/f:AppointmentBooked.cs" caret="0" fromTop="0" />
+    <File id="8B5B36C1-85A9-4FB2-B20A-A8E690CAFB9D/d:Events/f:HolidayBooked.cs" caret="0" fromTop="0" />
+    <File id="6693ECEC-BC88-49CE-9E40-9A70AB0C954E/d:Entites/f:Holiday.cs" caret="0" fromTop="0" />
+    <File id="0F39916A-A264-4412-BC4C-E8B4551599D9/d:DataTransferObjects/f:TimeAllocationDto.cs" caret="0" fromTop="0" />
+    <File id="0F39916A-A264-4412-BC4C-E8B4551599D9/d:Contracts/f:IEmployeeService.cs" caret="0" fromTop="0" />
+    <File id="6693ECEC-BC88-49CE-9E40-9A70AB0C954E/d:Entites/f:TimeAllocation.cs" caret="0" fromTop="0" />
+    <File id="AD735CA4-F617-40CC-A1F1-DE3F608A6C9D/d:Common/f:StubBus.cs" caret="0" fromTop="0" />
+    <File id="0F39916A-A264-4412-BC4C-E8B4551599D9/d:Common/f:StubBus.cs" caret="0" fromTop="0" />
+    <File id="0F39916A-A264-4412-BC4C-E8B4551599D9/f:EndpointConfig.cs" caret="0" fromTop="0" />
+    <File id="FC922F61-B802-4447-A97F-EDAB255E1258/d:Scripts/f:Employee.js" caret="0" fromTop="0" />
+    <File id="FC922F61-B802-4447-A97F-EDAB255E1258/d:Scripts/f:fullcalendar.js" caret="0" fromTop="0" />
+    <File id="FC922F61-B802-4447-A97F-EDAB255E1258/d:Scripts/f:fullcalendar.min.js" caret="0" fromTop="0" />
+    <File id="FC922F61-B802-4447-A97F-EDAB255E1258/d:Scripts/f:HumanResources.js" caret="0" fromTop="0" />
+    <File id="FC922F61-B802-4447-A97F-EDAB255E1258/d:Views/f:_ViewStart.cshtml" caret="0" fromTop="0" />
+    <File id="0F39916A-A264-4412-BC4C-E8B4551599D9/d:Requests/f:AddEmployeeRequest.cs" caret="92" fromTop="3" />
+    <File id="0F39916A-A264-4412-BC4C-E8B4551599D9/d:Implementations/f:EmployeeService.cs" caret="762" fromTop="11" />
+    <File id="6693ECEC-BC88-49CE-9E40-9A70AB0C954E/d:Entites/f:Employee.cs" caret="1559" fromTop="30" />
+  </RecentFiles>
+  <RecentEdits>
+    <File id="EBD06220-2A7F-426C-920D-DBB22AE71E99/d:Scripts/f:Consultant.js" caret="81" fromTop="1" />
+    <File id="EBD06220-2A7F-426C-920D-DBB22AE71E99/d:Controllers/f:ConsultantController.cs" caret="2103" fromTop="26" />
+    <File id="AD735CA4-F617-40CC-A1F1-DE3F608A6C9D/d:DataTransferObjects/f:ConsultantDto.cs" caret="405" fromTop="13" />
+    <File id="EBD06220-2A7F-426C-920D-DBB22AE71E99/d:Controllers/f:ConsultantController.cs" caret="1564" fromTop="25" />
+    <File id="EBD06220-2A7F-426C-920D-DBB22AE71E99/d:Controllers/f:ConsultantController.cs" caret="1564" fromTop="22" />
+    <File id="EBD06220-2A7F-426C-920D-DBB22AE71E99/d:Controllers/f:ConsultantController.cs" caret="1764" fromTop="28" />
+    <File id="FC922F61-B802-4447-A97F-EDAB255E1258/d:Controllers/f:EmployeeController.cs" caret="2049" fromTop="30" />
+    <File id="EBD06220-2A7F-426C-920D-DBB22AE71E99/d:Controllers/f:ConsultantController.cs" caret="1189" fromTop="14" />
+    <File id="8BB52A7E-8A11-42AF-8E0A-78770130CA9E/d:Mappers/f:Consultant.hbm.xml" caret="524" fromTop="12" />
+    <File id="AD735CA4-F617-40CC-A1F1-DE3F608A6C9D/d:Implementations/f:ConsultantService.cs" caret="2810" fromTop="15" />
+    <File id="EBD06220-2A7F-426C-920D-DBB22AE71E99/d:Views/d:Appointment/f:Book.cshtml" caret="1646" fromTop="36" />
+    <File id="EBD06220-2A7F-426C-920D-DBB22AE71E99/d:Views/d:Appointment/f:Book.cshtml" caret="287" fromTop="9" />
+    <File id="EBD06220-2A7F-426C-920D-DBB22AE71E99/d:Views/d:Appointment/f:Book.cshtml" caret="444" fromTop="15" />
+    <File id="EBD06220-2A7F-426C-920D-DBB22AE71E99/d:Views/d:Appointment/f:Book.cshtml" caret="802" fromTop="31" />
+    <File id="EBD06220-2A7F-426C-920D-DBB22AE71E99/d:Views/d:Appointment/f:Book.cshtml" caret="616" fromTop="23" />
+    <File id="EBD06220-2A7F-426C-920D-DBB22AE71E99/d:Views/d:Appointment/f:Book.cshtml" caret="960" fromTop="37" />
+    <File id="EBD06220-2A7F-426C-920D-DBB22AE71E99/d:ViewModels/f:BookAppointmentViewModel.cs" caret="698" fromTop="17" />
+    <File id="EBD06220-2A7F-426C-920D-DBB22AE71E99/d:ViewModels/f:BookAppointmentViewModel.cs" caret="453" fromTop="13" />
+    <File id="EBD06220-2A7F-426C-920D-DBB22AE71E99/d:Controllers/f:AppointmentController.cs" caret="768" fromTop="14" />
+    <File id="EBD06220-2A7F-426C-920D-DBB22AE71E99/d:Views/d:Appointment/f:Book.cshtml" caret="1252" fromTop="53" />
+    <File id="EBD06220-2A7F-426C-920D-DBB22AE71E99/d:Views/d:Appointment/f:Book.cshtml" caret="1442" fromTop="52" />
+    <File id="EBD06220-2A7F-426C-920D-DBB22AE71E99/d:Views/d:Appointment/f:Book.cshtml" caret="1413" fromTop="50" />
+    <File id="EBD06220-2A7F-426C-920D-DBB22AE71E99/d:Controllers/f:AppointmentController.cs" caret="1584" fromTop="20" />
+    <File id="EBD06220-2A7F-426C-920D-DBB22AE71E99/d:Controllers/f:AppointmentController.cs" caret="2038" fromTop="33" />
+    <File id="0F39916A-A264-4412-BC4C-E8B4551599D9/d:Implementations/f:EmployeeService.cs" caret="771" fromTop="11" />
+    <File id="0F39916A-A264-4412-BC4C-E8B4551599D9/d:Requests/f:AddEmployeeRequest.cs" caret="236" fromTop="13" />
+    <File id="0F39916A-A264-4412-BC4C-E8B4551599D9/d:Requests/f:AddEmployeeRequest.cs" caret="199" fromTop="11" />
+    <File id="0F39916A-A264-4412-BC4C-E8B4551599D9/d:Requests/f:AddEmployeeRequest.cs" caret="0" fromTop="0" />
+    <File id="6693ECEC-BC88-49CE-9E40-9A70AB0C954E/d:Entites/f:Employee.cs" caret="1397" fromTop="19" />
+    <File id="6693ECEC-BC88-49CE-9E40-9A70AB0C954E/d:Entites/f:Employee.cs" caret="1559" fromTop="30" />
+  </RecentEdits>
+</RecentFiles>

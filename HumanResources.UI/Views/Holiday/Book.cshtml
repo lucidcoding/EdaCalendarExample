@@ -1,0 +1,39 @@
+﻿@model HumanResources.UI.ViewModels.BookHolidayViewModel
+
+@{
+    ViewBag.Title = "Book";
+}
+
+<h2>Book</h2>
+<form method="POST" action="@Url.Action("Book", "Holiday")" >
+    @Html.ValidationSummary("The following validation errors occured:")
+    @Html.HiddenFor(m => m.EmployeeId)
+    <div class="row">
+        <div class="cell">
+            Start:
+        </div>
+        <div class="cell">
+            @Html.EditorFor(m => m.Start)
+        </div>
+        <div class="cell">
+            dd/mm/yyyy
+        </div>
+    </div>
+    <div class="row">
+        <div class="cell">
+            End:
+        </div>
+        <div class="cell">
+            @Html.EditorFor(m => m.End)
+        </div>
+        <div class="cell">
+            dd/mm/yyyy
+        </div>
+    </div>
+    <div class="row">
+        <button type="submit">Book</button>
+        <input type="button" onclick="window.location='@Url.Action("Index", "Employee")'" value="Cancel"></input>
+    </div>
+</form>
+
+

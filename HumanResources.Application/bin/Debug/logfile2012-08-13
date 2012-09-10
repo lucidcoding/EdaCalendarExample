@@ -1,0 +1,257 @@
+2012-08-13 21:31:45,366 [1] INFO  NHibernate.Cfg.Environment [(null)] <(null)> - NHibernate 3.0.0.4000 (3.0.0.4000)
+2012-08-13 21:31:45,449 [1] INFO  NHibernate.Cfg.Environment [(null)] <(null)> - hibernate-configuration section not found in application configuration file
+2012-08-13 21:31:45,450 [1] INFO  NHibernate.Cfg.Environment [(null)] <(null)> - Bytecode provider name : lcg
+2012-08-13 21:31:45,461 [1] INFO  NHibernate.Cfg.Environment [(null)] <(null)> - Using reflection optimizer
+2012-08-13 21:31:46,015 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - Searching for mapped documents in assembly: HumanResources.Data
+2012-08-13 21:31:46,020 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - Mapping resource: HumanResources.Data.Mappers.TimeAllocation.hbm.xml
+2012-08-13 21:31:47,314 [1] INFO  NHibernate.Dialect.Dialect [(null)] <(null)> - Using dialect: NHibernate.Dialect.MsSqlCeDialect
+2012-08-13 21:31:47,528 [1] INFO  NHibernate.Cfg.XmlHbmBinding.Binder [(null)] <(null)> - Mapping class: HumanResources.Domain.Entites.TimeAllocation -> TimeAllocation
+2012-08-13 21:31:47,733 [1] INFO  NHibernate.Cfg.XmlHbmBinding.Binder [(null)] <(null)> - Mapping joined-subclass: HumanResources.Domain.Entites.Holiday -> Holiday
+2012-08-13 21:31:47,768 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - Mapping resource: HumanResources.Data.Mappers.Employee.hbm.xml
+2012-08-13 21:31:47,790 [1] INFO  NHibernate.Dialect.Dialect [(null)] <(null)> - Using dialect: NHibernate.Dialect.MsSqlCeDialect
+2012-08-13 21:31:47,792 [1] INFO  NHibernate.Cfg.XmlHbmBinding.Binder [(null)] <(null)> - Mapping class: HumanResources.Domain.Entites.Employee -> Employee
+2012-08-13 21:31:47,866 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - checking mappings queue
+2012-08-13 21:31:47,869 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - processing one-to-many association mappings
+2012-08-13 21:31:47,875 [1] INFO  NHibernate.Cfg.XmlHbmBinding.Binder [(null)] <(null)> - mapping collection: HumanResources.Domain.Entites.Employee.TimeAllocations -> TimeAllocation
+2012-08-13 21:31:47,895 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - processing one-to-one association property references
+2012-08-13 21:31:47,897 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - processing foreign key constraints
+2012-08-13 21:31:47,911 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - processing filters (second pass)
+2012-08-13 21:31:47,999 [1] INFO  NHibernate.Dialect.Dialect [(null)] <(null)> - Using dialect: NHibernate.Dialect.MsSqlCeDialect
+2012-08-13 21:31:48,085 [1] INFO  NHibernate.Exceptions.SQLExceptionConverterFactory [(null)] <(null)> - Using dialect defined converter
+2012-08-13 21:31:48,089 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Generate SQL with comments: disabled
+2012-08-13 21:31:48,097 [1] INFO  NHibernate.Connection.ConnectionProviderFactory [(null)] <(null)> - Initializing connection provider: NHibernate.Connection.DriverConnectionProvider
+2012-08-13 21:31:48,100 [1] INFO  NHibernate.Connection.ConnectionProvider [(null)] <(null)> - Configuring ConnectionProvider
+2012-08-13 21:31:48,137 [1] ERROR NHibernate.Util.ReflectHelper [(null)] <(null)> - Could not load type System.Data.SqlServerCe.SqlCeConnection, System.Data.SqlServerCe.
+System.IO.FileNotFoundException: Could not load file or assembly 'System.Data.SqlServerCe' or one of its dependencies. The system cannot find the file specified.
+File name: 'System.Data.SqlServerCe'
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at NHibernate.Util.ReflectHelper.TypeFromAssembly(AssemblyQualifiedTypeName name, Boolean throwOnError)
+
+=== Pre-bind state information ===
+LOG: User = HQ\paul.davies
+LOG: DisplayName = System.Data.SqlServerCe
+ (Partial)
+WRN: Partial binding information was supplied for an assembly:
+WRN: Assembly Name: System.Data.SqlServerCe | Domain ID: 2
+WRN: A partial bind occurs when only part of the assembly display name is provided.
+WRN: This might result in the binder loading an incorrect assembly.
+WRN: It is recommended to provide a fully specified textual identity for the assembly,
+WRN: that consists of the simple name, version, culture, and public key token.
+WRN: See whitepaper http://go.microsoft.com/fwlink/?LinkId=109270 for more information and common solutions to this issue.
+LOG: Appbase = file:///F:/Experimental/EdaCalendarExample/HumanResources.Application/bin/Debug/
+LOG: Initial PrivatePath = NULL
+Calling assembly : NHibernate, Version=3.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4.
+===
+LOG: This bind starts in default load context.
+LOG: Using application configuration file: F:\Experimental\EdaCalendarExample\HumanResources.Application\bin\Debug\HumanResources.Application.dll.config
+LOG: Using host configuration file: 
+LOG: Using machine configuration file from C:\Windows\Microsoft.NET\Framework64\v4.0.30319\config\machine.config.
+LOG: Policy not being applied to reference at this time (private, custom, partial, or location-based assembly bind).
+LOG: The same bind was seen before, and was failed with hr = 0x80070002.
+
+2012-08-13 21:31:48,168 [1] ERROR NHibernate.Util.ReflectHelper [(null)] <(null)> - Could not load type System.Data.SqlServerCe.SqlCeCommand, System.Data.SqlServerCe.
+System.IO.FileNotFoundException: Could not load file or assembly 'System.Data.SqlServerCe' or one of its dependencies. The system cannot find the file specified.
+File name: 'System.Data.SqlServerCe'
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at NHibernate.Util.ReflectHelper.TypeFromAssembly(AssemblyQualifiedTypeName name, Boolean throwOnError)
+
+=== Pre-bind state information ===
+LOG: User = HQ\paul.davies
+LOG: DisplayName = System.Data.SqlServerCe
+ (Partial)
+WRN: Partial binding information was supplied for an assembly:
+WRN: Assembly Name: System.Data.SqlServerCe | Domain ID: 2
+WRN: A partial bind occurs when only part of the assembly display name is provided.
+WRN: This might result in the binder loading an incorrect assembly.
+WRN: It is recommended to provide a fully specified textual identity for the assembly,
+WRN: that consists of the simple name, version, culture, and public key token.
+WRN: See whitepaper http://go.microsoft.com/fwlink/?LinkId=109270 for more information and common solutions to this issue.
+LOG: Appbase = file:///F:/Experimental/EdaCalendarExample/HumanResources.Application/bin/Debug/
+LOG: Initial PrivatePath = NULL
+Calling assembly : NHibernate, Version=3.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4.
+===
+LOG: This bind starts in default load context.
+LOG: Using application configuration file: F:\Experimental\EdaCalendarExample\HumanResources.Application\bin\Debug\HumanResources.Application.dll.config
+LOG: Using host configuration file: 
+LOG: Using machine configuration file from C:\Windows\Microsoft.NET\Framework64\v4.0.30319\config\machine.config.
+LOG: Policy not being applied to reference at this time (private, custom, partial, or location-based assembly bind).
+LOG: The same bind was seen before, and was failed with hr = 0x80070002.
+
+2012-08-13 21:32:34,949 [1] INFO  NHibernate.Cfg.Environment [(null)] <(null)> - NHibernate 3.0.0.4000 (3.0.0.4000)
+2012-08-13 21:32:35,031 [1] INFO  NHibernate.Cfg.Environment [(null)] <(null)> - hibernate-configuration section not found in application configuration file
+2012-08-13 21:32:35,033 [1] INFO  NHibernate.Cfg.Environment [(null)] <(null)> - Bytecode provider name : lcg
+2012-08-13 21:32:35,036 [1] INFO  NHibernate.Cfg.Environment [(null)] <(null)> - Using reflection optimizer
+2012-08-13 21:32:35,593 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - Searching for mapped documents in assembly: HumanResources.Data
+2012-08-13 21:32:35,598 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - Mapping resource: HumanResources.Data.Mappers.TimeAllocation.hbm.xml
+2012-08-13 21:32:36,755 [1] INFO  NHibernate.Dialect.Dialect [(null)] <(null)> - Using dialect: NHibernate.Dialect.MsSqlCeDialect
+2012-08-13 21:32:36,926 [1] INFO  NHibernate.Cfg.XmlHbmBinding.Binder [(null)] <(null)> - Mapping class: HumanResources.Domain.Entites.TimeAllocation -> TimeAllocation
+2012-08-13 21:32:37,128 [1] INFO  NHibernate.Cfg.XmlHbmBinding.Binder [(null)] <(null)> - Mapping joined-subclass: HumanResources.Domain.Entites.Holiday -> Holiday
+2012-08-13 21:32:37,163 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - Mapping resource: HumanResources.Data.Mappers.Employee.hbm.xml
+2012-08-13 21:32:37,186 [1] INFO  NHibernate.Dialect.Dialect [(null)] <(null)> - Using dialect: NHibernate.Dialect.MsSqlCeDialect
+2012-08-13 21:32:37,189 [1] INFO  NHibernate.Cfg.XmlHbmBinding.Binder [(null)] <(null)> - Mapping class: HumanResources.Domain.Entites.Employee -> Employee
+2012-08-13 21:32:37,267 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - checking mappings queue
+2012-08-13 21:32:37,270 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - processing one-to-many association mappings
+2012-08-13 21:32:37,277 [1] INFO  NHibernate.Cfg.XmlHbmBinding.Binder [(null)] <(null)> - mapping collection: HumanResources.Domain.Entites.Employee.TimeAllocations -> TimeAllocation
+2012-08-13 21:32:37,298 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - processing one-to-one association property references
+2012-08-13 21:32:37,301 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - processing foreign key constraints
+2012-08-13 21:32:37,315 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - processing filters (second pass)
+2012-08-13 21:32:37,390 [1] INFO  NHibernate.Dialect.Dialect [(null)] <(null)> - Using dialect: NHibernate.Dialect.MsSqlCeDialect
+2012-08-13 21:32:37,459 [1] INFO  NHibernate.Exceptions.SQLExceptionConverterFactory [(null)] <(null)> - Using dialect defined converter
+2012-08-13 21:32:37,462 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Generate SQL with comments: disabled
+2012-08-13 21:32:37,467 [1] INFO  NHibernate.Connection.ConnectionProviderFactory [(null)] <(null)> - Initializing connection provider: NHibernate.Connection.DriverConnectionProvider
+2012-08-13 21:32:37,471 [1] INFO  NHibernate.Connection.ConnectionProvider [(null)] <(null)> - Configuring ConnectionProvider
+2012-08-13 21:32:37,515 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Transaction factory: NHibernate.Transaction.AdoNetWithDistributedTransactionFactory
+2012-08-13 21:32:37,525 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Optimize cache for minimal puts: False
+2012-08-13 21:32:37,528 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Connection release mode: auto
+2012-08-13 21:32:37,531 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Default batch fetch size: 1
+2012-08-13 21:32:37,533 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - echoing all SQL to stdout
+2012-08-13 21:32:37,535 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Statistics: disabled
+2012-08-13 21:32:37,537 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Deleted entity synthetic identifier rollback: disabled
+2012-08-13 21:32:37,540 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Query translator: NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory
+2012-08-13 21:32:37,574 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Query language substitutions: {}
+2012-08-13 21:32:37,579 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - cache provider: NHibernate.Cache.NoCacheProvider, NHibernate, Version=3.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+2012-08-13 21:32:37,585 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Batcher factory: NHibernate.AdoNet.NonBatchingBatcherFactory, NHibernate, Version=3.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+2012-08-13 21:32:37,590 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Default entity-mode: Poco
+2012-08-13 21:32:37,592 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Named query checking : enabled
+2012-08-13 21:32:37,638 [1] INFO  NHibernate.Impl.SessionFactoryImpl [(null)] <(null)> - building session factory
+2012-08-13 21:32:38,761 [1] INFO  NHibernate.Impl.SessionFactoryObjectFactory [(null)] <(null)> - no name configured
+2012-08-13 21:32:39,345 [1] INFO  NServiceBus.Licensing [(null)] <(null)> - Checking available license...
+2012-08-13 21:32:39,349 [1] INFO  NServiceBus.Licensing [(null)] <(null)> - Could not find license file: F:\Experimental\EdaCalendarExample\HumanResources.Application\bin\Debug\License\License.xml
+2012-08-13 21:32:39,363 [1] WARN  NServiceBus.Licensing [(null)] <(null)> - No valid license file was found. The host will be limited to 1 worker thread.
+2012-08-13 21:32:39,457 [1] FATAL NServiceBus.Hosting.GenericHost [(null)] <(null)> - System.ArgumentException: Problem loading message assembly: MyMessages ---> System.IO.FileNotFoundException: Could not load file or assembly 'MyMessages' or one of its dependencies. The system cannot find the file specified.
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at NServiceBus.Unicast.Config.ConfigUnicastBus.ConfigureBusProperties(UnicastBusConfig unicastConfig)
+   --- End of inner exception stack trace ---
+   at NServiceBus.Unicast.Config.ConfigUnicastBus.ConfigureBusProperties(UnicastBusConfig unicastConfig)
+   at NServiceBus.Unicast.Config.ConfigUnicastBus.RegisterMessageOwnersAndBusAddress()
+   at NServiceBus.Unicast.Config.ConfigUnicastBus.Configure(Configure config)
+   at NServiceBus.ConfigureUnicastBus.UnicastBus(Configure config)
+   at NServiceBus.Hosting.Windows.Roles.Handlers.ServerRoleHandler.ConfigureRole(IConfigureThisEndpoint specifier)
+   at NServiceBus.Hosting.Roles.RoleManager.ConfigureBusForEndpoint(IConfigureThisEndpoint specifier)
+   at NServiceBus.Hosting.GenericHost.PerformConfiguration()
+   at NServiceBus.Hosting.GenericHost.Start()
+2012-08-13 21:35:04,440 [1] INFO  NHibernate.Cfg.Environment [(null)] <(null)> - NHibernate 3.0.0.4000 (3.0.0.4000)
+2012-08-13 21:35:04,515 [1] INFO  NHibernate.Cfg.Environment [(null)] <(null)> - hibernate-configuration section not found in application configuration file
+2012-08-13 21:35:04,517 [1] INFO  NHibernate.Cfg.Environment [(null)] <(null)> - Bytecode provider name : lcg
+2012-08-13 21:35:04,520 [1] INFO  NHibernate.Cfg.Environment [(null)] <(null)> - Using reflection optimizer
+2012-08-13 21:35:05,052 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - Searching for mapped documents in assembly: HumanResources.Data
+2012-08-13 21:35:05,058 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - Mapping resource: HumanResources.Data.Mappers.TimeAllocation.hbm.xml
+2012-08-13 21:35:06,251 [1] INFO  NHibernate.Dialect.Dialect [(null)] <(null)> - Using dialect: NHibernate.Dialect.MsSqlCeDialect
+2012-08-13 21:35:06,385 [1] INFO  NHibernate.Cfg.XmlHbmBinding.Binder [(null)] <(null)> - Mapping class: HumanResources.Domain.Entites.TimeAllocation -> TimeAllocation
+2012-08-13 21:35:06,495 [1] INFO  NHibernate.Cfg.XmlHbmBinding.Binder [(null)] <(null)> - Mapping joined-subclass: HumanResources.Domain.Entites.Holiday -> Holiday
+2012-08-13 21:35:06,516 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - Mapping resource: HumanResources.Data.Mappers.Employee.hbm.xml
+2012-08-13 21:35:06,534 [1] INFO  NHibernate.Dialect.Dialect [(null)] <(null)> - Using dialect: NHibernate.Dialect.MsSqlCeDialect
+2012-08-13 21:35:06,537 [1] INFO  NHibernate.Cfg.XmlHbmBinding.Binder [(null)] <(null)> - Mapping class: HumanResources.Domain.Entites.Employee -> Employee
+2012-08-13 21:35:06,569 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - checking mappings queue
+2012-08-13 21:35:06,571 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - processing one-to-many association mappings
+2012-08-13 21:35:06,576 [1] INFO  NHibernate.Cfg.XmlHbmBinding.Binder [(null)] <(null)> - mapping collection: HumanResources.Domain.Entites.Employee.TimeAllocations -> TimeAllocation
+2012-08-13 21:35:06,584 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - processing one-to-one association property references
+2012-08-13 21:35:06,587 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - processing foreign key constraints
+2012-08-13 21:35:06,594 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - processing filters (second pass)
+2012-08-13 21:35:06,634 [1] INFO  NHibernate.Dialect.Dialect [(null)] <(null)> - Using dialect: NHibernate.Dialect.MsSqlCeDialect
+2012-08-13 21:35:06,666 [1] INFO  NHibernate.Exceptions.SQLExceptionConverterFactory [(null)] <(null)> - Using dialect defined converter
+2012-08-13 21:35:06,669 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Generate SQL with comments: disabled
+2012-08-13 21:35:06,673 [1] INFO  NHibernate.Connection.ConnectionProviderFactory [(null)] <(null)> - Initializing connection provider: NHibernate.Connection.DriverConnectionProvider
+2012-08-13 21:35:06,676 [1] INFO  NHibernate.Connection.ConnectionProvider [(null)] <(null)> - Configuring ConnectionProvider
+2012-08-13 21:35:06,697 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Transaction factory: NHibernate.Transaction.AdoNetWithDistributedTransactionFactory
+2012-08-13 21:35:06,701 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Optimize cache for minimal puts: False
+2012-08-13 21:35:06,703 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Connection release mode: auto
+2012-08-13 21:35:06,705 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Default batch fetch size: 1
+2012-08-13 21:35:06,707 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - echoing all SQL to stdout
+2012-08-13 21:35:06,709 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Statistics: disabled
+2012-08-13 21:35:06,711 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Deleted entity synthetic identifier rollback: disabled
+2012-08-13 21:35:06,713 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Query translator: NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory
+2012-08-13 21:35:06,717 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Query language substitutions: {}
+2012-08-13 21:35:06,720 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - cache provider: NHibernate.Cache.NoCacheProvider, NHibernate, Version=3.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+2012-08-13 21:35:06,724 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Batcher factory: NHibernate.AdoNet.NonBatchingBatcherFactory, NHibernate, Version=3.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+2012-08-13 21:35:06,727 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Default entity-mode: Poco
+2012-08-13 21:35:06,729 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Named query checking : enabled
+2012-08-13 21:35:06,754 [1] INFO  NHibernate.Impl.SessionFactoryImpl [(null)] <(null)> - building session factory
+2012-08-13 21:35:07,718 [1] INFO  NHibernate.Impl.SessionFactoryObjectFactory [(null)] <(null)> - no name configured
+2012-08-13 21:35:08,316 [1] INFO  NServiceBus.Licensing [(null)] <(null)> - Checking available license...
+2012-08-13 21:35:08,320 [1] INFO  NServiceBus.Licensing [(null)] <(null)> - Could not find license file: F:\Experimental\EdaCalendarExample\HumanResources.Application\bin\Debug\License\License.xml
+2012-08-13 21:35:08,335 [1] WARN  NServiceBus.Licensing [(null)] <(null)> - No valid license file was found. The host will be limited to 1 worker thread.
+2012-08-13 21:35:08,409 [1] INFO  NServiceBus.Hosting.Roles.RoleManager [(null)] <(null)> - Role NServiceBus.AsA_Server configured
+2012-08-13 21:35:08,437 [1] WARN  MessageForwardingInCaseOfFault [(null)] <(null)> - Could not find configuration section 'MessageForwardingInCaseOfFaultConfig'. Going to try to find the error queue defined in 'MsmqTransportConfig'.
+2012-08-13 21:35:08,514 [1] INFO  NServiceBus.Host [(null)] <(null)> - Going to activate profile: NServiceBus.Production, NServiceBus.Host, Version=3.2.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c
+2012-08-13 21:35:08,518 [1] INFO  NServiceBus.Host [(null)] <(null)> - Going to activate profile: NServiceBus.PerformanceCounters, NServiceBus.Host, Version=3.2.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c
+2012-08-13 21:35:17,829 [1] WARN  NServiceBus.Utils.MsmqUtilities [(null)] <(null)> - Queue pbs42848\private$\humanresources.retries does not exist.
+2012-08-13 21:35:17,902 [1] WARN  NServiceBus.Utils.MsmqUtilities [(null)] <(null)> - Queue pbs42848\private$\humanresources.timeouts does not exist.
+2012-08-13 21:35:17,958 [1] WARN  NServiceBus.Utils.MsmqUtilities [(null)] <(null)> - Queue pbs42848\private$\humanresources does not exist.
+2012-08-13 21:35:18,098 [1] INFO  NServiceBus.Unicast.MessagingBestPractices [(null)] <(null)> - You are using a basic message to do pub/sub, consider implementing the more specific ICommand and IEvent interfaces to help NServiceBus to enforce messaging best practices for you
+2012-08-13 21:35:18,110 [1] INFO  NServiceBus.Unicast.UnicastBus [(null)] <(null)> - Subscribing to HumanResources.Messages.Commands.BookHoliday, HumanResources.Messages, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue mypublisherinputqueue@pbs42848
+2012-08-13 21:35:18,140 [1] INFO  NServiceBus.Unicast.UnicastBus [(null)] <(null)> - Future versions of NServiceBus will only autosubscribe messages explicitly marked as IEvent so consider marking messages that are events with the explicit IEvent interface
+2012-08-13 21:35:22,816 [1] FATAL NServiceBus.Hosting.GenericHost [(null)] <(null)> - Autofac.Core.DependencyResolutionException: An exception was thrown while invoking the constructor 'Void .ctor(Raven.Client.IDocumentStore)' on type 'RavenTimeoutPersistence'. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:8080
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.InternalConnect(EndPoint remoteEP)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Int32 timeout, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at Raven.Client.Connection.HttpJsonRequest.ReadStringInternal(Func`1 getResponse)
+   at Raven.Client.Connection.HttpJsonRequest.ReadResponseString()
+   at Raven.Client.Connection.HttpJsonRequest.ExecuteRequest()
+   at Raven.Client.Connection.ServerClient.DirectPutIndex(String name, String operationUrl, Boolean overwrite, IndexDefinition definition)
+   at Raven.Client.Connection.ServerClient.<>c__DisplayClass34.<PutIndex>b__33(String operationUrl)
+   at Raven.Client.Connection.ServerClient.TryOperation[T](Func`2 operation, String operationUrl, Boolean avoidThrowing, T& result)
+   at Raven.Client.Connection.ServerClient.ExecuteWithReplication[T](String method, Func`2 operation)
+   at Raven.Client.Connection.ServerClient.PutIndex(String name, IndexDefinition definition, Boolean overwrite)
+   at Raven.Client.Connection.ServerClient.PutIndex[TDocument,TReduceResult](String name, IndexDefinitionBuilder`2 indexDef, Boolean overwrite)
+   at NServiceBus.Timeout.Hosting.Windows.Persistence.RavenTimeoutPersistence..ctor(IDocumentStore store)
+   --- End of inner exception stack trace ---
+   at Autofac.Core.Activators.Reflection.ConstructorParameterBinding.Instantiate()
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.ActivateInstance(IComponentContext context, IEnumerable`1 parameters)
+   at Autofac.Core.Resolving.InstanceLookup.Activate(IEnumerable`1 parameters)
+   at Autofac.Core.Resolving.InstanceLookup.<Execute>b__6()
+   at Autofac.Core.Lifetime.LifetimeScope.GetOrCreateAndShare(Guid id, Func`1 creator)
+   at Autofac.Core.Resolving.InstanceLookup.Execute()
+   at Autofac.Core.Resolving.ResolveOperation.GetOrCreateInstance(ISharingLifetimeScope currentOperationScope, IComponentRegistration registration, IEnumerable`1 parameters)
+   at Autofac.Core.Resolving.InstanceLookup.ResolveComponent(IComponentRegistration registration, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.TryResolveService(IComponentContext context, Service service, IEnumerable`1 parameters, Object& instance)
+   at Autofac.ResolutionExtensions.ResolveService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve(IComponentContext context, Type serviceType, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve(IComponentContext context, Type serviceType)
+   at Autofac.Core.Activators.Reflection.AutowiringPropertyInjector.InjectProperties(IComponentContext context, Object instance, Boolean overrideSetValues)
+   at Autofac.Builder.RegistrationBuilder`3.<>c__DisplayClassd.<PropertiesAutowired>b__c(Object s, ActivatingEventArgs`1 e)
+   at System.EventHandler`1.Invoke(Object sender, TEventArgs e)
+   at Autofac.Core.Registration.ComponentRegistration.RaiseActivating(IComponentContext context, IEnumerable`1 parameters, Object& instance)
+   at Autofac.Core.Resolving.InstanceLookup.Activate(IEnumerable`1 parameters)
+   at Autofac.Core.Resolving.InstanceLookup.<Execute>b__6()
+   at Autofac.Core.Lifetime.LifetimeScope.GetOrCreateAndShare(Guid id, Func`1 creator)
+   at Autofac.Core.Resolving.InstanceLookup.Execute()
+   at Autofac.Core.Resolving.ResolveOperation.GetOrCreateInstance(ISharingLifetimeScope currentOperationScope, IComponentRegistration registration, IEnumerable`1 parameters)
+   at Autofac.Core.Resolving.InstanceLookup.ResolveComponent(IComponentRegistration registration, IEnumerable`1 parameters)
+   at Autofac.Features.Collections.CollectionRegistrationSource.<>c__DisplayClass4.<>c__DisplayClass6.<RegistrationsFor>b__1(IComponentRegistration cr)
+   at System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   at System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   at System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   at Autofac.Features.Collections.CollectionRegistrationSource.<>c__DisplayClass4.<RegistrationsFor>b__0(IComponentContext c, IEnumerable`1 p)
+   at Autofac.Core.Activators.Delegate.DelegateActivator.ActivateInstance(IComponentContext context, IEnumerable`1 parameters)
+   at Autofac.Core.Resolving.InstanceLookup.Activate(IEnumerable`1 parameters)
+   at Autofac.Core.Resolving.InstanceLookup.Execute()
+   at Autofac.Core.Resolving.ResolveOperation.GetOrCreateInstance(ISharingLifetimeScope currentOperationScope, IComponentRegistration registration, IEnumerable`1 parameters)
+   at Autofac.Core.Resolving.ResolveOperation.ResolveComponent(IComponentRegistration registration, IEnumerable`1 parameters)
+   at Autofac.Core.Resolving.ResolveOperation.Execute(IComponentRegistration registration, IEnumerable`1 parameters)
+   at Autofac.Core.Lifetime.LifetimeScope.ResolveComponent(IComponentRegistration registration, IEnumerable`1 parameters)
+   at Autofac.Core.Container.ResolveComponent(IComponentRegistration registration, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.TryResolveService(IComponentContext context, Service service, IEnumerable`1 parameters, Object& instance)
+   at Autofac.ResolutionExtensions.ResolveService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve(IComponentContext context, Type serviceType, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve(IComponentContext context, Type serviceType)
+   at NServiceBus.ObjectBuilder.Autofac.Internal.ContainerExtensions.ResolveAll(IComponentContext container, Type componentType)
+   at NServiceBus.ObjectBuilder.Autofac.AutofacObjectBuilder.BuildAll(Type typeToBuild)
+   at NServiceBus.ObjectBuilder.Common.CommonObjectBuilder.<NServiceBus.ObjectBuilder.IBuilder.BuildAll>d__1`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at NServiceBus.Unicast.Config.StartupRunners.<Run>b__4(Object obj, EventArgs ev)
+   at NServiceBus.Unicast.UnicastBus.NServiceBus.IStartableBus.Start(Action startupAction)
+   at NServiceBus.Unicast.UnicastBus.NServiceBus.IStartableBus.Start()
+   at NServiceBus.Hosting.GenericHost.Start()

@@ -1,0 +1,577 @@
+2012-09-07 15:49:49,487 [1] INFO  NHibernate.Cfg.Environment [(null)] <(null)> - NHibernate 3.0.0.4000 (3.0.0.4000)
+2012-09-07 15:49:49,567 [1] INFO  NHibernate.Cfg.Environment [(null)] <(null)> - hibernate-configuration section not found in application configuration file
+2012-09-07 15:49:49,568 [1] INFO  NHibernate.Cfg.Environment [(null)] <(null)> - Bytecode provider name : lcg
+2012-09-07 15:49:49,571 [1] INFO  NHibernate.Cfg.Environment [(null)] <(null)> - Using reflection optimizer
+2012-09-07 15:49:50,176 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - Searching for mapped documents in assembly: Sales.Data
+2012-09-07 15:49:50,180 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - Mapping resource: Sales.Data.Mappers.TimeAllocation.hbm.xml
+2012-09-07 15:49:51,492 [1] INFO  NHibernate.Dialect.Dialect [(null)] <(null)> - Using dialect: NHibernate.Dialect.MsSqlCeDialect
+2012-09-07 15:49:51,723 [1] INFO  NHibernate.Cfg.XmlHbmBinding.Binder [(null)] <(null)> - Mapping class: Sales.Domain.Entities.TimeAllocation -> TimeAllocation
+2012-09-07 15:49:51,915 [1] INFO  NHibernate.Cfg.XmlHbmBinding.Binder [(null)] <(null)> - Mapping joined-subclass: Sales.Domain.Entities.Appointment -> Appointment
+2012-09-07 15:49:51,950 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - Mapping resource: Sales.Data.Mappers.Consultant.hbm.xml
+2012-09-07 15:49:51,972 [1] INFO  NHibernate.Dialect.Dialect [(null)] <(null)> - Using dialect: NHibernate.Dialect.MsSqlCeDialect
+2012-09-07 15:49:51,974 [1] INFO  NHibernate.Cfg.XmlHbmBinding.Binder [(null)] <(null)> - Mapping class: Sales.Domain.Entities.Consultant -> Consultant
+2012-09-07 15:49:52,058 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - checking mappings queue
+2012-09-07 15:49:52,061 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - processing one-to-many association mappings
+2012-09-07 15:49:52,068 [1] INFO  NHibernate.Cfg.XmlHbmBinding.Binder [(null)] <(null)> - mapping collection: Sales.Domain.Entities.Consultant.TimeAllocations -> TimeAllocation
+2012-09-07 15:49:52,089 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - processing one-to-one association property references
+2012-09-07 15:49:52,092 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - processing foreign key constraints
+2012-09-07 15:49:52,110 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - processing filters (second pass)
+2012-09-07 15:49:52,205 [1] INFO  NHibernate.Dialect.Dialect [(null)] <(null)> - Using dialect: NHibernate.Dialect.MsSqlCeDialect
+2012-09-07 15:49:52,265 [1] INFO  NHibernate.Exceptions.SQLExceptionConverterFactory [(null)] <(null)> - Using dialect defined converter
+2012-09-07 15:49:52,269 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Generate SQL with comments: disabled
+2012-09-07 15:49:52,274 [1] INFO  NHibernate.Connection.ConnectionProviderFactory [(null)] <(null)> - Initializing connection provider: NHibernate.Connection.DriverConnectionProvider
+2012-09-07 15:49:52,277 [1] INFO  NHibernate.Connection.ConnectionProvider [(null)] <(null)> - Configuring ConnectionProvider
+2012-09-07 15:49:52,312 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Transaction factory: NHibernate.Transaction.AdoNetWithDistributedTransactionFactory
+2012-09-07 15:49:52,319 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Optimize cache for minimal puts: False
+2012-09-07 15:49:52,320 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Connection release mode: auto
+2012-09-07 15:49:52,323 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Default batch fetch size: 1
+2012-09-07 15:49:52,325 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - echoing all SQL to stdout
+2012-09-07 15:49:52,326 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Statistics: disabled
+2012-09-07 15:49:52,328 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Deleted entity synthetic identifier rollback: disabled
+2012-09-07 15:49:52,331 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Query translator: NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory
+2012-09-07 15:49:52,335 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Query language substitutions: {}
+2012-09-07 15:49:52,341 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - cache provider: NHibernate.Cache.NoCacheProvider, NHibernate, Version=3.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+2012-09-07 15:49:52,346 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Batcher factory: NHibernate.AdoNet.NonBatchingBatcherFactory, NHibernate, Version=3.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+2012-09-07 15:49:52,350 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Default entity-mode: Poco
+2012-09-07 15:49:52,351 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Named query checking : enabled
+2012-09-07 15:49:52,389 [1] INFO  NHibernate.Impl.SessionFactoryImpl [(null)] <(null)> - building session factory
+2012-09-07 15:49:53,480 [1] INFO  NHibernate.Impl.SessionFactoryObjectFactory [(null)] <(null)> - no name configured
+2012-09-07 15:49:53,607 [1] INFO  NServiceBus.Licensing [(null)] <(null)> - Checking available license...
+2012-09-07 15:49:53,612 [1] INFO  NServiceBus.Licensing [(null)] <(null)> - Could not find license file: F:\Experimental\EdaCalendarExample\Sales.NServiceBusServer\bin\Debug\License\License.xml
+2012-09-07 15:49:53,627 [1] WARN  NServiceBus.Licensing [(null)] <(null)> - No valid license file was found. The host will be limited to a throughput of 1msg/s.
+2012-09-07 15:49:53,647 [1] INFO  NServiceBus.Hosting.Roles.RoleManager [(null)] <(null)> - Role NServiceBus.AsA_Server configured
+2012-09-07 15:49:53,907 [1] INFO  NServiceBus.Host [(null)] <(null)> - Going to activate profile: NServiceBus.Production, NServiceBus.Host, Version=3.2.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c
+2012-09-07 15:49:53,910 [1] INFO  NServiceBus.Host [(null)] <(null)> - Going to activate profile: NServiceBus.PerformanceCounters, NServiceBus.Host, Version=3.2.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c
+2012-09-07 15:52:23,377 [1] INFO  NHibernate.Cfg.Environment [(null)] <(null)> - NHibernate 3.0.0.4000 (3.0.0.4000)
+2012-09-07 15:52:23,451 [1] INFO  NHibernate.Cfg.Environment [(null)] <(null)> - hibernate-configuration section not found in application configuration file
+2012-09-07 15:52:23,453 [1] INFO  NHibernate.Cfg.Environment [(null)] <(null)> - Bytecode provider name : lcg
+2012-09-07 15:52:23,456 [1] INFO  NHibernate.Cfg.Environment [(null)] <(null)> - Using reflection optimizer
+2012-09-07 15:52:24,066 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - Searching for mapped documents in assembly: Sales.Data
+2012-09-07 15:52:24,072 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - Mapping resource: Sales.Data.Mappers.TimeAllocation.hbm.xml
+2012-09-07 15:52:25,521 [1] INFO  NHibernate.Dialect.Dialect [(null)] <(null)> - Using dialect: NHibernate.Dialect.MsSqlCeDialect
+2012-09-07 15:52:25,709 [1] INFO  NHibernate.Cfg.XmlHbmBinding.Binder [(null)] <(null)> - Mapping class: Sales.Domain.Entities.TimeAllocation -> TimeAllocation
+2012-09-07 15:52:25,908 [1] INFO  NHibernate.Cfg.XmlHbmBinding.Binder [(null)] <(null)> - Mapping joined-subclass: Sales.Domain.Entities.Appointment -> Appointment
+2012-09-07 15:52:25,942 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - Mapping resource: Sales.Data.Mappers.Consultant.hbm.xml
+2012-09-07 15:52:25,964 [1] INFO  NHibernate.Dialect.Dialect [(null)] <(null)> - Using dialect: NHibernate.Dialect.MsSqlCeDialect
+2012-09-07 15:52:25,967 [1] INFO  NHibernate.Cfg.XmlHbmBinding.Binder [(null)] <(null)> - Mapping class: Sales.Domain.Entities.Consultant -> Consultant
+2012-09-07 15:52:26,033 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - checking mappings queue
+2012-09-07 15:52:26,036 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - processing one-to-many association mappings
+2012-09-07 15:52:26,043 [1] INFO  NHibernate.Cfg.XmlHbmBinding.Binder [(null)] <(null)> - mapping collection: Sales.Domain.Entities.Consultant.TimeAllocations -> TimeAllocation
+2012-09-07 15:52:26,060 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - processing one-to-one association property references
+2012-09-07 15:52:26,062 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - processing foreign key constraints
+2012-09-07 15:52:26,076 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - processing filters (second pass)
+2012-09-07 15:52:26,147 [1] INFO  NHibernate.Dialect.Dialect [(null)] <(null)> - Using dialect: NHibernate.Dialect.MsSqlCeDialect
+2012-09-07 15:52:26,205 [1] INFO  NHibernate.Exceptions.SQLExceptionConverterFactory [(null)] <(null)> - Using dialect defined converter
+2012-09-07 15:52:26,208 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Generate SQL with comments: disabled
+2012-09-07 15:52:26,213 [1] INFO  NHibernate.Connection.ConnectionProviderFactory [(null)] <(null)> - Initializing connection provider: NHibernate.Connection.DriverConnectionProvider
+2012-09-07 15:52:26,217 [1] INFO  NHibernate.Connection.ConnectionProvider [(null)] <(null)> - Configuring ConnectionProvider
+2012-09-07 15:52:26,253 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Transaction factory: NHibernate.Transaction.AdoNetWithDistributedTransactionFactory
+2012-09-07 15:52:26,267 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Optimize cache for minimal puts: False
+2012-09-07 15:52:26,269 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Connection release mode: auto
+2012-09-07 15:52:26,271 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Default batch fetch size: 1
+2012-09-07 15:52:26,273 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - echoing all SQL to stdout
+2012-09-07 15:52:26,274 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Statistics: disabled
+2012-09-07 15:52:26,276 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Deleted entity synthetic identifier rollback: disabled
+2012-09-07 15:52:26,279 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Query translator: NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory
+2012-09-07 15:52:26,283 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Query language substitutions: {}
+2012-09-07 15:52:26,287 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - cache provider: NHibernate.Cache.NoCacheProvider, NHibernate, Version=3.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+2012-09-07 15:52:26,291 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Batcher factory: NHibernate.AdoNet.NonBatchingBatcherFactory, NHibernate, Version=3.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+2012-09-07 15:52:26,293 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Default entity-mode: Poco
+2012-09-07 15:52:26,295 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Named query checking : enabled
+2012-09-07 15:52:26,335 [1] INFO  NHibernate.Impl.SessionFactoryImpl [(null)] <(null)> - building session factory
+2012-09-07 15:52:27,397 [1] INFO  NHibernate.Impl.SessionFactoryObjectFactory [(null)] <(null)> - no name configured
+2012-09-07 15:52:27,467 [1] INFO  NServiceBus.Licensing [(null)] <(null)> - Checking available license...
+2012-09-07 15:52:27,470 [1] INFO  NServiceBus.Licensing [(null)] <(null)> - Could not find license file: F:\Experimental\EdaCalendarExample\Sales.NServiceBusServer\bin\Debug\License\License.xml
+2012-09-07 15:52:27,483 [1] WARN  NServiceBus.Licensing [(null)] <(null)> - No valid license file was found. The host will be limited to a throughput of 1msg/s.
+2012-09-07 15:52:27,497 [1] INFO  NServiceBus.Hosting.Roles.RoleManager [(null)] <(null)> - Role NServiceBus.AsA_Server configured
+2012-09-07 15:52:27,688 [1] INFO  NServiceBus.Host [(null)] <(null)> - Going to activate profile: NServiceBus.Production, NServiceBus.Host, Version=3.2.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c
+2012-09-07 15:52:27,691 [1] INFO  NServiceBus.Host [(null)] <(null)> - Going to activate profile: NServiceBus.PerformanceCounters, NServiceBus.Host, Version=3.2.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c
+2012-09-07 15:52:56,211 [Worker.13] ERROR NHibernate.Transaction.AdoTransaction [(null)] <(null)> - Begin transaction failed
+System.InvalidOperationException: The connection object can not be enlisted in transaction scope.
+   at System.Data.SqlServerCe.SqlCeConnection.Enlist(Transaction tx)
+   at System.Data.SqlServerCe.SqlCeConnection.Open()
+   at NHibernate.Connection.DriverConnectionProvider.GetConnection()
+   at NHibernate.AdoNet.ConnectionManager.GetConnection()
+   at NHibernate.Impl.SessionImpl.get_Connection()
+   at NHibernate.Transaction.AdoTransaction.Begin(IsolationLevel isolationLevel)
+2012-09-07 16:14:23,895 [1] INFO  NHibernate.Cfg.Environment [(null)] <(null)> - NHibernate 3.0.0.4000 (3.0.0.4000)
+2012-09-07 16:14:23,970 [1] INFO  NHibernate.Cfg.Environment [(null)] <(null)> - hibernate-configuration section not found in application configuration file
+2012-09-07 16:14:23,972 [1] INFO  NHibernate.Cfg.Environment [(null)] <(null)> - Bytecode provider name : lcg
+2012-09-07 16:14:23,976 [1] INFO  NHibernate.Cfg.Environment [(null)] <(null)> - Using reflection optimizer
+2012-09-07 16:14:24,520 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - Searching for mapped documents in assembly: Sales.Data
+2012-09-07 16:14:24,526 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - Mapping resource: Sales.Data.Mappers.TimeAllocation.hbm.xml
+2012-09-07 16:14:25,708 [1] INFO  NHibernate.Dialect.Dialect [(null)] <(null)> - Using dialect: NHibernate.Dialect.MsSqlCeDialect
+2012-09-07 16:14:25,897 [1] INFO  NHibernate.Cfg.XmlHbmBinding.Binder [(null)] <(null)> - Mapping class: Sales.Domain.Entities.TimeAllocation -> TimeAllocation
+2012-09-07 16:14:26,085 [1] INFO  NHibernate.Cfg.XmlHbmBinding.Binder [(null)] <(null)> - Mapping joined-subclass: Sales.Domain.Entities.Appointment -> Appointment
+2012-09-07 16:14:26,116 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - Mapping resource: Sales.Data.Mappers.Consultant.hbm.xml
+2012-09-07 16:14:26,138 [1] INFO  NHibernate.Dialect.Dialect [(null)] <(null)> - Using dialect: NHibernate.Dialect.MsSqlCeDialect
+2012-09-07 16:14:26,141 [1] INFO  NHibernate.Cfg.XmlHbmBinding.Binder [(null)] <(null)> - Mapping class: Sales.Domain.Entities.Consultant -> Consultant
+2012-09-07 16:14:26,222 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - checking mappings queue
+2012-09-07 16:14:26,224 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - processing one-to-many association mappings
+2012-09-07 16:14:26,229 [1] INFO  NHibernate.Cfg.XmlHbmBinding.Binder [(null)] <(null)> - mapping collection: Sales.Domain.Entities.Consultant.TimeAllocations -> TimeAllocation
+2012-09-07 16:14:26,246 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - processing one-to-one association property references
+2012-09-07 16:14:26,249 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - processing foreign key constraints
+2012-09-07 16:14:26,257 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - processing filters (second pass)
+2012-09-07 16:14:26,324 [1] INFO  NHibernate.Dialect.Dialect [(null)] <(null)> - Using dialect: NHibernate.Dialect.MsSqlCeDialect
+2012-09-07 16:14:26,393 [1] INFO  NHibernate.Exceptions.SQLExceptionConverterFactory [(null)] <(null)> - Using dialect defined converter
+2012-09-07 16:14:26,397 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Generate SQL with comments: disabled
+2012-09-07 16:14:26,403 [1] INFO  NHibernate.Connection.ConnectionProviderFactory [(null)] <(null)> - Initializing connection provider: NHibernate.Connection.DriverConnectionProvider
+2012-09-07 16:14:26,408 [1] INFO  NHibernate.Connection.ConnectionProvider [(null)] <(null)> - Configuring ConnectionProvider
+2012-09-07 16:14:26,443 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Transaction factory: NHibernate.Transaction.AdoNetWithDistributedTransactionFactory
+2012-09-07 16:14:26,450 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Optimize cache for minimal puts: False
+2012-09-07 16:14:26,452 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Connection release mode: auto
+2012-09-07 16:14:26,455 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Default batch fetch size: 1
+2012-09-07 16:14:26,456 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - echoing all SQL to stdout
+2012-09-07 16:14:26,458 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Statistics: disabled
+2012-09-07 16:14:26,460 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Deleted entity synthetic identifier rollback: disabled
+2012-09-07 16:14:26,463 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Query translator: NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory
+2012-09-07 16:14:26,467 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Query language substitutions: {}
+2012-09-07 16:14:26,473 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - cache provider: NHibernate.Cache.NoCacheProvider, NHibernate, Version=3.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+2012-09-07 16:14:26,479 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Batcher factory: NHibernate.AdoNet.NonBatchingBatcherFactory, NHibernate, Version=3.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+2012-09-07 16:14:26,483 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Default entity-mode: Poco
+2012-09-07 16:14:26,487 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Named query checking : enabled
+2012-09-07 16:14:26,525 [1] INFO  NHibernate.Impl.SessionFactoryImpl [(null)] <(null)> - building session factory
+2012-09-07 16:14:27,619 [1] INFO  NHibernate.Impl.SessionFactoryObjectFactory [(null)] <(null)> - no name configured
+2012-09-07 16:14:27,717 [1] INFO  NServiceBus.Licensing [(null)] <(null)> - Checking available license...
+2012-09-07 16:14:27,720 [1] INFO  NServiceBus.Licensing [(null)] <(null)> - Could not find license file: F:\Experimental\EdaCalendarExample\Sales.NServiceBusServer\bin\Debug\License\License.xml
+2012-09-07 16:14:27,734 [1] WARN  NServiceBus.Licensing [(null)] <(null)> - No valid license file was found. The host will be limited to a throughput of 1msg/s.
+2012-09-07 16:14:27,748 [1] INFO  NServiceBus.Hosting.Roles.RoleManager [(null)] <(null)> - Role NServiceBus.AsA_Server configured
+2012-09-07 16:14:27,968 [1] INFO  NServiceBus.Host [(null)] <(null)> - Going to activate profile: NServiceBus.Production, NServiceBus.Host, Version=3.2.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c
+2012-09-07 16:14:27,970 [1] INFO  NServiceBus.Host [(null)] <(null)> - Going to activate profile: NServiceBus.PerformanceCounters, NServiceBus.Host, Version=3.2.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c
+2012-09-07 16:14:47,257 [Worker.13] INFO  NHibernate.Loader.Loader [(null)] <(null)> - SELECT consultant0_.Id as Id2_0_, consultant0_.Forename as Forename2_0_, consultant0_.Surname as Surname2_0_ FROM Consultant consultant0_ WHERE consultant0_.Id=@p0
+2012-09-07 16:14:47,348 [Worker.13] WARN  NHibernate.Util.ADOExceptionReporter [(null)] <(null)> - NHibernate.ADOException: While preparing SELECT consultant0_.Id as Id2_0_, consultant0_.Forename as Forename2_0_, consultant0_.Surname as Surname2_0_ FROM Consultant consultant0_ WHERE consultant0_.Id=@p0 an error occurred ---> System.InvalidOperationException: The connection object can not be enlisted in transaction scope.
+   at System.Data.SqlServerCe.SqlCeConnection.Enlist(Transaction tx)
+   at System.Data.SqlServerCe.SqlCeConnection.Open()
+   at NHibernate.Connection.DriverConnectionProvider.GetConnection()
+   at NHibernate.AdoNet.ConnectionManager.GetConnection()
+   at NHibernate.AdoNet.AbstractBatcher.Prepare(IDbCommand cmd)
+   --- End of inner exception stack trace ---
+   at NHibernate.AdoNet.AbstractBatcher.Prepare(IDbCommand cmd)
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+   at NHibernate.Loader.Loader.GetResultSet(IDbCommand st, Boolean autoDiscoverTypes, Boolean callable, RowSelection selection, ISessionImplementor session)
+2012-09-07 16:14:47,355 [Worker.13] ERROR NHibernate.Util.ADOExceptionReporter [(null)] <(null)> - While preparing SELECT consultant0_.Id as Id2_0_, consultant0_.Forename as Forename2_0_, consultant0_.Surname as Surname2_0_ FROM Consultant consultant0_ WHERE consultant0_.Id=@p0 an error occurred
+2012-09-07 16:14:47,356 [Worker.13] WARN  NHibernate.Util.ADOExceptionReporter [(null)] <(null)> - System.InvalidOperationException: The connection object can not be enlisted in transaction scope.
+   at System.Data.SqlServerCe.SqlCeConnection.Enlist(Transaction tx)
+   at System.Data.SqlServerCe.SqlCeConnection.Open()
+   at NHibernate.Connection.DriverConnectionProvider.GetConnection()
+   at NHibernate.AdoNet.ConnectionManager.GetConnection()
+   at NHibernate.AdoNet.AbstractBatcher.Prepare(IDbCommand cmd)
+2012-09-07 16:14:47,359 [Worker.13] ERROR NHibernate.Util.ADOExceptionReporter [(null)] <(null)> - The connection object can not be enlisted in transaction scope.
+2012-09-07 16:14:47,395 [Worker.13] INFO  NHibernate.Event.Default.DefaultLoadEventListener [(null)] <(null)> - Error performing load command
+NHibernate.ADOException: While preparing SELECT consultant0_.Id as Id2_0_, consultant0_.Forename as Forename2_0_, consultant0_.Surname as Surname2_0_ FROM Consultant consultant0_ WHERE consultant0_.Id=@p0 an error occurred ---> System.InvalidOperationException: The connection object can not be enlisted in transaction scope.
+   at System.Data.SqlServerCe.SqlCeConnection.Enlist(Transaction tx)
+   at System.Data.SqlServerCe.SqlCeConnection.Open()
+   at NHibernate.Connection.DriverConnectionProvider.GetConnection()
+   at NHibernate.AdoNet.ConnectionManager.GetConnection()
+   at NHibernate.AdoNet.AbstractBatcher.Prepare(IDbCommand cmd)
+   --- End of inner exception stack trace ---
+   at NHibernate.AdoNet.AbstractBatcher.Prepare(IDbCommand cmd)
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+   at NHibernate.Loader.Loader.GetResultSet(IDbCommand st, Boolean autoDiscoverTypes, Boolean callable, RowSelection selection, ISessionImplementor session)
+   at NHibernate.Loader.Loader.DoQuery(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies)
+   at NHibernate.Loader.Loader.DoQueryAndInitializeNonLazyCollections(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies)
+   at NHibernate.Loader.Loader.LoadEntity(ISessionImplementor session, Object id, IType identifierType, Object optionalObject, String optionalEntityName, Object optionalIdentifier, IEntityPersister persister)
+   at NHibernate.Loader.Entity.AbstractEntityLoader.Load(ISessionImplementor session, Object id, Object optionalObject, Object optionalId)
+   at NHibernate.Loader.Entity.AbstractEntityLoader.Load(Object id, Object optionalObject, ISessionImplementor session)
+   at NHibernate.Persister.Entity.AbstractEntityPersister.Load(Object id, Object optionalObject, LockMode lockMode, ISessionImplementor session)
+   at NHibernate.Event.Default.DefaultLoadEventListener.LoadFromDatasource(LoadEvent event, IEntityPersister persister, EntityKey keyToLoad, LoadType options)
+   at NHibernate.Event.Default.DefaultLoadEventListener.DoLoad(LoadEvent event, IEntityPersister persister, EntityKey keyToLoad, LoadType options)
+   at NHibernate.Event.Default.DefaultLoadEventListener.Load(LoadEvent event, IEntityPersister persister, EntityKey keyToLoad, LoadType options)
+   at NHibernate.Event.Default.DefaultLoadEventListener.ProxyOrLoad(LoadEvent event, IEntityPersister persister, EntityKey keyToLoad, LoadType options)
+   at NHibernate.Event.Default.DefaultLoadEventListener.OnLoad(LoadEvent event, LoadType loadType)
+2012-09-07 16:18:13,912 [1] INFO  NHibernate.Cfg.Environment [(null)] <(null)> - NHibernate 3.0.0.4000 (3.0.0.4000)
+2012-09-07 16:18:14,000 [1] INFO  NHibernate.Cfg.Environment [(null)] <(null)> - hibernate-configuration section not found in application configuration file
+2012-09-07 16:18:14,002 [1] INFO  NHibernate.Cfg.Environment [(null)] <(null)> - Bytecode provider name : lcg
+2012-09-07 16:18:14,006 [1] INFO  NHibernate.Cfg.Environment [(null)] <(null)> - Using reflection optimizer
+2012-09-07 16:18:14,626 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - Searching for mapped documents in assembly: Sales.Data
+2012-09-07 16:18:14,631 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - Mapping resource: Sales.Data.Mappers.TimeAllocation.hbm.xml
+2012-09-07 16:18:15,796 [1] INFO  NHibernate.Dialect.Dialect [(null)] <(null)> - Using dialect: NHibernate.Dialect.MsSqlCeDialect
+2012-09-07 16:18:15,930 [1] INFO  NHibernate.Cfg.XmlHbmBinding.Binder [(null)] <(null)> - Mapping class: Sales.Domain.Entities.TimeAllocation -> TimeAllocation
+2012-09-07 16:18:16,078 [1] INFO  NHibernate.Cfg.XmlHbmBinding.Binder [(null)] <(null)> - Mapping joined-subclass: Sales.Domain.Entities.Appointment -> Appointment
+2012-09-07 16:18:16,099 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - Mapping resource: Sales.Data.Mappers.Consultant.hbm.xml
+2012-09-07 16:18:16,121 [1] INFO  NHibernate.Dialect.Dialect [(null)] <(null)> - Using dialect: NHibernate.Dialect.MsSqlCeDialect
+2012-09-07 16:18:16,123 [1] INFO  NHibernate.Cfg.XmlHbmBinding.Binder [(null)] <(null)> - Mapping class: Sales.Domain.Entities.Consultant -> Consultant
+2012-09-07 16:18:16,178 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - checking mappings queue
+2012-09-07 16:18:16,181 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - processing one-to-many association mappings
+2012-09-07 16:18:16,188 [1] INFO  NHibernate.Cfg.XmlHbmBinding.Binder [(null)] <(null)> - mapping collection: Sales.Domain.Entities.Consultant.TimeAllocations -> TimeAllocation
+2012-09-07 16:18:16,204 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - processing one-to-one association property references
+2012-09-07 16:18:16,206 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - processing foreign key constraints
+2012-09-07 16:18:16,219 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - processing filters (second pass)
+2012-09-07 16:18:16,291 [1] INFO  NHibernate.Dialect.Dialect [(null)] <(null)> - Using dialect: NHibernate.Dialect.MsSqlCeDialect
+2012-09-07 16:18:16,359 [1] INFO  NHibernate.Exceptions.SQLExceptionConverterFactory [(null)] <(null)> - Using dialect defined converter
+2012-09-07 16:18:16,362 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Generate SQL with comments: disabled
+2012-09-07 16:18:16,367 [1] INFO  NHibernate.Connection.ConnectionProviderFactory [(null)] <(null)> - Initializing connection provider: NHibernate.Connection.DriverConnectionProvider
+2012-09-07 16:18:16,371 [1] INFO  NHibernate.Connection.ConnectionProvider [(null)] <(null)> - Configuring ConnectionProvider
+2012-09-07 16:18:16,435 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Transaction factory: NHibernate.Transaction.AdoNetWithDistributedTransactionFactory
+2012-09-07 16:18:16,449 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Optimize cache for minimal puts: False
+2012-09-07 16:18:16,450 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Connection release mode: auto
+2012-09-07 16:18:16,452 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Default batch fetch size: 1
+2012-09-07 16:18:16,454 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - echoing all SQL to stdout
+2012-09-07 16:18:16,456 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Statistics: disabled
+2012-09-07 16:18:16,457 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Deleted entity synthetic identifier rollback: disabled
+2012-09-07 16:18:16,459 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Query translator: NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory
+2012-09-07 16:18:16,464 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Query language substitutions: {}
+2012-09-07 16:18:16,469 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - cache provider: NHibernate.Cache.NoCacheProvider, NHibernate, Version=3.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+2012-09-07 16:18:16,473 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Batcher factory: NHibernate.AdoNet.NonBatchingBatcherFactory, NHibernate, Version=3.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+2012-09-07 16:18:16,475 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Default entity-mode: Poco
+2012-09-07 16:18:16,478 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Named query checking : enabled
+2012-09-07 16:18:16,529 [1] INFO  NHibernate.Impl.SessionFactoryImpl [(null)] <(null)> - building session factory
+2012-09-07 16:18:17,669 [1] INFO  NHibernate.Impl.SessionFactoryObjectFactory [(null)] <(null)> - no name configured
+2012-09-07 16:18:17,808 [1] INFO  NServiceBus.Licensing [(null)] <(null)> - Checking available license...
+2012-09-07 16:18:17,812 [1] INFO  NServiceBus.Licensing [(null)] <(null)> - Could not find license file: F:\Experimental\EdaCalendarExample\Sales.NServiceBusServer\bin\Debug\License\License.xml
+2012-09-07 16:18:17,826 [1] WARN  NServiceBus.Licensing [(null)] <(null)> - No valid license file was found. The host will be limited to a throughput of 1msg/s.
+2012-09-07 16:18:17,845 [1] INFO  NServiceBus.Hosting.Roles.RoleManager [(null)] <(null)> - Role NServiceBus.AsA_Server configured
+2012-09-07 16:18:18,140 [1] INFO  NServiceBus.Host [(null)] <(null)> - Going to activate profile: NServiceBus.Production, NServiceBus.Host, Version=3.2.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c
+2012-09-07 16:18:18,143 [1] INFO  NServiceBus.Host [(null)] <(null)> - Going to activate profile: NServiceBus.PerformanceCounters, NServiceBus.Host, Version=3.2.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c
+2012-09-07 16:18:46,232 [Worker.12] INFO  NHibernate.Loader.Loader [(null)] <(null)> - SELECT consultant0_.Id as Id2_0_, consultant0_.Forename as Forename2_0_, consultant0_.Surname as Surname2_0_ FROM Consultant consultant0_ WHERE consultant0_.Id=@p0
+2012-09-07 16:18:46,322 [Worker.12] WARN  NHibernate.Util.ADOExceptionReporter [(null)] <(null)> - NHibernate.ADOException: While preparing SELECT consultant0_.Id as Id2_0_, consultant0_.Forename as Forename2_0_, consultant0_.Surname as Surname2_0_ FROM Consultant consultant0_ WHERE consultant0_.Id=@p0 an error occurred ---> System.InvalidOperationException: The connection object can not be enlisted in transaction scope.
+   at System.Data.SqlServerCe.SqlCeConnection.Enlist(Transaction tx)
+   at System.Data.SqlServerCe.SqlCeConnection.Open()
+   at NHibernate.Connection.DriverConnectionProvider.GetConnection()
+   at NHibernate.AdoNet.ConnectionManager.GetConnection()
+   at NHibernate.AdoNet.AbstractBatcher.Prepare(IDbCommand cmd)
+   --- End of inner exception stack trace ---
+   at NHibernate.AdoNet.AbstractBatcher.Prepare(IDbCommand cmd)
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+   at NHibernate.Loader.Loader.GetResultSet(IDbCommand st, Boolean autoDiscoverTypes, Boolean callable, RowSelection selection, ISessionImplementor session)
+2012-09-07 16:18:46,326 [Worker.12] ERROR NHibernate.Util.ADOExceptionReporter [(null)] <(null)> - While preparing SELECT consultant0_.Id as Id2_0_, consultant0_.Forename as Forename2_0_, consultant0_.Surname as Surname2_0_ FROM Consultant consultant0_ WHERE consultant0_.Id=@p0 an error occurred
+2012-09-07 16:18:46,328 [Worker.12] WARN  NHibernate.Util.ADOExceptionReporter [(null)] <(null)> - System.InvalidOperationException: The connection object can not be enlisted in transaction scope.
+   at System.Data.SqlServerCe.SqlCeConnection.Enlist(Transaction tx)
+   at System.Data.SqlServerCe.SqlCeConnection.Open()
+   at NHibernate.Connection.DriverConnectionProvider.GetConnection()
+   at NHibernate.AdoNet.ConnectionManager.GetConnection()
+   at NHibernate.AdoNet.AbstractBatcher.Prepare(IDbCommand cmd)
+2012-09-07 16:18:46,330 [Worker.12] ERROR NHibernate.Util.ADOExceptionReporter [(null)] <(null)> - The connection object can not be enlisted in transaction scope.
+2012-09-07 16:18:46,368 [Worker.12] INFO  NHibernate.Event.Default.DefaultLoadEventListener [(null)] <(null)> - Error performing load command
+NHibernate.ADOException: While preparing SELECT consultant0_.Id as Id2_0_, consultant0_.Forename as Forename2_0_, consultant0_.Surname as Surname2_0_ FROM Consultant consultant0_ WHERE consultant0_.Id=@p0 an error occurred ---> System.InvalidOperationException: The connection object can not be enlisted in transaction scope.
+   at System.Data.SqlServerCe.SqlCeConnection.Enlist(Transaction tx)
+   at System.Data.SqlServerCe.SqlCeConnection.Open()
+   at NHibernate.Connection.DriverConnectionProvider.GetConnection()
+   at NHibernate.AdoNet.ConnectionManager.GetConnection()
+   at NHibernate.AdoNet.AbstractBatcher.Prepare(IDbCommand cmd)
+   --- End of inner exception stack trace ---
+   at NHibernate.AdoNet.AbstractBatcher.Prepare(IDbCommand cmd)
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+   at NHibernate.Loader.Loader.GetResultSet(IDbCommand st, Boolean autoDiscoverTypes, Boolean callable, RowSelection selection, ISessionImplementor session)
+   at NHibernate.Loader.Loader.DoQuery(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies)
+   at NHibernate.Loader.Loader.DoQueryAndInitializeNonLazyCollections(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies)
+   at NHibernate.Loader.Loader.LoadEntity(ISessionImplementor session, Object id, IType identifierType, Object optionalObject, String optionalEntityName, Object optionalIdentifier, IEntityPersister persister)
+   at NHibernate.Loader.Entity.AbstractEntityLoader.Load(ISessionImplementor session, Object id, Object optionalObject, Object optionalId)
+   at NHibernate.Loader.Entity.AbstractEntityLoader.Load(Object id, Object optionalObject, ISessionImplementor session)
+   at NHibernate.Persister.Entity.AbstractEntityPersister.Load(Object id, Object optionalObject, LockMode lockMode, ISessionImplementor session)
+   at NHibernate.Event.Default.DefaultLoadEventListener.LoadFromDatasource(LoadEvent event, IEntityPersister persister, EntityKey keyToLoad, LoadType options)
+   at NHibernate.Event.Default.DefaultLoadEventListener.DoLoad(LoadEvent event, IEntityPersister persister, EntityKey keyToLoad, LoadType options)
+   at NHibernate.Event.Default.DefaultLoadEventListener.Load(LoadEvent event, IEntityPersister persister, EntityKey keyToLoad, LoadType options)
+   at NHibernate.Event.Default.DefaultLoadEventListener.ProxyOrLoad(LoadEvent event, IEntityPersister persister, EntityKey keyToLoad, LoadType options)
+   at NHibernate.Event.Default.DefaultLoadEventListener.OnLoad(LoadEvent event, LoadType loadType)
+2012-09-07 16:35:02,753 [1] INFO  NHibernate.Cfg.Environment [(null)] <(null)> - NHibernate 3.0.0.4000 (3.0.0.4000)
+2012-09-07 16:35:02,836 [1] INFO  NHibernate.Cfg.Environment [(null)] <(null)> - hibernate-configuration section not found in application configuration file
+2012-09-07 16:35:02,839 [1] INFO  NHibernate.Cfg.Environment [(null)] <(null)> - Bytecode provider name : lcg
+2012-09-07 16:35:02,842 [1] INFO  NHibernate.Cfg.Environment [(null)] <(null)> - Using reflection optimizer
+2012-09-07 16:35:03,454 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - Searching for mapped documents in assembly: Sales.Data
+2012-09-07 16:35:03,460 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - Mapping resource: Sales.Data.Mappers.TimeAllocation.hbm.xml
+2012-09-07 16:35:04,641 [1] INFO  NHibernate.Dialect.Dialect [(null)] <(null)> - Using dialect: NHibernate.Dialect.MsSqlCeDialect
+2012-09-07 16:35:04,784 [1] INFO  NHibernate.Cfg.XmlHbmBinding.Binder [(null)] <(null)> - Mapping class: Sales.Domain.Entities.TimeAllocation -> TimeAllocation
+2012-09-07 16:35:04,933 [1] INFO  NHibernate.Cfg.XmlHbmBinding.Binder [(null)] <(null)> - Mapping joined-subclass: Sales.Domain.Entities.Appointment -> Appointment
+2012-09-07 16:35:04,955 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - Mapping resource: Sales.Data.Mappers.Consultant.hbm.xml
+2012-09-07 16:35:04,977 [1] INFO  NHibernate.Dialect.Dialect [(null)] <(null)> - Using dialect: NHibernate.Dialect.MsSqlCeDialect
+2012-09-07 16:35:04,979 [1] INFO  NHibernate.Cfg.XmlHbmBinding.Binder [(null)] <(null)> - Mapping class: Sales.Domain.Entities.Consultant -> Consultant
+2012-09-07 16:35:05,049 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - checking mappings queue
+2012-09-07 16:35:05,052 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - processing one-to-many association mappings
+2012-09-07 16:35:05,059 [1] INFO  NHibernate.Cfg.XmlHbmBinding.Binder [(null)] <(null)> - mapping collection: Sales.Domain.Entities.Consultant.TimeAllocations -> TimeAllocation
+2012-09-07 16:35:05,082 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - processing one-to-one association property references
+2012-09-07 16:35:05,084 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - processing foreign key constraints
+2012-09-07 16:35:05,097 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - processing filters (second pass)
+2012-09-07 16:35:05,172 [1] INFO  NHibernate.Dialect.Dialect [(null)] <(null)> - Using dialect: NHibernate.Dialect.MsSqlCeDialect
+2012-09-07 16:35:05,236 [1] INFO  NHibernate.Exceptions.SQLExceptionConverterFactory [(null)] <(null)> - Using dialect defined converter
+2012-09-07 16:35:05,239 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Generate SQL with comments: disabled
+2012-09-07 16:35:05,243 [1] INFO  NHibernate.Connection.ConnectionProviderFactory [(null)] <(null)> - Initializing connection provider: NHibernate.Connection.DriverConnectionProvider
+2012-09-07 16:35:05,246 [1] INFO  NHibernate.Connection.ConnectionProvider [(null)] <(null)> - Configuring ConnectionProvider
+2012-09-07 16:35:05,282 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Transaction factory: NHibernate.Transaction.AdoNetWithDistributedTransactionFactory
+2012-09-07 16:35:05,293 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Optimize cache for minimal puts: False
+2012-09-07 16:35:05,295 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Connection release mode: auto
+2012-09-07 16:35:05,298 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Default batch fetch size: 1
+2012-09-07 16:35:05,300 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - echoing all SQL to stdout
+2012-09-07 16:35:05,302 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Statistics: disabled
+2012-09-07 16:35:05,304 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Deleted entity synthetic identifier rollback: disabled
+2012-09-07 16:35:05,306 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Query translator: NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory
+2012-09-07 16:35:05,312 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Query language substitutions: {}
+2012-09-07 16:35:05,318 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - cache provider: NHibernate.Cache.NoCacheProvider, NHibernate, Version=3.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+2012-09-07 16:35:05,324 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Batcher factory: NHibernate.AdoNet.NonBatchingBatcherFactory, NHibernate, Version=3.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+2012-09-07 16:35:05,328 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Default entity-mode: Poco
+2012-09-07 16:35:05,330 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Named query checking : enabled
+2012-09-07 16:35:05,378 [1] INFO  NHibernate.Impl.SessionFactoryImpl [(null)] <(null)> - building session factory
+2012-09-07 16:35:06,568 [1] INFO  NHibernate.Impl.SessionFactoryObjectFactory [(null)] <(null)> - no name configured
+2012-09-07 16:35:06,643 [1] INFO  NServiceBus.Licensing [(null)] <(null)> - Checking available license...
+2012-09-07 16:35:06,646 [1] INFO  NServiceBus.Licensing [(null)] <(null)> - Could not find license file: F:\Experimental\EdaCalendarExample\Sales.NServiceBusServer\bin\Debug\License\License.xml
+2012-09-07 16:35:06,662 [1] WARN  NServiceBus.Licensing [(null)] <(null)> - No valid license file was found. The host will be limited to a throughput of 1msg/s.
+2012-09-07 16:35:06,678 [1] INFO  NServiceBus.Hosting.Roles.RoleManager [(null)] <(null)> - Role NServiceBus.AsA_Server configured
+2012-09-07 16:35:06,904 [1] INFO  NServiceBus.Host [(null)] <(null)> - Going to activate profile: NServiceBus.Production, NServiceBus.Host, Version=3.2.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c
+2012-09-07 16:35:06,907 [1] INFO  NServiceBus.Host [(null)] <(null)> - Going to activate profile: NServiceBus.PerformanceCounters, NServiceBus.Host, Version=3.2.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c
+2012-09-07 16:35:25,153 [Worker.12] INFO  NHibernate.Loader.Loader [(null)] <(null)> - SELECT consultant0_.Id as Id2_0_, consultant0_.Forename as Forename2_0_, consultant0_.Surname as Surname2_0_ FROM Consultant consultant0_ WHERE consultant0_.Id=@p0
+2012-09-07 16:35:25,250 [Worker.12] WARN  NHibernate.Util.ADOExceptionReporter [(null)] <(null)> - NHibernate.ADOException: While preparing SELECT consultant0_.Id as Id2_0_, consultant0_.Forename as Forename2_0_, consultant0_.Surname as Surname2_0_ FROM Consultant consultant0_ WHERE consultant0_.Id=@p0 an error occurred ---> System.InvalidOperationException: The connection object can not be enlisted in transaction scope.
+   at System.Data.SqlServerCe.SqlCeConnection.Enlist(Transaction tx)
+   at System.Data.SqlServerCe.SqlCeConnection.Open()
+   at NHibernate.Connection.DriverConnectionProvider.GetConnection()
+   at NHibernate.AdoNet.ConnectionManager.GetConnection()
+   at NHibernate.AdoNet.AbstractBatcher.Prepare(IDbCommand cmd)
+   --- End of inner exception stack trace ---
+   at NHibernate.AdoNet.AbstractBatcher.Prepare(IDbCommand cmd)
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+   at NHibernate.Loader.Loader.GetResultSet(IDbCommand st, Boolean autoDiscoverTypes, Boolean callable, RowSelection selection, ISessionImplementor session)
+2012-09-07 16:35:25,262 [Worker.12] ERROR NHibernate.Util.ADOExceptionReporter [(null)] <(null)> - While preparing SELECT consultant0_.Id as Id2_0_, consultant0_.Forename as Forename2_0_, consultant0_.Surname as Surname2_0_ FROM Consultant consultant0_ WHERE consultant0_.Id=@p0 an error occurred
+2012-09-07 16:35:25,264 [Worker.12] WARN  NHibernate.Util.ADOExceptionReporter [(null)] <(null)> - System.InvalidOperationException: The connection object can not be enlisted in transaction scope.
+   at System.Data.SqlServerCe.SqlCeConnection.Enlist(Transaction tx)
+   at System.Data.SqlServerCe.SqlCeConnection.Open()
+   at NHibernate.Connection.DriverConnectionProvider.GetConnection()
+   at NHibernate.AdoNet.ConnectionManager.GetConnection()
+   at NHibernate.AdoNet.AbstractBatcher.Prepare(IDbCommand cmd)
+2012-09-07 16:35:25,267 [Worker.12] ERROR NHibernate.Util.ADOExceptionReporter [(null)] <(null)> - The connection object can not be enlisted in transaction scope.
+2012-09-07 16:35:25,303 [Worker.12] INFO  NHibernate.Event.Default.DefaultLoadEventListener [(null)] <(null)> - Error performing load command
+NHibernate.ADOException: While preparing SELECT consultant0_.Id as Id2_0_, consultant0_.Forename as Forename2_0_, consultant0_.Surname as Surname2_0_ FROM Consultant consultant0_ WHERE consultant0_.Id=@p0 an error occurred ---> System.InvalidOperationException: The connection object can not be enlisted in transaction scope.
+   at System.Data.SqlServerCe.SqlCeConnection.Enlist(Transaction tx)
+   at System.Data.SqlServerCe.SqlCeConnection.Open()
+   at NHibernate.Connection.DriverConnectionProvider.GetConnection()
+   at NHibernate.AdoNet.ConnectionManager.GetConnection()
+   at NHibernate.AdoNet.AbstractBatcher.Prepare(IDbCommand cmd)
+   --- End of inner exception stack trace ---
+   at NHibernate.AdoNet.AbstractBatcher.Prepare(IDbCommand cmd)
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+   at NHibernate.Loader.Loader.GetResultSet(IDbCommand st, Boolean autoDiscoverTypes, Boolean callable, RowSelection selection, ISessionImplementor session)
+   at NHibernate.Loader.Loader.DoQuery(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies)
+   at NHibernate.Loader.Loader.DoQueryAndInitializeNonLazyCollections(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies)
+   at NHibernate.Loader.Loader.LoadEntity(ISessionImplementor session, Object id, IType identifierType, Object optionalObject, String optionalEntityName, Object optionalIdentifier, IEntityPersister persister)
+   at NHibernate.Loader.Entity.AbstractEntityLoader.Load(ISessionImplementor session, Object id, Object optionalObject, Object optionalId)
+   at NHibernate.Loader.Entity.AbstractEntityLoader.Load(Object id, Object optionalObject, ISessionImplementor session)
+   at NHibernate.Persister.Entity.AbstractEntityPersister.Load(Object id, Object optionalObject, LockMode lockMode, ISessionImplementor session)
+   at NHibernate.Event.Default.DefaultLoadEventListener.LoadFromDatasource(LoadEvent event, IEntityPersister persister, EntityKey keyToLoad, LoadType options)
+   at NHibernate.Event.Default.DefaultLoadEventListener.DoLoad(LoadEvent event, IEntityPersister persister, EntityKey keyToLoad, LoadType options)
+   at NHibernate.Event.Default.DefaultLoadEventListener.Load(LoadEvent event, IEntityPersister persister, EntityKey keyToLoad, LoadType options)
+   at NHibernate.Event.Default.DefaultLoadEventListener.ProxyOrLoad(LoadEvent event, IEntityPersister persister, EntityKey keyToLoad, LoadType options)
+   at NHibernate.Event.Default.DefaultLoadEventListener.OnLoad(LoadEvent event, LoadType loadType)
+2012-09-07 17:14:22,470 [1] INFO  NHibernate.Cfg.Environment [(null)] <(null)> - NHibernate 3.0.0.4000 (3.0.0.4000)
+2012-09-07 17:14:22,609 [1] INFO  NHibernate.Cfg.Environment [(null)] <(null)> - hibernate-configuration section not found in application configuration file
+2012-09-07 17:14:22,611 [1] INFO  NHibernate.Cfg.Environment [(null)] <(null)> - Bytecode provider name : lcg
+2012-09-07 17:14:22,615 [1] INFO  NHibernate.Cfg.Environment [(null)] <(null)> - Using reflection optimizer
+2012-09-07 17:14:23,285 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - Searching for mapped documents in assembly: Sales.Data
+2012-09-07 17:14:23,291 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - Mapping resource: Sales.Data.Mappers.TimeAllocation.hbm.xml
+2012-09-07 17:14:24,510 [1] INFO  NHibernate.Dialect.Dialect [(null)] <(null)> - Using dialect: NHibernate.Dialect.MsSqlCeDialect
+2012-09-07 17:14:24,669 [1] INFO  NHibernate.Cfg.XmlHbmBinding.Binder [(null)] <(null)> - Mapping class: Sales.Domain.Entities.TimeAllocation -> TimeAllocation
+2012-09-07 17:14:24,822 [1] INFO  NHibernate.Cfg.XmlHbmBinding.Binder [(null)] <(null)> - Mapping joined-subclass: Sales.Domain.Entities.Appointment -> Appointment
+2012-09-07 17:14:24,845 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - Mapping resource: Sales.Data.Mappers.Consultant.hbm.xml
+2012-09-07 17:14:24,867 [1] INFO  NHibernate.Dialect.Dialect [(null)] <(null)> - Using dialect: NHibernate.Dialect.MsSqlCeDialect
+2012-09-07 17:14:24,869 [1] INFO  NHibernate.Cfg.XmlHbmBinding.Binder [(null)] <(null)> - Mapping class: Sales.Domain.Entities.Consultant -> Consultant
+2012-09-07 17:14:24,933 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - checking mappings queue
+2012-09-07 17:14:24,936 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - processing one-to-many association mappings
+2012-09-07 17:14:24,943 [1] INFO  NHibernate.Cfg.XmlHbmBinding.Binder [(null)] <(null)> - mapping collection: Sales.Domain.Entities.Consultant.TimeAllocations -> TimeAllocation
+2012-09-07 17:14:24,959 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - processing one-to-one association property references
+2012-09-07 17:14:24,961 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - processing foreign key constraints
+2012-09-07 17:14:24,974 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - processing filters (second pass)
+2012-09-07 17:14:25,041 [1] INFO  NHibernate.Dialect.Dialect [(null)] <(null)> - Using dialect: NHibernate.Dialect.MsSqlCeDialect
+2012-09-07 17:14:25,104 [1] INFO  NHibernate.Exceptions.SQLExceptionConverterFactory [(null)] <(null)> - Using dialect defined converter
+2012-09-07 17:14:25,108 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Generate SQL with comments: disabled
+2012-09-07 17:14:25,114 [1] INFO  NHibernate.Connection.ConnectionProviderFactory [(null)] <(null)> - Initializing connection provider: NHibernate.Connection.DriverConnectionProvider
+2012-09-07 17:14:25,118 [1] INFO  NHibernate.Connection.ConnectionProvider [(null)] <(null)> - Configuring ConnectionProvider
+2012-09-07 17:14:25,158 [1] ERROR NHibernate.Util.ReflectHelper [(null)] <(null)> - Could not load type System.Data.SqlServerCe.SqlCeConnection, System.Data.SqlServerCe.
+System.IO.FileNotFoundException: Could not load file or assembly 'System.Data.SqlServerCe' or one of its dependencies. The system cannot find the file specified.
+File name: 'System.Data.SqlServerCe'
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at NHibernate.Util.ReflectHelper.TypeFromAssembly(AssemblyQualifiedTypeName name, Boolean throwOnError)
+
+=== Pre-bind state information ===
+LOG: User = HQ\paul.davies
+LOG: DisplayName = System.Data.SqlServerCe
+ (Partial)
+WRN: Partial binding information was supplied for an assembly:
+WRN: Assembly Name: System.Data.SqlServerCe | Domain ID: 2
+WRN: A partial bind occurs when only part of the assembly display name is provided.
+WRN: This might result in the binder loading an incorrect assembly.
+WRN: It is recommended to provide a fully specified textual identity for the assembly,
+WRN: that consists of the simple name, version, culture, and public key token.
+WRN: See whitepaper http://go.microsoft.com/fwlink/?LinkId=109270 for more information and common solutions to this issue.
+LOG: Appbase = file:///F:/Experimental/EdaCalendarExample/Sales.NServiceBusServer/bin/Debug/
+LOG: Initial PrivatePath = NULL
+Calling assembly : NHibernate, Version=3.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4.
+===
+LOG: This bind starts in default load context.
+LOG: Using application configuration file: F:\Experimental\EdaCalendarExample\Sales.NServiceBusServer\bin\Debug\Sales.NServiceBusServer.dll.config
+LOG: Using host configuration file: 
+LOG: Using machine configuration file from C:\Windows\Microsoft.NET\Framework64\v4.0.30319\config\machine.config.
+LOG: Policy not being applied to reference at this time (private, custom, partial, or location-based assembly bind).
+LOG: The same bind was seen before, and was failed with hr = 0x80070002.
+
+2012-09-07 17:14:25,193 [1] ERROR NHibernate.Util.ReflectHelper [(null)] <(null)> - Could not load type System.Data.SqlServerCe.SqlCeCommand, System.Data.SqlServerCe.
+System.IO.FileNotFoundException: Could not load file or assembly 'System.Data.SqlServerCe' or one of its dependencies. The system cannot find the file specified.
+File name: 'System.Data.SqlServerCe'
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at NHibernate.Util.ReflectHelper.TypeFromAssembly(AssemblyQualifiedTypeName name, Boolean throwOnError)
+
+=== Pre-bind state information ===
+LOG: User = HQ\paul.davies
+LOG: DisplayName = System.Data.SqlServerCe
+ (Partial)
+WRN: Partial binding information was supplied for an assembly:
+WRN: Assembly Name: System.Data.SqlServerCe | Domain ID: 2
+WRN: A partial bind occurs when only part of the assembly display name is provided.
+WRN: This might result in the binder loading an incorrect assembly.
+WRN: It is recommended to provide a fully specified textual identity for the assembly,
+WRN: that consists of the simple name, version, culture, and public key token.
+WRN: See whitepaper http://go.microsoft.com/fwlink/?LinkId=109270 for more information and common solutions to this issue.
+LOG: Appbase = file:///F:/Experimental/EdaCalendarExample/Sales.NServiceBusServer/bin/Debug/
+LOG: Initial PrivatePath = NULL
+Calling assembly : NHibernate, Version=3.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4.
+===
+LOG: This bind starts in default load context.
+LOG: Using application configuration file: F:\Experimental\EdaCalendarExample\Sales.NServiceBusServer\bin\Debug\Sales.NServiceBusServer.dll.config
+LOG: Using host configuration file: 
+LOG: Using machine configuration file from C:\Windows\Microsoft.NET\Framework64\v4.0.30319\config\machine.config.
+LOG: Policy not being applied to reference at this time (private, custom, partial, or location-based assembly bind).
+LOG: The same bind was seen before, and was failed with hr = 0x80070002.
+
+2012-09-07 17:18:10,110 [1] INFO  NHibernate.Cfg.Environment [(null)] <(null)> - NHibernate 3.0.0.4000 (3.0.0.4000)
+2012-09-07 17:18:10,200 [1] INFO  NHibernate.Cfg.Environment [(null)] <(null)> - hibernate-configuration section not found in application configuration file
+2012-09-07 17:18:10,203 [1] INFO  NHibernate.Cfg.Environment [(null)] <(null)> - Bytecode provider name : lcg
+2012-09-07 17:18:10,207 [1] INFO  NHibernate.Cfg.Environment [(null)] <(null)> - Using reflection optimizer
+2012-09-07 17:18:10,923 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - Searching for mapped documents in assembly: Sales.Data
+2012-09-07 17:18:10,928 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - Mapping resource: Sales.Data.Mappers.TimeAllocation.hbm.xml
+2012-09-07 17:18:12,087 [1] INFO  NHibernate.Dialect.Dialect [(null)] <(null)> - Using dialect: NHibernate.Dialect.MsSql2005Dialect
+2012-09-07 17:18:12,219 [1] INFO  NHibernate.Cfg.XmlHbmBinding.Binder [(null)] <(null)> - Mapping class: Sales.Domain.Entities.TimeAllocation -> TimeAllocation
+2012-09-07 17:18:12,343 [1] INFO  NHibernate.Cfg.XmlHbmBinding.Binder [(null)] <(null)> - Mapping joined-subclass: Sales.Domain.Entities.Appointment -> Appointment
+2012-09-07 17:18:12,364 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - Mapping resource: Sales.Data.Mappers.Consultant.hbm.xml
+2012-09-07 17:18:12,384 [1] INFO  NHibernate.Dialect.Dialect [(null)] <(null)> - Using dialect: NHibernate.Dialect.MsSql2005Dialect
+2012-09-07 17:18:12,386 [1] INFO  NHibernate.Cfg.XmlHbmBinding.Binder [(null)] <(null)> - Mapping class: Sales.Domain.Entities.Consultant -> Consultant
+2012-09-07 17:18:12,427 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - checking mappings queue
+2012-09-07 17:18:12,430 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - processing one-to-many association mappings
+2012-09-07 17:18:12,436 [1] INFO  NHibernate.Cfg.XmlHbmBinding.Binder [(null)] <(null)> - mapping collection: Sales.Domain.Entities.Consultant.TimeAllocations -> TimeAllocation
+2012-09-07 17:18:12,453 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - processing one-to-one association property references
+2012-09-07 17:18:12,455 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - processing foreign key constraints
+2012-09-07 17:18:12,468 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - processing filters (second pass)
+2012-09-07 17:18:12,532 [1] INFO  NHibernate.Dialect.Dialect [(null)] <(null)> - Using dialect: NHibernate.Dialect.MsSql2005Dialect
+2012-09-07 17:18:12,594 [1] INFO  NHibernate.Exceptions.SQLExceptionConverterFactory [(null)] <(null)> - Using dialect defined converter
+2012-09-07 17:18:12,599 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Generate SQL with comments: disabled
+2012-09-07 17:18:12,604 [1] INFO  NHibernate.Connection.ConnectionProviderFactory [(null)] <(null)> - Initializing connection provider: NHibernate.Connection.DriverConnectionProvider
+2012-09-07 17:18:12,609 [1] INFO  NHibernate.Connection.ConnectionProvider [(null)] <(null)> - Configuring ConnectionProvider
+2012-09-07 17:18:12,615 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Transaction factory: NHibernate.Transaction.AdoNetWithDistributedTransactionFactory
+2012-09-07 17:18:12,619 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Optimize cache for minimal puts: False
+2012-09-07 17:18:12,621 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Connection release mode: auto
+2012-09-07 17:18:12,624 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Default batch fetch size: 1
+2012-09-07 17:18:12,626 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - echoing all SQL to stdout
+2012-09-07 17:18:12,628 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Statistics: disabled
+2012-09-07 17:18:12,629 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Deleted entity synthetic identifier rollback: disabled
+2012-09-07 17:18:12,632 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Query translator: NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory
+2012-09-07 17:18:12,637 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Query language substitutions: {}
+2012-09-07 17:18:12,644 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - cache provider: NHibernate.Cache.NoCacheProvider, NHibernate, Version=3.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+2012-09-07 17:18:12,649 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Batcher factory: NHibernate.AdoNet.NonBatchingBatcherFactory, NHibernate, Version=3.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+2012-09-07 17:18:12,653 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Default entity-mode: Poco
+2012-09-07 17:18:12,655 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Named query checking : enabled
+2012-09-07 17:18:12,692 [1] INFO  NHibernate.Impl.SessionFactoryImpl [(null)] <(null)> - building session factory
+2012-09-07 17:18:14,724 [1] INFO  NHibernate.Impl.SessionFactoryObjectFactory [(null)] <(null)> - no name configured
+2012-09-07 17:18:14,796 [1] INFO  NServiceBus.Licensing [(null)] <(null)> - Checking available license...
+2012-09-07 17:18:14,799 [1] INFO  NServiceBus.Licensing [(null)] <(null)> - Could not find license file: F:\Experimental\EdaCalendarExample\Sales.NServiceBusServer\bin\Debug\License\License.xml
+2012-09-07 17:18:14,812 [1] WARN  NServiceBus.Licensing [(null)] <(null)> - No valid license file was found. The host will be limited to a throughput of 1msg/s.
+2012-09-07 17:18:14,827 [1] INFO  NServiceBus.Hosting.Roles.RoleManager [(null)] <(null)> - Role NServiceBus.AsA_Server configured
+2012-09-07 17:18:14,979 [1] INFO  NServiceBus.Host [(null)] <(null)> - Going to activate profile: NServiceBus.Production, NServiceBus.Host, Version=3.2.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c
+2012-09-07 17:18:14,982 [1] INFO  NServiceBus.Host [(null)] <(null)> - Going to activate profile: NServiceBus.PerformanceCounters, NServiceBus.Host, Version=3.2.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c
+2012-09-07 17:18:34,236 [Worker.12] INFO  NHibernate.Loader.Loader [(null)] <(null)> - SELECT consultant0_.Id as Id2_0_, consultant0_.Forename as Forename2_0_, consultant0_.Surname as Surname2_0_ FROM Consultant consultant0_ WHERE consultant0_.Id=@p0
+2012-09-07 17:19:26,138 [1] INFO  NHibernate.Cfg.Environment [(null)] <(null)> - NHibernate 3.0.0.4000 (3.0.0.4000)
+2012-09-07 17:19:26,216 [1] INFO  NHibernate.Cfg.Environment [(null)] <(null)> - hibernate-configuration section not found in application configuration file
+2012-09-07 17:19:26,219 [1] INFO  NHibernate.Cfg.Environment [(null)] <(null)> - Bytecode provider name : lcg
+2012-09-07 17:19:26,222 [1] INFO  NHibernate.Cfg.Environment [(null)] <(null)> - Using reflection optimizer
+2012-09-07 17:19:26,757 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - Searching for mapped documents in assembly: Sales.Data
+2012-09-07 17:19:26,762 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - Mapping resource: Sales.Data.Mappers.TimeAllocation.hbm.xml
+2012-09-07 17:19:27,894 [1] INFO  NHibernate.Dialect.Dialect [(null)] <(null)> - Using dialect: NHibernate.Dialect.MsSql2005Dialect
+2012-09-07 17:19:28,032 [1] INFO  NHibernate.Cfg.XmlHbmBinding.Binder [(null)] <(null)> - Mapping class: Sales.Domain.Entities.TimeAllocation -> TimeAllocation
+2012-09-07 17:19:28,191 [1] INFO  NHibernate.Cfg.XmlHbmBinding.Binder [(null)] <(null)> - Mapping joined-subclass: Sales.Domain.Entities.Appointment -> Appointment
+2012-09-07 17:19:28,213 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - Mapping resource: Sales.Data.Mappers.Consultant.hbm.xml
+2012-09-07 17:19:28,234 [1] INFO  NHibernate.Dialect.Dialect [(null)] <(null)> - Using dialect: NHibernate.Dialect.MsSql2005Dialect
+2012-09-07 17:19:28,236 [1] INFO  NHibernate.Cfg.XmlHbmBinding.Binder [(null)] <(null)> - Mapping class: Sales.Domain.Entities.Consultant -> Consultant
+2012-09-07 17:19:28,306 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - checking mappings queue
+2012-09-07 17:19:28,309 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - processing one-to-many association mappings
+2012-09-07 17:19:28,316 [1] INFO  NHibernate.Cfg.XmlHbmBinding.Binder [(null)] <(null)> - mapping collection: Sales.Domain.Entities.Consultant.TimeAllocations -> TimeAllocation
+2012-09-07 17:19:28,336 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - processing one-to-one association property references
+2012-09-07 17:19:28,338 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - processing foreign key constraints
+2012-09-07 17:19:28,352 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - processing filters (second pass)
+2012-09-07 17:19:28,429 [1] INFO  NHibernate.Dialect.Dialect [(null)] <(null)> - Using dialect: NHibernate.Dialect.MsSql2005Dialect
+2012-09-07 17:19:28,493 [1] INFO  NHibernate.Exceptions.SQLExceptionConverterFactory [(null)] <(null)> - Using dialect defined converter
+2012-09-07 17:19:28,496 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Generate SQL with comments: disabled
+2012-09-07 17:19:28,501 [1] INFO  NHibernate.Connection.ConnectionProviderFactory [(null)] <(null)> - Initializing connection provider: NHibernate.Connection.DriverConnectionProvider
+2012-09-07 17:19:28,506 [1] INFO  NHibernate.Connection.ConnectionProvider [(null)] <(null)> - Configuring ConnectionProvider
+2012-09-07 17:19:28,512 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Transaction factory: NHibernate.Transaction.AdoNetWithDistributedTransactionFactory
+2012-09-07 17:19:28,525 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Optimize cache for minimal puts: False
+2012-09-07 17:19:28,527 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Connection release mode: auto
+2012-09-07 17:19:28,529 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Default batch fetch size: 1
+2012-09-07 17:19:28,532 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - echoing all SQL to stdout
+2012-09-07 17:19:28,533 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Statistics: disabled
+2012-09-07 17:19:28,535 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Deleted entity synthetic identifier rollback: disabled
+2012-09-07 17:19:28,538 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Query translator: NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory
+2012-09-07 17:19:28,544 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Query language substitutions: {}
+2012-09-07 17:19:28,550 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - cache provider: NHibernate.Cache.NoCacheProvider, NHibernate, Version=3.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+2012-09-07 17:19:28,556 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Batcher factory: NHibernate.AdoNet.NonBatchingBatcherFactory, NHibernate, Version=3.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+2012-09-07 17:19:28,559 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Default entity-mode: Poco
+2012-09-07 17:19:28,561 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Named query checking : enabled
+2012-09-07 17:19:28,611 [1] INFO  NHibernate.Impl.SessionFactoryImpl [(null)] <(null)> - building session factory
+2012-09-07 17:19:30,429 [1] INFO  NHibernate.Impl.SessionFactoryObjectFactory [(null)] <(null)> - no name configured
+2012-09-07 17:19:30,519 [1] INFO  NServiceBus.Licensing [(null)] <(null)> - Checking available license...
+2012-09-07 17:19:30,522 [1] INFO  NServiceBus.Licensing [(null)] <(null)> - Could not find license file: F:\Experimental\EdaCalendarExample\Sales.NServiceBusServer\bin\Debug\License\License.xml
+2012-09-07 17:19:30,535 [1] WARN  NServiceBus.Licensing [(null)] <(null)> - No valid license file was found. The host will be limited to a throughput of 1msg/s.
+2012-09-07 17:19:30,549 [1] INFO  NServiceBus.Hosting.Roles.RoleManager [(null)] <(null)> - Role NServiceBus.AsA_Server configured
+2012-09-07 17:19:30,697 [1] INFO  NServiceBus.Host [(null)] <(null)> - Going to activate profile: NServiceBus.Production, NServiceBus.Host, Version=3.2.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c
+2012-09-07 17:19:30,700 [1] INFO  NServiceBus.Host [(null)] <(null)> - Going to activate profile: NServiceBus.PerformanceCounters, NServiceBus.Host, Version=3.2.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c
+2012-09-07 17:19:48,192 [Worker.12] INFO  NHibernate.Loader.Loader [(null)] <(null)> - SELECT consultant0_.Id as Id2_0_, consultant0_.Forename as Forename2_0_, consultant0_.Surname as Surname2_0_ FROM Consultant consultant0_ WHERE consultant0_.Id=@p0
+2012-09-07 17:20:01,581 [Worker.12] INFO  NHibernate.Loader.Loader [(null)] <(null)> - SELECT timealloca0_.ConsultantId as Consulta4_1_, timealloca0_.Id as Id1_, timealloca0_.Id as Id0_0_, timealloca0_.[Start] as Start2_0_0_, timealloca0_.[End] as End3_0_0_, timealloca0_.ConsultantId as Consulta4_0_0_, timealloca0_1_.LeadName as LeadName1_0_, timealloca0_1_.Address as Address1_0_, case when timealloca0_1_.Id is not null then 1 when timealloca0_.Id is not null then 0 end as clazz_0_ FROM [TimeAllocation] timealloca0_ left outer join Appointment timealloca0_1_ on timealloca0_.Id=timealloca0_1_.Id WHERE timealloca0_.ConsultantId=@p0
+2012-09-07 17:20:59,515 [1] INFO  NHibernate.Cfg.Environment [(null)] <(null)> - NHibernate 3.0.0.4000 (3.0.0.4000)
+2012-09-07 17:20:59,593 [1] INFO  NHibernate.Cfg.Environment [(null)] <(null)> - hibernate-configuration section not found in application configuration file
+2012-09-07 17:20:59,595 [1] INFO  NHibernate.Cfg.Environment [(null)] <(null)> - Bytecode provider name : lcg
+2012-09-07 17:20:59,598 [1] INFO  NHibernate.Cfg.Environment [(null)] <(null)> - Using reflection optimizer
+2012-09-07 17:21:00,193 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - Searching for mapped documents in assembly: Sales.Data
+2012-09-07 17:21:00,198 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - Mapping resource: Sales.Data.Mappers.TimeAllocation.hbm.xml
+2012-09-07 17:21:01,326 [1] INFO  NHibernate.Dialect.Dialect [(null)] <(null)> - Using dialect: NHibernate.Dialect.MsSql2005Dialect
+2012-09-07 17:21:01,508 [1] INFO  NHibernate.Cfg.XmlHbmBinding.Binder [(null)] <(null)> - Mapping class: Sales.Domain.Entities.TimeAllocation -> TimeAllocation
+2012-09-07 17:21:01,664 [1] INFO  NHibernate.Cfg.XmlHbmBinding.Binder [(null)] <(null)> - Mapping joined-subclass: Sales.Domain.Entities.Appointment -> Appointment
+2012-09-07 17:21:01,686 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - Mapping resource: Sales.Data.Mappers.Consultant.hbm.xml
+2012-09-07 17:21:01,707 [1] INFO  NHibernate.Dialect.Dialect [(null)] <(null)> - Using dialect: NHibernate.Dialect.MsSql2005Dialect
+2012-09-07 17:21:01,709 [1] INFO  NHibernate.Cfg.XmlHbmBinding.Binder [(null)] <(null)> - Mapping class: Sales.Domain.Entities.Consultant -> Consultant
+2012-09-07 17:21:01,778 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - checking mappings queue
+2012-09-07 17:21:01,781 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - processing one-to-many association mappings
+2012-09-07 17:21:01,789 [1] INFO  NHibernate.Cfg.XmlHbmBinding.Binder [(null)] <(null)> - mapping collection: Sales.Domain.Entities.Consultant.TimeAllocations -> TimeAllocation
+2012-09-07 17:21:01,809 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - processing one-to-one association property references
+2012-09-07 17:21:01,812 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - processing foreign key constraints
+2012-09-07 17:21:01,825 [1] INFO  NHibernate.Cfg.Configuration [(null)] <(null)> - processing filters (second pass)
+2012-09-07 17:21:01,897 [1] INFO  NHibernate.Dialect.Dialect [(null)] <(null)> - Using dialect: NHibernate.Dialect.MsSql2005Dialect
+2012-09-07 17:21:01,959 [1] INFO  NHibernate.Exceptions.SQLExceptionConverterFactory [(null)] <(null)> - Using dialect defined converter
+2012-09-07 17:21:01,962 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Generate SQL with comments: disabled
+2012-09-07 17:21:01,966 [1] INFO  NHibernate.Connection.ConnectionProviderFactory [(null)] <(null)> - Initializing connection provider: NHibernate.Connection.DriverConnectionProvider
+2012-09-07 17:21:01,970 [1] INFO  NHibernate.Connection.ConnectionProvider [(null)] <(null)> - Configuring ConnectionProvider
+2012-09-07 17:21:01,976 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Transaction factory: NHibernate.Transaction.AdoNetWithDistributedTransactionFactory
+2012-09-07 17:21:01,988 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Optimize cache for minimal puts: False
+2012-09-07 17:21:01,990 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Connection release mode: auto
+2012-09-07 17:21:01,993 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Default batch fetch size: 1
+2012-09-07 17:21:01,995 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - echoing all SQL to stdout
+2012-09-07 17:21:01,998 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Statistics: disabled
+2012-09-07 17:21:02,000 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Deleted entity synthetic identifier rollback: disabled
+2012-09-07 17:21:02,004 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Query translator: NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory
+2012-09-07 17:21:02,010 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Query language substitutions: {}
+2012-09-07 17:21:02,016 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - cache provider: NHibernate.Cache.NoCacheProvider, NHibernate, Version=3.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+2012-09-07 17:21:02,022 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Batcher factory: NHibernate.AdoNet.NonBatchingBatcherFactory, NHibernate, Version=3.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+2012-09-07 17:21:02,026 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Default entity-mode: Poco
+2012-09-07 17:21:02,028 [1] INFO  NHibernate.Cfg.SettingsFactory [(null)] <(null)> - Named query checking : enabled
+2012-09-07 17:21:02,080 [1] INFO  NHibernate.Impl.SessionFactoryImpl [(null)] <(null)> - building session factory
+2012-09-07 17:21:03,980 [1] INFO  NHibernate.Impl.SessionFactoryObjectFactory [(null)] <(null)> - no name configured
+2012-09-07 17:21:04,072 [1] INFO  NServiceBus.Licensing [(null)] <(null)> - Checking available license...
+2012-09-07 17:21:04,075 [1] INFO  NServiceBus.Licensing [(null)] <(null)> - Could not find license file: F:\Experimental\EdaCalendarExample\Sales.NServiceBusServer\bin\Debug\License\License.xml
+2012-09-07 17:21:04,089 [1] WARN  NServiceBus.Licensing [(null)] <(null)> - No valid license file was found. The host will be limited to a throughput of 1msg/s.
+2012-09-07 17:21:04,103 [1] INFO  NServiceBus.Hosting.Roles.RoleManager [(null)] <(null)> - Role NServiceBus.AsA_Server configured
+2012-09-07 17:21:04,249 [1] INFO  NServiceBus.Host [(null)] <(null)> - Going to activate profile: NServiceBus.Production, NServiceBus.Host, Version=3.2.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c
+2012-09-07 17:21:04,252 [1] INFO  NServiceBus.Host [(null)] <(null)> - Going to activate profile: NServiceBus.PerformanceCounters, NServiceBus.Host, Version=3.2.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c
+2012-09-07 17:21:16,461 [Worker.12] INFO  NHibernate.Loader.Loader [(null)] <(null)> - SELECT consultant0_.Id as Id2_0_, consultant0_.Forename as Forename2_0_, consultant0_.Surname as Surname2_0_ FROM Consultant consultant0_ WHERE consultant0_.Id=@p0
+2012-09-07 17:21:36,600 [5] INFO  NHibernate.Engine.Cascade [(null)] <(null)> - processing cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for: Sales.Domain.Entities.Consultant
+2012-09-07 17:21:36,608 [5] INFO  NHibernate.Engine.Cascade [(null)] <(null)> - cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for collection: Sales.Domain.Entities.Consultant.TimeAllocations
+2012-09-07 17:21:36,624 [5] WARN  NHibernate.Engine.ForeignKeys [(null)] <(null)> - Unable to determine if Sales.Domain.Entities.TimeAllocation with assigned identifier 42b0d9da-f41f-47c7-8a9c-21b188fec538 is transient or detached; querying the database. Use explicit Save() or Update() in session to prevent this.
+2012-09-07 17:21:36,650 [5] INFO  NHibernate.Engine.Cascade [(null)] <(null)> - done cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for collection: Sales.Domain.Entities.Consultant.TimeAllocations
+2012-09-07 17:21:36,652 [5] INFO  NHibernate.Engine.Cascade [(null)] <(null)> - done processing cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for: Sales.Domain.Entities.Consultant
