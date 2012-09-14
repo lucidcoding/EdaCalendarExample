@@ -1,0 +1,5 @@
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Calendar.Domain\bin\Debug\Calendar.Domain.dll
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Calendar.Domain\bin\Debug\Calendar.Domain.pdb
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Calendar.Domain\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Calendar.Domain\obj\Debug\Calendar.Domain.dll
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Calendar.Domain\obj\Debug\Calendar.Domain.pdb

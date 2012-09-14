@@ -3,3 +3,8 @@ F:\Experimental\EdaCalendarExample\HumanResources.Domain\bin\Debug\HumanResource
 F:\Experimental\EdaCalendarExample\HumanResources.Domain\obj\Debug\ResolveAssemblyReference.cache
 F:\Experimental\EdaCalendarExample\HumanResources.Domain\obj\Debug\HumanResources.Domain.dll
 F:\Experimental\EdaCalendarExample\HumanResources.Domain\obj\Debug\HumanResources.Domain.pdb
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.Domain\bin\Debug\HumanResources.Domain.dll
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.Domain\bin\Debug\HumanResources.Domain.pdb
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.Domain\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.Domain\obj\Debug\HumanResources.Domain.dll
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.Domain\obj\Debug\HumanResources.Domain.pdb

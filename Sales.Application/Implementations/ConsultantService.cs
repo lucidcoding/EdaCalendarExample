@@ -131,7 +131,7 @@ namespace Sales.Application.Implementations
                 {
                     var consultant = _consultantRepository.GetById(request.ConsultantId);
                     DomainEvents.Register<AppointmentBookedEvent>(AppointmentBooked);
-                    consultant.BookAppointment(request.Date, request.StartTime, request.EndTime, request.LeadName, request.Address);
+                    consultant.BookAppointment(request.Id, request.Date, request.StartTime, request.EndTime, request.LeadName, request.Address);
                     transaction.Commit();
                 }
             }

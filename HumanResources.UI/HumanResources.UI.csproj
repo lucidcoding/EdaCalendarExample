@@ -80,7 +80,7 @@
     <Compile Include="Common\NServiceBusControllerActivator.cs" />
     <Compile Include="Common\NServiceBusDependencyResolverAdapter.cs" />
     <Compile Include="Common\StructureMapControllerActivator.cs.cs" />
-    <Compile Include="Common\UiRegistry.cs" />
+    <Compile Include="Core\UiRegistry.cs" />
     <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\HolidayController.cs" />
     <Compile Include="Global.asax.cs">
@@ -151,6 +151,10 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Calendar.Messages\Calendar.Messages.csproj">
+      <Project>{9FE0EFE5-F5D2-4F5F-8FA0-3F821AA30FD4}</Project>
+      <Name>Calendar.Messages</Name>
+    </ProjectReference>
     <ProjectReference Include="..\HumanResources.Application\HumanResources.Application.csproj">
       <Project>{0F39916A-A264-4412-BC4C-E8B4551599D9}</Project>
       <Name>HumanResources.Application</Name>

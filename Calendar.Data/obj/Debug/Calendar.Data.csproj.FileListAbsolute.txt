@@ -1,0 +1,15 @@
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Calendar.Data\bin\Debug\Calendar.Data.dll
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Calendar.Data\bin\Debug\Calendar.Data.pdb
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Calendar.Data\bin\Debug\Antlr3.Runtime.dll
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Calendar.Data\bin\Debug\Calendar.Domain.dll
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Calendar.Data\bin\Debug\Castle.Core.dll
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Calendar.Data\bin\Debug\Castle.DynamicProxy2.dll
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Calendar.Data\bin\Debug\Iesi.Collections.dll
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Calendar.Data\bin\Debug\log4net.dll
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Calendar.Data\bin\Debug\NHibernate.ByteCode.Castle.dll
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Calendar.Data\bin\Debug\NHibernate.dll
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Calendar.Data\bin\Debug\StructureMap.dll
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Calendar.Data\bin\Debug\Calendar.Domain.pdb
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Calendar.Data\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Calendar.Data\obj\Debug\Calendar.Data.dll
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Calendar.Data\obj\Debug\Calendar.Data.pdb

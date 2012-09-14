@@ -1,0 +1,7 @@
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Calendar.Messages\bin\Debug\Calendar.Messages.dll
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Calendar.Messages\bin\Debug\Calendar.Messages.pdb
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Calendar.Messages\bin\Debug\NServiceBus.dll
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Calendar.Messages\bin\Debug\log4net.dll
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Calendar.Messages\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Calendar.Messages\obj\Debug\Calendar.Messages.dll
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Calendar.Messages\obj\Debug\Calendar.Messages.pdb

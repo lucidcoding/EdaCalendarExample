@@ -21,6 +21,7 @@ namespace Sales.NServiceBusServer.CommandHandlers
         {
             var request = new BookAppointmentRequest
             {
+                Id = command.Id,
                 ConsultantId = command.ConsultantId,
                 Date = command.Date,
                 StartTime = command.StartTime,

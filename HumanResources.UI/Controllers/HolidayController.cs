@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Threading;
 using System.Web.Mvc;
+using Calendar.Messages.Commands;
 using HumanResources.Application.Contracts;
 using HumanResources.Application.Requests;
+using HumanResources.Domain.Global;
 using HumanResources.Messages.Commands;
 using HumanResources.UI.ViewModels;
 using NServiceBus;
@@ -52,15 +54,28 @@ namespace HumanResources.UI.Controllers
                 return View("Book", viewModel);
             }
 
-            var command = new BookHoliday
+            Guid id = Guid.NewGuid();
+
+            var makeBookingCommand = new MakeBooking
             {
+                Id = id,
+                EmployeeId = viewModel.EmployeeId,
+                Start = viewModel.Start,
+                End = viewModel.End,
+                BookingTypeId = Constants.HolidayBookingTypeId
+            };
+
+            var bookHolidayCommand = new BookHoliday
+            {
+                Id = id,
                 EmployeeId = viewModel.EmployeeId,
                 Start = viewModel.Start,
                 End = viewModel.End
             };
 
-            IAsyncResult ayncResult = _bus.Send(command).Register(EmptyCallBack, this);
-            WaitHandle asyncWaitHandle = ayncResult.AsyncWaitHandle;
+            _bus.Send(makeBookingCommand);
+            var ayncResult = _bus.Send(bookHolidayCommand).Register(EmptyCallBack, this);
+            var asyncWaitHandle = ayncResult.AsyncWaitHandle;
             asyncWaitHandle.WaitOne(50000);
             return RedirectToAction("Index", "Employee", new { employeeId = viewModel.EmployeeId });
         }

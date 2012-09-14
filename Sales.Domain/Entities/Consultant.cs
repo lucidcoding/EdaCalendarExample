@@ -81,6 +81,7 @@ namespace Sales.Domain.Entities
         }
 
         public virtual void BookAppointment(
+            Guid id,
             DateTime date,
             TimeSpan startTime,
             TimeSpan endTime,
@@ -95,7 +96,7 @@ namespace Sales.Domain.Entities
 
             var appointment = new Appointment
             {
-                Id = Guid.NewGuid(),
+                Id = id,
                 Consultant = this,
                 Start = start,
                 End = end,

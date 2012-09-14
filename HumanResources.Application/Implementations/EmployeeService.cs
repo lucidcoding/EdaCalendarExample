@@ -8,7 +8,6 @@ using HumanResources.Domain.Common;
 using HumanResources.Domain.Entities;
 using HumanResources.Domain.Events;
 using HumanResources.Domain.RepositoryContracts;
-using HumanResources.Messages.Events;
 using NHibernate;
 using NHibernate.Context;
 using NServiceBus;
@@ -18,16 +17,13 @@ namespace HumanResources.Application.Implementations
     public class EmployeeService : IEmployeeService
     {
         private readonly ISessionFactory _sessionFactory;
-        private readonly IBus _bus;
         private readonly IEmployeeRepository _employeeRepository;
 
         public EmployeeService(
             ISessionFactory sessionFactory, 
-            IBus bus,
             IEmployeeRepository employeeRepository)
         {
             _sessionFactory = sessionFactory;
-            _bus = bus;
             _employeeRepository = employeeRepository;
         }
 
@@ -126,7 +122,7 @@ namespace HumanResources.Application.Implementations
                 {
                     var employee = _employeeRepository.GetById(request.EmployeeId);
                     DomainEvents.Register<HolidayBookedEvent>(HolidayBooked);
-                    employee.BookHoliday(request.Start, request.End);
+                    employee.BookHoliday(request.Id, request.Start, request.End);
                     transaction.Commit();
                 }    
             }
@@ -140,18 +136,7 @@ namespace HumanResources.Application.Implementations
 
         private void HolidayBooked(HolidayBookedEvent @event)
         {
-            //Should this all be wrapped in a transaction?
             _employeeRepository.SaveOrUpdate(@event.Source.Employee);
-
-            var holidayBooked = new HolidayBooked
-                                    {
-                                        HolidayId = @event.Source.Id.Value,
-                                        EmployeeId = @event.Source.Employee.Id.Value,
-                                        Start = @event.Source.Start,
-                                        End = @event.Source.End
-                                    };
-
-            _bus.Publish(holidayBooked);
         }
 
         public void BookTimeAllocation(BookTimeAllocationRequest request)

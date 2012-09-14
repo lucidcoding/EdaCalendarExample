@@ -4,6 +4,7 @@ namespace Sales.Messages.Commands
 {
     public class BookAppointment
     {
+        public Guid Id { get; set; }
         public Guid ConsultantId { get; set; }
         public DateTime Date { get; set; }
         public TimeSpan StartTime { get; set; }

@@ -1,4 +1,6 @@
-﻿using NServiceBus;
+﻿using System;
+using Calendar.Messages.Commands;
+using NServiceBus;
 using HumanResources.Application.Contracts;
 using HumanResources.Application.Requests;
 using HumanResources.Messages.Commands;
@@ -20,6 +22,7 @@ namespace HumanResources.NServiceBusServer.CommandHandlers
         {
             var request = new BookHolidayRequest
             {
+                Id = command.Id,
                 EmployeeId = command.EmployeeId,
                 Start = command.Start,
                 End = command.End

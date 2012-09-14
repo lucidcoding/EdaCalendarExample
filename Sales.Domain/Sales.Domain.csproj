@@ -53,6 +53,7 @@
     <Compile Include="Entities\TimeAllocation.cs" />
     <Compile Include="Events\AppointmentBookedEvent.cs" />
     <Compile Include="Events\TimeAllocationBookedEvent.cs" />
+    <Compile Include="Global\Constants.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RepositoryContracts\IConsultantRepository.cs" />
   </ItemGroup>

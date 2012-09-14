@@ -36,16 +36,6 @@ namespace HumanResources.Domain.Entities
             get { return HolidayEntitlement - Holidays.Sum(x => x.TotalDays); }
         }
 
-        public virtual ValidationMessageCollection Add(string forename, string surname, int holidayentitlement)
-        {
-            var validationMessages = new ValidationMessageCollection();
-
-            if(string.IsNullOrEmpty(forename) || string.IsNullOrEmpty(surname) || holidayentitlement == default(int))
-                validationMessages.AddError("Error booking holiday.");
-
-            return validationMessages;
-        }
-
         public virtual ValidationMessageCollection ValidateBookHoliday(DateTime start, DateTime end)
         {
             var validationMessages = new ValidationMessageCollection();
@@ -83,14 +73,14 @@ namespace HumanResources.Domain.Entities
             return validationMessages;
         }
 
-        public virtual void BookHoliday(DateTime start, DateTime end)
+        public virtual void BookHoliday(Guid id, DateTime start, DateTime end)
         {
             var validationMessages = ValidateBookHoliday(start, end);
             if(validationMessages.Count > 0) throw new ValidationException(validationMessages);
 
             var holiday = new Holiday
                               {
-                                  Id = Guid.NewGuid(),
+                                  Id = id,
                                   Employee = this,
                                   Approved = true,
                                   Start = start,

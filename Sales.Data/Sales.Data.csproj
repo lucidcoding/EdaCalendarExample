@@ -84,7 +84,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Common\DataRegistry.cs" />
+    <Compile Include="Core\DataRegistry.cs" />
     <Compile Include="Common\Repository.cs" />
     <Compile Include="Common\SessionFactoryFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

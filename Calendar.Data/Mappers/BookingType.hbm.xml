@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   namespace="Calendar.Domain.Entities"
+                   assembly="Calendar.Domain">
+  <class name="BookingType" table="BookingType">
+    <id name="Id" column="Id" type="guid">
+      <generator class="assigned"/>
+    </id>
+    <property name="Description" column="`Description`" />
+  </class>
+</hibernate-mapping>

@@ -1,6 +1,7 @@
 ﻿using System.Web.Mvc;
 using System.Web.Routing;
 using HumanResources.UI.Common;
+using HumanResources.UI.Core;
 using NServiceBus;
 using StructureMap;
 

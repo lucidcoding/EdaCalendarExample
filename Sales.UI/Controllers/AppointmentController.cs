@@ -1,9 +1,10 @@
 ﻿using System;
-using System.Threading;
 using System.Web.Mvc;
+using Calendar.Messages.Commands;
 using NServiceBus;
 using Sales.Application.Contracts;
 using Sales.Application.Requests;
+using Sales.Domain.Global;
 using Sales.Messages.Commands;
 using Sales.UI.ViewModels;
 
@@ -56,8 +57,21 @@ namespace Sales.UI.Controllers
                 return View("Book", viewModel);
             }
 
-            var command = new BookAppointment
+            Guid id = Guid.NewGuid();
+
+            //Todo: note some logic has slipped into here on how to raise a command to make a booking.
+            var makeBookingCommand = new MakeBooking
             {
+                Id = id,
+                EmployeeId = viewModel.ConsultantId,
+                Start = viewModel.Date + viewModel.StartTime,
+                End = viewModel.Date + viewModel.EndTime,
+                BookingTypeId = Constants.SalesAppointmentBookingTypeId
+            };
+
+            var bookAppointmentCommand = new BookAppointment
+            {
+                Id = id,
                 ConsultantId = viewModel.ConsultantId,
                 Date = viewModel.Date,
                 StartTime = viewModel.StartTime,
@@ -66,8 +80,9 @@ namespace Sales.UI.Controllers
                 Address = viewModel.Address
             };
 
-            IAsyncResult ayncResult = _bus.Send(command).Register(EmptyCallBack, this);
-            WaitHandle asyncWaitHandle = ayncResult.AsyncWaitHandle;
+            _bus.Send(makeBookingCommand);
+            var ayncResult = _bus.Send(bookAppointmentCommand).Register(EmptyCallBack, this);
+            var asyncWaitHandle = ayncResult.AsyncWaitHandle;
             asyncWaitHandle.WaitOne(50000);
             return RedirectToAction("Index", "Consultant", new { consultantId = viewModel.ConsultantId });
         }

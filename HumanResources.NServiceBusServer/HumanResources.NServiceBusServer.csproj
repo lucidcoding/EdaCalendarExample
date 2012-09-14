@@ -37,7 +37,9 @@
     <Reference Include="NServiceBus.Core">
       <HintPath>..\Library\NServiceBus.Core.dll</HintPath>
     </Reference>
-    <Reference Include="NServiceBus.Host">
+    <Reference Include="NServiceBus.Host, Version=3.2.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <ExecutableExtension>.exe</ExecutableExtension>
       <HintPath>..\Library\NServiceBus.Host.exe</HintPath>
     </Reference>
     <Reference Include="NServiceBus.ObjectBuilder.StructureMap">
@@ -56,12 +58,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommandHandlers\BookHolidayHandler.cs" />
-    <Compile Include="Common\NServiceBusServerRegistry.cs" />
-    <Compile Include="EventHandlers\AppointmentBookedHandler.cs" />
+    <Compile Include="Core\NServiceBusServerRegistry.cs" />
+    <Compile Include="EventHandlers\BookingMadeHandler.cs" />
     <Compile Include="MessageEndpoint.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SubscriberEndpoint.cs" />
-    <Compile Include="SubscriptionAuthorizer.cs" />
+    <Compile Include="Core\SubscriberEndpoint.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -72,6 +73,10 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Calendar.Messages\Calendar.Messages.csproj">
+      <Project>{9FE0EFE5-F5D2-4F5F-8FA0-3F821AA30FD4}</Project>
+      <Name>Calendar.Messages</Name>
+    </ProjectReference>
     <ProjectReference Include="..\HumanResources.Application\HumanResources.Application.csproj">
       <Project>{0F39916A-A264-4412-BC4C-E8B4551599D9}</Project>
       <Name>HumanResources.Application</Name>
@@ -87,10 +92,6 @@
     <ProjectReference Include="..\HumanResources.Messages\HumanResources.Messages.csproj">
       <Project>{8B5B36C1-85A9-4FB2-B20A-A8E690CAFB9D}</Project>
       <Name>HumanResources.Messages</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Sales.Messages\Sales.Messages.csproj">
-      <Project>{9A2441B1-F3BA-4E9E-A21D-2D0DB61E86EA}</Project>
-      <Name>Sales.Messages</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

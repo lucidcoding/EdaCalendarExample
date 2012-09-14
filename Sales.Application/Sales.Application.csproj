@@ -57,7 +57,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Common\ApplicationRegistry.cs" />
+    <Compile Include="Core\ApplicationRegistry.cs" />
     <Compile Include="Contracts\IConsultantService.cs" />
     <Compile Include="DataTransferObjects\AppointmentDto.cs" />
     <Compile Include="DataTransferObjects\ConsultantDto.cs" />

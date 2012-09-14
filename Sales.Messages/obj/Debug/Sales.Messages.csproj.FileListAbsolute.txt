@@ -5,3 +5,10 @@ F:\Experimental\EdaCalendarExample\Sales.Messages\bin\Debug\log4net.dll
 F:\Experimental\EdaCalendarExample\Sales.Messages\obj\Debug\ResolveAssemblyReference.cache
 F:\Experimental\EdaCalendarExample\Sales.Messages\obj\Debug\Sales.Messages.dll
 F:\Experimental\EdaCalendarExample\Sales.Messages\obj\Debug\Sales.Messages.pdb
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.Messages\bin\Debug\Sales.Messages.dll
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.Messages\bin\Debug\Sales.Messages.pdb
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.Messages\bin\Debug\NServiceBus.dll
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.Messages\bin\Debug\log4net.dll
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.Messages\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.Messages\obj\Debug\Sales.Messages.dll
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.Messages\obj\Debug\Sales.Messages.pdb
