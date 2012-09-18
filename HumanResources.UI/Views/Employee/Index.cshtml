@@ -32,7 +32,7 @@
 </div>
 <div class="row">
     <div class="cell">
-        Remianing Holiday:
+        Remaining Holiday:
     </div>
     <div class="cell">
         @Model.RemainingHoliday
@@ -40,7 +40,7 @@
 </div>
 <div class="row">
     <div class="cell">
-        <a href="@Url.Action("Book", "Holiday", new { employeeId = Model.EmployeeId })" id="BookHoliday">Book Holiday</a>
+        <a href="@Url.Action("BookUpdate", "Holiday", new { updating = false, employeeId = Model.EmployeeId })" id="BookHoliday">Book Holiday</a>
     </div>
 </div>
 <div class="row">

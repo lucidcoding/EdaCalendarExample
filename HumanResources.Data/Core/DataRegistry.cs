@@ -13,6 +13,8 @@ namespace HumanResources.Data.Core
             Configure(x =>
             {
                 For<IEmployeeRepository>().Use<EmployeeRepository>();
+                For<IHolidayRepository>().Use<HolidayRepository>();
+                For<ITimeAllocationRepository>().Use<TimeAllocationRepository>();
                 For<ISessionFactory>().HybridHttpOrThreadLocalScoped().Use(
                     SessionFactoryFactory.GetSessionFactory());
             });

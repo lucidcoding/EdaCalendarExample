@@ -1,13 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Calendar.Domain.Common;
 using Calendar.Domain.Events;
 
 namespace Calendar.Domain.Entities
 {
-    //todo: note 
-    //I am treating the Booking as the aggregate root in this case because that makes more sense in this domian. In a Calendar system, a booking
-    //is more central than an employee.
     public class Booking : Entity<Guid>
     {
         public virtual Employee Employee { get; set; }
@@ -15,10 +13,11 @@ namespace Calendar.Domain.Entities
         public virtual DateTime End { get; set; }
         public virtual BookingType BookingType { get; set; }
 
-        public static ValidationMessageCollection ValidateMake(Employee employee, DateTime start, DateTime end)
+        //Udi always says validation should be done in UI, and domain should just throw unhelful error because if it gets that
+        //then it is likely to be a hacker - but how do you account for validation logic like this? Surely it's not the end of
+        //the world that any system that adds bookings into a calendar should detect clashes?
+        private static ValidationMessageCollection ValidateMakeUpdate(DateTime start, DateTime end, IEnumerable<Booking> bookings, Booking bookingBeingUpdated)
         {
-            //todo: note 
-            //This now contains validation common to all domains.
             var validationMessages = new ValidationMessageCollection();
 
             if (start == default(DateTime) || end == default(DateTime))
@@ -36,29 +35,31 @@ namespace Calendar.Domain.Entities
             if (!validationMessages.IsValid)
                 return validationMessages;
 
-            var matchingTimeAllocations = (from booking in employee.Bookings
-                                           where (start >= booking.Start && start <= booking.End)
+            var matchingTimeAllocations = (from booking in bookings
+                                           where (bookingBeingUpdated == null || bookingBeingUpdated != booking)
+                                              && ((start >= booking.Start && start <= booking.End)
                                               || (end >= booking.Start && end <= booking.End)
-                                              || (start <= booking.Start && end >= booking.End)
+                                              || (start <= booking.Start && end >= booking.End))
                                            select booking)
-                .ToList();
+               .ToList();
 
-            //todo: note 
-            //Udi always says validation should be done in UI, and domain should just throw unhelful error because if it gets that
-            //then it is likely to be a hacker - but how do you account for validation logic like this? Surely it's not the end of
-            //the world that any system that adds bookings into a calendar should detect clashes?
             if (matchingTimeAllocations.Any())
                 validationMessages.AddError("Booking clashes with other bookings for employee.");
 
             return validationMessages;
         }
 
-        public static void Make(Guid bookingId, Employee employee, DateTime start, DateTime end, BookingType type)
+        public static ValidationMessageCollection ValidateMake(Employee employee, DateTime start, DateTime end)
+        {
+            return ValidateMakeUpdate(start, end, employee.Bookings, null);
+        }
+
+        public static Booking Make(Guid bookingId, Employee employee, DateTime start, DateTime end, BookingType type)
         {
             var validationMessages = ValidateMake(employee, start, end);
             if (validationMessages.Count > 0) throw new ValidationException(validationMessages);
 
-            var booking = new Booking()
+            var booking = new Booking
             {
                 Id = bookingId,
                 Employee = employee,
@@ -67,7 +68,23 @@ namespace Calendar.Domain.Entities
                 BookingType = type
             };
 
+            employee.Bookings.Add(booking);
             DomainEvents.Raise(new BookingMadeEvent(booking));
+            return booking;
+        }
+
+        public virtual ValidationMessageCollection ValidateUpdate(DateTime start, DateTime end)
+        {
+            return ValidateMakeUpdate(start, end, Employee.Bookings, this);
+        }
+
+        public virtual void Update(DateTime start, DateTime end)
+        {
+            var validationMessages = ValidateUpdate(start, end);
+            if (validationMessages.Count > 0) throw new ValidationException(validationMessages);
+            Start = start;
+            End = end;
+            DomainEvents.Raise(new BookingUpdatedEvent(this));
         }
     }
 }

@@ -37,16 +37,24 @@ namespace Sales.UI.Controllers
                 foreach (var timeAllocation in employee.TimeAllocations)
                 {
                     string title = "";
+                    string address = "";
                     var appointment = timeAllocation as AppointmentDto;
                     if (appointment != null) title = appointment.LeadName;
+                    if (appointment != null) address = appointment.Address;
 
                     calendarEntries.Add(new
                                             {
+                                                id = timeAllocation.Id,
+                                                consultantId,
+                                                isAppointment = (appointment != null),
                                                 title,
                                                 start = DateHelper.ToUnixTimespan(timeAllocation.Start),
                                                 end = DateHelper.ToUnixTimespan(timeAllocation.End),
-                                                backgroundColor = timeAllocation.GetType() == typeof(AppointmentDto) ? "indianred" : "lightgrey",
-                                                borderColor = timeAllocation.GetType() == typeof(AppointmentDto) ? "indianred" : "lightgrey",
+                                                isoStart = timeAllocation.Start.ToString("yyyy-MM-dd HH:mm:ss"),
+                                                isoEnd = timeAllocation.End.ToString("yyyy-MM-dd HH:mm:ss"),
+                                                address,
+                                                backgroundColor = (appointment != null) ? "indianred" : "lightgrey",
+                                                borderColor = (appointment != null) ? "indianred" : "lightgrey",
                                             });
                 }
             }

@@ -8,11 +8,11 @@ namespace Sales.NServiceBusServer.EventHandlers
 {
     public class BookingMadeHandler : IHandleMessages<BookingMade>
     {
-        private readonly IConsultantService _consultantService;
+        private readonly ITimeAllocationService _timeAllocationService;
 
-        public BookingMadeHandler(IConsultantService consultantService)
+        public BookingMadeHandler(ITimeAllocationService timeAllocationService)
         {
-            _consultantService = consultantService;
+            _timeAllocationService = timeAllocationService;
         }
 
         public void Handle(BookingMade @event)
@@ -22,13 +22,13 @@ namespace Sales.NServiceBusServer.EventHandlers
             {
                 var request = new BookTimeAllocationRequest
                                   {
-                                      TimeAllocationId = @event.Id,
+                                      Id = @event.Id,
                                       ConsultantId = @event.EmployeeId,
                                       Start = @event.Start,
                                       End = @event.End
                                   };
 
-                _consultantService.BookTimeAllocation(request);
+                _timeAllocationService.Book(request);
             }
         }
     }

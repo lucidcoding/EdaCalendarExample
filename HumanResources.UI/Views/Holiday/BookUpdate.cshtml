@@ -5,9 +5,11 @@
 }
 
 <h2>Book</h2>
-<form method="POST" action="@Url.Action("Book", "Holiday")" >
+<form method="post" action="@Url.Action("BookUpdate", "Holiday")" >
     @Html.ValidationSummary("The following validation errors occured:")
+    @Html.HiddenFor(m => m.Updating)
     @Html.HiddenFor(m => m.EmployeeId)
+    @Html.HiddenFor(m => m.HolidayId)
     <div class="row">
         <div class="cell">
             Start:

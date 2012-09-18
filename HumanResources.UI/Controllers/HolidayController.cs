@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Threading;
 using System.Web.Mvc;
 using Calendar.Messages.Commands;
 using HumanResources.Application.Contracts;
 using HumanResources.Application.Requests;
 using HumanResources.Domain.Global;
-using HumanResources.Messages.Commands;
 using HumanResources.UI.ViewModels;
 using NServiceBus;
 
@@ -14,74 +12,97 @@ namespace HumanResources.UI.Controllers
     public class HolidayController : Controller
     {
         private readonly IBus _bus;
-        private readonly IEmployeeService _employeeService;
+        private readonly IHolidayService _holidayService;
 
-        public HolidayController(IBus bus, IEmployeeService employeeService)
+        public HolidayController(IBus bus, IHolidayService holidayService)
         {
             _bus = bus;
-            _employeeService = employeeService;
+            _holidayService = holidayService;
         }
 
-        public ActionResult Book(Guid employeeId)
+        public ActionResult BookUpdate(bool updating, Guid? employeeId, Guid? holidayId, DateTime? start, DateTime? end)
         {
             var viewModel = new BookHolidayViewModel
-                                {
-                                    EmployeeId = employeeId,
-                                    Start = new DateTime(2012, 08, 1),
-                                    End = new DateTime(2012, 08, 1)
-                                };
+            {
+                Updating = updating,
+                EmployeeId = employeeId,
+                HolidayId = holidayId,
+                Start = start.HasValue ? start.Value : new DateTime(2012, 08, 1),
+                End = end.HasValue ? end.Value : new DateTime(2012, 08, 1),
+            };
 
             return View(viewModel);
         }
 
         [HttpPost]
-        public ActionResult Book(BookHolidayViewModel viewModel)
+        public ActionResult BookUpdate(BookHolidayViewModel viewModel)
         {
-            var request = new BookHolidayRequest
-                              {
-                                  EmployeeId = viewModel.EmployeeId,
-                                  Start = viewModel.Start,
-                                  End = viewModel.End
-                              };
-
-            var validationResult = _employeeService.ValidateBookHoliday(request);
-
-            if (!validationResult.IsValid)
+            if (viewModel.Updating)
             {
-                foreach (var error in validationResult.Errors)
-                    ModelState.AddModelError(error.Field ?? "", error.Text);
+                var updateHolidayRequest = new UpdateHolidayRequest
+                {
+                    Id = viewModel.HolidayId.Value,
+                    Start = viewModel.Start,
+                    End = viewModel.End
+                };
 
-                return View("Book", viewModel);
+                var validationResult = _holidayService.ValidateUpdate(updateHolidayRequest);
+
+                if (!validationResult.IsValid)
+                {
+                    foreach (var error in validationResult.Errors)
+                        ModelState.AddModelError(error.Field ?? "", error.Text);
+
+                    return View("BookUpdate", viewModel);
+                }
+
+                //todo: Send command on bus to update
+                var updateBookingCommand = new UpdateBooking
+                {
+                    Id = viewModel.HolidayId.Value,
+                    Start = viewModel.Start,
+                    End = viewModel.End
+                };
+
+                _holidayService.Update(updateHolidayRequest);
+                _bus.Send(updateBookingCommand);
+            }
+            else
+            {
+                Guid id = Guid.NewGuid();
+
+                var bookHolidayRequest = new BookHolidayRequest
+                {
+                    Id = id,
+                    EmployeeId = viewModel.EmployeeId.Value,
+                    Start = viewModel.Start,
+                    End = viewModel.End
+                };
+
+                var validationResult = _holidayService.ValidateBook(bookHolidayRequest);
+
+                if (!validationResult.IsValid)
+                {
+                    foreach (var error in validationResult.Errors)
+                        ModelState.AddModelError(error.Field ?? "", error.Text);
+
+                    return View("BookUpdate", viewModel);
+                }
+
+                var makeBookingCommand = new MakeBooking
+                                             {
+                                                 Id = id,
+                                                 EmployeeId = viewModel.EmployeeId.Value,
+                                                 Start = viewModel.Start,
+                                                 End = viewModel.End,
+                                                 BookingTypeId = Constants.HolidayBookingTypeId
+                                             };
+
+                _holidayService.Book(bookHolidayRequest);
+                _bus.Send(makeBookingCommand);
             }
 
-            Guid id = Guid.NewGuid();
-
-            var makeBookingCommand = new MakeBooking
-            {
-                Id = id,
-                EmployeeId = viewModel.EmployeeId,
-                Start = viewModel.Start,
-                End = viewModel.End,
-                BookingTypeId = Constants.HolidayBookingTypeId
-            };
-
-            var bookHolidayCommand = new BookHoliday
-            {
-                Id = id,
-                EmployeeId = viewModel.EmployeeId,
-                Start = viewModel.Start,
-                End = viewModel.End
-            };
-
-            _bus.Send(makeBookingCommand);
-            var ayncResult = _bus.Send(bookHolidayCommand).Register(EmptyCallBack, this);
-            var asyncWaitHandle = ayncResult.AsyncWaitHandle;
-            asyncWaitHandle.WaitOne(50000);
             return RedirectToAction("Index", "Employee", new { employeeId = viewModel.EmployeeId });
-        }
-
-        private void EmptyCallBack(IAsyncResult asyncResult)
-        {
         }
     }
 }

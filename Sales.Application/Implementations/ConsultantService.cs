@@ -6,12 +6,8 @@ using NHibernate.Context;
 using NServiceBus;
 using Sales.Application.Contracts;
 using Sales.Application.DataTransferObjects;
-using Sales.Application.Requests;
-using Sales.Domain.Common;
 using Sales.Domain.Entities;
-using Sales.Domain.Events;
 using Sales.Domain.RepositoryContracts;
-using Sales.Messages.Events;
 
 namespace Sales.Application.Implementations
 {
@@ -89,104 +85,6 @@ namespace Sales.Application.Implementations
                 CurrentSessionContext.Unbind(_sessionFactory);
                 session.Dispose();
             }
-        }
-
-        public ValidationMessageCollection ValidateBookAppointment(BookAppointmentRequest request)
-        {
-            var session = _sessionFactory.OpenSession();
-            CurrentSessionContext.Bind(session);
-
-            try
-            {
-                Consultant consultant;
-
-                using (var transaction = session.BeginTransaction())
-                {
-                    consultant = _consultantRepository.GetById(request.ConsultantId);
-                    transaction.Commit();
-                }
-
-                return consultant.ValidateBookAppointment(
-                    request.Date, 
-                    request.StartTime, 
-                    request.EndTime,
-                    request.LeadName,
-                    request.Address);
-            }
-            finally
-            {
-                CurrentSessionContext.Unbind(_sessionFactory);
-                session.Dispose();
-            }
-        }
-
-        public void BookAppointment(BookAppointmentRequest request)
-        {
-            var session = _sessionFactory.OpenSession();
-            CurrentSessionContext.Bind(session);
-
-            try
-            {
-                using (var transaction = session.BeginTransaction())
-                {
-                    var consultant = _consultantRepository.GetById(request.ConsultantId);
-                    DomainEvents.Register<AppointmentBookedEvent>(AppointmentBooked);
-                    consultant.BookAppointment(request.Id, request.Date, request.StartTime, request.EndTime, request.LeadName, request.Address);
-                    transaction.Commit();
-                }
-            }
-            finally
-            {
-                CurrentSessionContext.Unbind(_sessionFactory);
-                DomainEvents.ClearCallbacks();
-                session.Dispose();
-            }
-        }
-
-        private void AppointmentBooked(AppointmentBookedEvent @event)
-        {
-            _consultantRepository.SaveOrUpdate(@event.Source.Consultant);
-
-            var appointmentBooked = new AppointmentBooked
-            {
-                AppointmentId = @event.Source.Id.Value,
-                EmployeeId = @event.Source.Consultant.Id.Value,
-                Date = @event.Source.Date,
-                StartTime = @event.Source.StartTime,
-                EndTime = @event.Source.EndTime,
-                LeadName = @event.Source.LeadName,
-                Address = @event.Source.Address
-            };
-
-            _bus.Publish(appointmentBooked);
-        }
-
-        public void BookTimeAllocation(BookTimeAllocationRequest request)
-        {
-            var session = _sessionFactory.OpenSession();
-            CurrentSessionContext.Bind(session);
-
-            try
-            {
-                using (var transaction = session.BeginTransaction())
-                {
-                    var consultant = _consultantRepository.GetById(request.ConsultantId);
-                    DomainEvents.Register<TimeAllocationBookedEvent>(TimeAllocationBooked);
-                    consultant.BookTimeAllocation(request.TimeAllocationId, request.Start, request.End);
-                    transaction.Commit();
-                }
-            }
-            finally
-            {
-                CurrentSessionContext.Unbind(_sessionFactory);
-                DomainEvents.ClearCallbacks();
-                session.Dispose();
-            }
-        }
-
-        private void TimeAllocationBooked(TimeAllocationBookedEvent @event)
-        {
-            _consultantRepository.SaveOrUpdate(@event.Source.Consultant);
         }
     }
 }

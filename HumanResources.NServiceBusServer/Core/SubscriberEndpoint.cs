@@ -15,11 +15,13 @@ namespace HumanResources.NServiceBusServer.Core
         public void Run()
         {
             _bus.Subscribe<BookingMade>();
+            _bus.Subscribe<BookingUpdated>();
         }
 
         public void Stop()
         {
             _bus.Unsubscribe<BookingMade>();
+            _bus.Unsubscribe<BookingUpdated>();
         }
     }
 }

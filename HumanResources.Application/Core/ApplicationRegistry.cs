@@ -12,6 +12,8 @@ namespace HumanResources.Application.Core
             Configure(x =>
             {
                 For<IEmployeeService>().Use<EmployeeService>();
+                For<IHolidayService>().Use<HolidayService>();
+                For<ITimeAllocationService>().Use<TimeAllocationService>();
                 x.ImportRegistry(typeof(DataRegistry));
             });
         }

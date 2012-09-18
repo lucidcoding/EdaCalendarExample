@@ -1,12 +1,13 @@
 ﻿using System;
-using NServiceBus;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
-namespace Sales.Messages.Events
+namespace Sales.Application.Requests
 {
-    public class AppointmentBooked : IEvent
+    public class UpdateAppointmentRequest
     {
-        public Guid AppointmentId { get; set; }
-        public Guid EmployeeId { get; set; }
+        public Guid Id { get; set; }
         public DateTime Date { get; set; }
         public TimeSpan StartTime { get; set; }
         public TimeSpan EndTime { get; set; }

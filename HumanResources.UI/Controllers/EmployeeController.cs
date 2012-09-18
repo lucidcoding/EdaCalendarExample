@@ -53,9 +53,14 @@ namespace HumanResources.UI.Controllers
                 {
                     calendarEntries.Add(new 
                                             {
+                                                id = timeAllocation.Id,
+                                                employeeId,
+                                                isHoliday = timeAllocation.GetType() == typeof(HolidayDto),
                                                 title = timeAllocation.GetType() == typeof(HolidayDto) ? "Holiday" : "",
                                                 start = DateHelper.ToUnixTimespan(timeAllocation.Start),
                                                 end = DateHelper.ToUnixTimespan(timeAllocation.End),
+                                                isoStart = timeAllocation.Start.ToString("yyyy-MM-dd HH:mm:ss"),
+                                                isoEnd = timeAllocation.End.ToString("yyyy-MM-dd HH:mm:ss"),
                                                 backgroundColor = timeAllocation.GetType() == typeof(HolidayDto) ? "cadetblue" : "lightgrey",
                                                 borderColor = timeAllocation.GetType() == typeof(HolidayDto) ? "cadetblue" : "lightgrey",
                                             });

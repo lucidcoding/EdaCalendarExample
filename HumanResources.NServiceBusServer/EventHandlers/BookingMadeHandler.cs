@@ -1,18 +1,18 @@
 ﻿using Calendar.Messages.Events;
-using HumanResources.Domain.Global;
-using NServiceBus;
 using HumanResources.Application.Contracts;
 using HumanResources.Application.Requests;
+using HumanResources.Domain.Global;
+using NServiceBus;
 
 namespace HumanResources.NServiceBusServer.EventHandlers
 {
     public class BookingMadeHandler : IHandleMessages<BookingMade>
     {
-        private readonly IEmployeeService _employeeService;
+        private readonly ITimeAllocationService _timeAllocationService;
 
-        public BookingMadeHandler(IEmployeeService employeeService)
+        public BookingMadeHandler( ITimeAllocationService timeAllocationService)
         {
-            _employeeService = employeeService;
+            _timeAllocationService = timeAllocationService;
         }
 
         public void Handle(BookingMade @event)
@@ -22,13 +22,13 @@ namespace HumanResources.NServiceBusServer.EventHandlers
             {
                 var request = new BookTimeAllocationRequest
                                   {
-                                      TimeAllocationId = @event.Id,
+                                      Id = @event.Id,
                                       ConsultantId = @event.EmployeeId,
                                       Start = @event.Start,
                                       End = @event.End
                                   };
 
-                _employeeService.BookTimeAllocation(request);
+                _timeAllocationService.Book(request);
             }
         }
     }

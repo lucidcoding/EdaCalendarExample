@@ -24,7 +24,7 @@
 </div>
 <div class="row">
     <div class="cell">
-        <a href="@Url.Action("Book", "Appointment", new { consultantId = Model.ConsultantId })" id="BookAppointment">Book Appointment</a>
+        <a href="@Url.Action("BookUpdate", "Appointment", new { updating = false, consultantId = Model.ConsultantId })" id="BookAppointment">Book Appointment</a>
     </div>
 </div>
 <div class="row">

@@ -52,6 +52,7 @@
     <Compile Include="Entities\BookingType.cs" />
     <Compile Include="Entities\Employee.cs" />
     <Compile Include="Events\BookingMadeEvent.cs" />
+    <Compile Include="Events\BookingUpdatedEvent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RepositoryContracts\IBookingTypeRepository.cs" />
     <Compile Include="RepositoryContracts\IEmployeeRepository.cs" />

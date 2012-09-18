@@ -8,6 +8,7 @@ namespace Sales.Domain.Common
     {
         void SaveOrUpdate(TEntity obj);
         void Save(TEntity obj);
+        void Update(TEntity obj);
         TEntity GetById(TId id);
         TEntity LoadById(TId id);
         List<TEntity> GetAll();

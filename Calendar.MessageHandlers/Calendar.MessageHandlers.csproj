@@ -59,9 +59,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommandHandlers\UpdateBookingHandler.cs" />
     <Compile Include="CommandHandlers\MakeBookingHandler.cs" />
     <Compile Include="Core\NServiceBusServerRegistry.cs" />
-    <Compile Include="DomainEventHandlers\BookingMadeDomainEventHandler.cs" />
     <Compile Include="MessageEndpoint.cs" />
     <Compile Include="Core\MessageModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

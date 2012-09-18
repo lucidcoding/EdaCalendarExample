@@ -1,0 +1,8 @@
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Calendar.Domain.Tests\bin\Debug\Calendar.Domain.Tests.dll
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Calendar.Domain.Tests\bin\Debug\Calendar.Domain.Tests.pdb
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Calendar.Domain.Tests\bin\Debug\Calendar.Domain.dll
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Calendar.Domain.Tests\bin\Debug\nunit.framework.dll
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Calendar.Domain.Tests\bin\Debug\Calendar.Domain.pdb
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Calendar.Domain.Tests\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Calendar.Domain.Tests\obj\Debug\Calendar.Domain.Tests.dll
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Calendar.Domain.Tests\obj\Debug\Calendar.Domain.Tests.pdb

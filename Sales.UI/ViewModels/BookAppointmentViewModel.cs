@@ -5,7 +5,9 @@ namespace Sales.UI.ViewModels
 {
     public class BookAppointmentViewModel
     {
-        public Guid ConsultantId { get; set; }
+        public bool Updating { get; set; }
+        public Guid? ConsultantId { get; set; }
+        public Guid? AppointmentId { get; set; }
 
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
         [DataType(DataType.DateTime, ErrorMessage = "Please enter a valid date in the format dd/mm/yyyy")]

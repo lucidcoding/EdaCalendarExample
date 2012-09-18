@@ -13,6 +13,8 @@ namespace Sales.Data.Core
             Configure(x =>
             {
                 For<IConsultantRepository>().Use<ConsultantRepository>();
+                For<IAppointmentRepository>().Use<AppointmentRepository>();
+                For<ITimeAllocationRepository>().Use<TimeAllocationRepository>();
                 For<ISessionFactory>().HybridHttpOrThreadLocalScoped().Use(
                     SessionFactoryFactory.GetSessionFactory());
             });

@@ -44,6 +44,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calendar.MessageHandlers", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calendar.Messages", "Calendar.Messages\Calendar.Messages.csproj", "{9FE0EFE5-F5D2-4F5F-8FA0-3F821AA30FD4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calendar.Domain.Tests", "Calendar.Domain.Tests\Calendar.Domain.Tests.csproj", "{DF858BBA-78EC-4051-A1E9-A2556C804494}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -114,6 +116,10 @@ Global
 		{9FE0EFE5-F5D2-4F5F-8FA0-3F821AA30FD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9FE0EFE5-F5D2-4F5F-8FA0-3F821AA30FD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9FE0EFE5-F5D2-4F5F-8FA0-3F821AA30FD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF858BBA-78EC-4051-A1E9-A2556C804494}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF858BBA-78EC-4051-A1E9-A2556C804494}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF858BBA-78EC-4051-A1E9-A2556C804494}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF858BBA-78EC-4051-A1E9-A2556C804494}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -135,5 +141,6 @@ Global
 		{4B038E23-C270-4338-8382-D2978F7EA3BF} = {2B0EE482-871B-4C42-AEF0-939013B9E077}
 		{08A17AA5-DD63-49E7-96AA-3DCA4490DF5F} = {2B0EE482-871B-4C42-AEF0-939013B9E077}
 		{9FE0EFE5-F5D2-4F5F-8FA0-3F821AA30FD4} = {2B0EE482-871B-4C42-AEF0-939013B9E077}
+		{DF858BBA-78EC-4051-A1E9-A2556C804494} = {2B0EE482-871B-4C42-AEF0-939013B9E077}
 	EndGlobalSection
 EndGlobal

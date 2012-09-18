@@ -36,7 +36,6 @@ C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.NService
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.NServiceBusServer\bin\Debug\HumanResources.Application.dll
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.NServiceBusServer\bin\Debug\HumanResources.Data.dll
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.NServiceBusServer\bin\Debug\HumanResources.Domain.dll
-C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.NServiceBusServer\bin\Debug\HumanResources.Messages.dll
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.NServiceBusServer\bin\Debug\NServiceBus.Core.dll
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.NServiceBusServer\bin\Debug\NServiceBus.dll
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.NServiceBusServer\bin\Debug\NServiceBus.Host.exe
@@ -53,7 +52,6 @@ C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.NService
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.NServiceBusServer\bin\Debug\HumanResources.Application.pdb
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.NServiceBusServer\bin\Debug\HumanResources.Data.pdb
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.NServiceBusServer\bin\Debug\HumanResources.Domain.pdb
-C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.NServiceBusServer\bin\Debug\HumanResources.Messages.pdb
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.NServiceBusServer\bin\Debug\NServiceBus.Host.xml
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.NServiceBusServer\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.NServiceBusServer\obj\Debug\HumanResources.NServiceBusServer.dll
