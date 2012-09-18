@@ -49,10 +49,10 @@ namespace HumanResources.UI
                 .CreateBus()
                 .Start(() => Configure.Instance.ForInstallationOn<NServiceBus.Installation.Environments.Windows>().Install());
 
+            ObjectFactory.Container.Configure(x => x.AddRegistry<UiRegistry>());
             ControllerBuilder.Current.SetControllerFactory(new StructureMapControllerActivator());
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
-            ObjectFactory.Container.Configure(x => x.AddRegistry<UiRegistry>());
         }
     }
 }
