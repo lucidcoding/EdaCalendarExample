@@ -40,3 +40,5 @@ C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.Application\bin\D
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.Application\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.Application\obj\Debug\Sales.Application.dll
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.Application\obj\Debug\Sales.Application.pdb
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.Application\bin\Debug\Calendar.Messages.dll
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.Application\bin\Debug\Calendar.Messages.pdb

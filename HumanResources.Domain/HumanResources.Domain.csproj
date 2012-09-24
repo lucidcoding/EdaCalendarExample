@@ -51,6 +51,7 @@
     <Compile Include="Entities\Employee.cs" />
     <Compile Include="Entities\Holiday.cs" />
     <Compile Include="Entities\TimeAllocation.cs" />
+    <Compile Include="Events\TimeAllocationInvalidatedEvent.cs" />
     <Compile Include="Events\TimeAllocationUpdatedEvent.cs" />
     <Compile Include="Events\HolidayUpdatedEvent.cs" />
     <Compile Include="Events\HolidayBookedEvent.cs" />

@@ -1,4 +1,5 @@
-﻿using Calendar.Domain.Common;
+﻿using System.Linq;
+using Calendar.Domain.Common;
 using Calendar.Domain.Entities;
 using Calendar.Domain.Events;
 using Calendar.Domain.RepositoryContracts;
@@ -20,6 +21,7 @@ namespace Calendar.MessageHandlers.CommandHandlers
             _bus = bus;
             _bookingRepository = bookingRepository;
             DomainEvents.Register<BookingUpdatedEvent>(BookingUpdated);
+            DomainEvents.Register<UpdateBookingInvalidatedEvent>(UpdateBookingInvalidated);
         }
 
         public void Handle(UpdateBooking command)
@@ -41,6 +43,17 @@ namespace Calendar.MessageHandlers.CommandHandlers
             };
 
             _bus.Publish(bookingUpdated);
+        }
+
+        public void UpdateBookingInvalidated(UpdateBookingInvalidatedEvent @event)
+        {
+            var makeBookingInvalidated = new UpdateBookingInvalidated
+            {
+                Id = @event.Source.Id.Value,
+                Message = @event.ValidationMessages.FullMessage
+            };
+
+            _bus.Publish(makeBookingInvalidated);
         }
     }
 }

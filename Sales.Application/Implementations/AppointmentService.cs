@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Transactions;
 using AutoMapper;
+using Calendar.Messages.Commands;
 using NHibernate;
 using NHibernate.Context;
 using NServiceBus;
@@ -9,6 +11,7 @@ using Sales.Application.Requests;
 using Sales.Domain.Common;
 using Sales.Domain.Entities;
 using Sales.Domain.Events;
+using Sales.Domain.Global;
 using Sales.Domain.RepositoryContracts;
 
 namespace Sales.Application.Implementations
@@ -63,7 +66,6 @@ namespace Sales.Application.Implementations
             }
         }
 
-
         public ValidationMessageCollection ValidateBook(BookAppointmentRequest request)
         {
             var session = _sessionFactory.OpenSession();
@@ -101,12 +103,13 @@ namespace Sales.Application.Implementations
 
             try
             {
-                using (var transaction = session.BeginTransaction())
+                using (var transactionScope = new TransactionScope())
                 {
                     var consultant = _consultantRepository.GetById(request.ConsultantId);
                     DomainEvents.Register<AppointmentBookedEvent>(AppointmentBooked);
                     Appointment.Book(consultant, request.Id, request.Date, request.StartTime, request.EndTime, request.LeadName, request.Address);
-                    transaction.Commit();
+                    session.Flush();
+                    transactionScope.Complete();
                 }
             }
             finally
@@ -120,6 +123,19 @@ namespace Sales.Application.Implementations
         private void AppointmentBooked(AppointmentBookedEvent @event)
         {
             _appointmentRepository.Save(@event.Source);
+
+            //todo: still a problem here.
+            //Some logic has slipped into here on how to raise a command to make a booking.
+            var makeBookingCommand = new MakeBooking
+            {
+                Id = @event.Source.Id.Value,
+                EmployeeId = @event.Source.Consultant.Id.Value,
+                Start = @event.Source.Date + @event.Source.StartTime,
+                End = @event.Source.Date + @event.Source.EndTime,
+                BookingTypeId = Constants.SalesAppointmentBookingTypeId
+            };
+
+            _bus.Send(makeBookingCommand);
         }
 
         public ValidationMessageCollection ValidateUpdate(UpdateAppointmentRequest request)
@@ -158,11 +174,9 @@ namespace Sales.Application.Implementations
 
             try
             {
-                Appointment appointment;
-
-                using (var transaction = session.BeginTransaction())
+                using (var transactionScope = new TransactionScope())
                 {
-                    appointment = _appointmentRepository.GetById(request.Id);
+                    var appointment = _appointmentRepository.GetById(request.Id);
                     DomainEvents.Register<AppointmentUpdatedEvent>(AppointmentUpdated);
 
                     appointment.Update(
@@ -172,7 +186,8 @@ namespace Sales.Application.Implementations
                         request.LeadName,
                         request.Address);
 
-                    transaction.Commit();
+                    session.Flush();
+                    transactionScope.Complete();
                 }
             }
             finally
@@ -185,6 +200,17 @@ namespace Sales.Application.Implementations
         private void AppointmentUpdated(AppointmentUpdatedEvent @event)
         {
             _appointmentRepository.Update(@event.Source);
+
+            //todo: still a problem here.
+            //Some logic has slipped into here on how to raise a command to make a booking.
+            var makeBookingCommand = new UpdateBooking
+            {
+                Id = @event.Source.Id.Value,
+                Start = @event.Source.Date + @event.Source.StartTime,
+                End = @event.Source.Date + @event.Source.EndTime,
+            };
+
+            _bus.Send(makeBookingCommand);
         }
     }
 }

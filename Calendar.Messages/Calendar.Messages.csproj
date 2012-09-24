@@ -45,6 +45,8 @@
   <ItemGroup>
     <Compile Include="Commands\MakeBooking.cs" />
     <Compile Include="Commands\UpdateBooking.cs" />
+    <Compile Include="Events\UpdateBookingInvalidated.cs" />
+    <Compile Include="Events\MakeBookingInvalidated.cs" />
     <Compile Include="Events\BookingMade.cs" />
     <Compile Include="Events\BookingUpdated.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

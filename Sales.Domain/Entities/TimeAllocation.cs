@@ -9,6 +9,8 @@ namespace Sales.Domain.Entities
         public virtual Consultant Consultant { get; set; }
         public virtual DateTime Start { get; set; }
         public virtual DateTime End { get; set; }
+        public virtual bool Invalidated { get; set; }
+        public virtual string InvalidatedMessage { get; set; }
 
         public static void Book(Consultant consultant, Guid timeAllocationId, DateTime start, DateTime end)
         {
@@ -29,6 +31,13 @@ namespace Sales.Domain.Entities
             Start = start;
             End = end;
             DomainEvents.Raise(new TimeAllocationUpdatedEvent(this));
+        }
+
+        public virtual void Invalidate(string message)
+        {
+            Invalidated = true;
+            InvalidatedMessage = message;
+            DomainEvents.Raise(new TimeAllocationInvalidatedEvent(this));
         }
     }
 }

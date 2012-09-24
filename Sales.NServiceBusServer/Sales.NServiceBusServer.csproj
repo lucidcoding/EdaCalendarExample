@@ -58,6 +58,8 @@
     <Compile Include="Core\NServiceBusServerRegistry.cs" />
     <Compile Include="EventHandlers\BookingMadeHandler.cs" />
     <Compile Include="EventHandlers\BookingUpdatedHandler.cs" />
+    <Compile Include="EventHandlers\MakeBookingInvalidatedHandler.cs" />
+    <Compile Include="EventHandlers\UpdateBookingInvalidatedHandler.cs" />
     <Compile Include="MessageEndpoint.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Core\SubscriberEndpoint.cs" />

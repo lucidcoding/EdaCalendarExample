@@ -6,5 +6,6 @@ namespace HumanResources.Application.Contracts
     {
         void Book(BookTimeAllocationRequest request);
         void Update(UpdateTimeAllocationRequest request);
+        void Invalidate(InvalidateTimeAllocationRequest request);
     }
 }

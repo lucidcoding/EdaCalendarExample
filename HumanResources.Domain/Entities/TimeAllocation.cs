@@ -9,6 +9,8 @@ namespace HumanResources.Domain.Entities
         public virtual Employee Employee { get; set; }
         public virtual DateTime Start { get; set; }
         public virtual DateTime End { get; set; }
+        public virtual bool Invalidated { get; set; }
+        public virtual string InvalidatedMessage { get; set; }
 
         public static void Book(Employee employee, Guid timeAllocationId, DateTime start, DateTime end)
         {
@@ -28,6 +30,14 @@ namespace HumanResources.Domain.Entities
         {
             Start = start;
             End = end;
+            DomainEvents.Raise(new TimeAllocationUpdatedEvent(this));
+        }
+
+        public virtual void Invalidate(string message)
+        {
+            Invalidated = true;
+            InvalidatedMessage = message;
+            DomainEvents.Raise(new TimeAllocationInvalidatedEvent(this));
         }
     }
 }

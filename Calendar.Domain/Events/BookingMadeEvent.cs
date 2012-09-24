@@ -5,7 +5,8 @@ namespace Calendar.Domain.Events
 {
     public class BookingMadeEvent : DomainEvent<Booking>
     {
-        public BookingMadeEvent(Booking booking) : base(booking)
+        public BookingMadeEvent(Booking booking)
+            : base(booking)
         {
         }
     }

@@ -62,5 +62,21 @@ namespace Calendar.Domain.Common
         {
             get { return Errors.Count == 0; }
         }
+
+        public string FullMessage
+        {
+            get 
+            { 
+                string returnValue = "";
+
+                foreach (var message in this)
+                {
+                    returnValue += message.Text;
+                    if (message != this.Last()) returnValue += " ";
+                }
+                    
+                return returnValue;
+            }
+        }
     }
 }

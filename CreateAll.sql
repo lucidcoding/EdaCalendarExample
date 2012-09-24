@@ -58,16 +58,18 @@ BEGIN
 		[Id] uniqueidentifier NOT NULL,
 		[EmployeeId] uniqueidentifier NOT NULL,
 		[Start] datetime  NOT NULL,
-		[End] datetime NOT NULL
+		[End] datetime NOT NULL,
+		[Invalidated] bit NOT NULL,
+		[InvalidatedMessage] nvarchar(500) NULL
 		CONSTRAINT [PK_TimeAllocation] PRIMARY KEY CLUSTERED 
 		(
 			[Id] ASC
 		)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
 	) ON [PRIMARY]
 
-	INSERT INTO [TimeAllocation] ([Id], [EmployeeId], [Start], [End]) VALUES ('086838fc-76c0-4bf7-afd7-9b0d53372d7b', '54b26de9-2dae-4168-a66c-281b6f03f1b5', '2012-08-13 09:00:00', '2012-08-17 17:00:00')
-	INSERT INTO [TimeAllocation] ([Id], [EmployeeId], [Start], [End]) VALUES ('c81a69b9-40be-4553-abbf-e334b64e5f8a', '54b26de9-2dae-4168-a66c-281b6f03f1b5', '2012-08-07 10:00:00', '2012-08-07 11:00:00')
-	INSERT INTO [TimeAllocation] ([Id], [EmployeeId], [Start], [End]) VALUES ('f346bcc5-b2d1-4b4e-9359-f810d1880fcb', '54b26de9-2dae-4168-a66c-281b6f03f1b5', '2012-08-23 14:00:00', '2012-08-23 17:00:00')
+	INSERT INTO [TimeAllocation] ([Id], [EmployeeId], [Start], [End], [Invalidated], [InvalidatedMessage]) VALUES ('086838fc-76c0-4bf7-afd7-9b0d53372d7b', '54b26de9-2dae-4168-a66c-281b6f03f1b5', '2012-08-13 09:00:00', '2012-08-17 17:00:00', 0, NULL)
+	INSERT INTO [TimeAllocation] ([Id], [EmployeeId], [Start], [End], [Invalidated], [InvalidatedMessage]) VALUES ('c81a69b9-40be-4553-abbf-e334b64e5f8a', '54b26de9-2dae-4168-a66c-281b6f03f1b5', '2012-08-07 10:00:00', '2012-08-07 11:00:00', 0, NULL)
+	INSERT INTO [TimeAllocation] ([Id], [EmployeeId], [Start], [End], [Invalidated], [InvalidatedMessage]) VALUES ('f346bcc5-b2d1-4b4e-9359-f810d1880fcb', '54b26de9-2dae-4168-a66c-281b6f03f1b5', '2012-08-23 14:00:00', '2012-08-23 17:00:00', 0, NULL)
 END
 GO
 
@@ -115,16 +117,18 @@ BEGIN
 		[Id] uniqueidentifier NOT NULL,
 		[ConsultantId] uniqueidentifier NOT NULL,
 		[Start] datetime  NOT NULL,
-		[End] datetime NOT NULL
+		[End] datetime NOT NULL,
+		[Invalidated] bit NOT NULL,
+		[InvalidatedMessage] nvarchar(500) NULL
 		CONSTRAINT [PK_TimeAllocation] PRIMARY KEY CLUSTERED 
 		(
 			[Id] ASC
 		)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
 	) ON [PRIMARY]
 
-	INSERT INTO [TimeAllocation] ([Id], [ConsultantId], [Start], [End]) VALUES ('086838fc-76c0-4bf7-afd7-9b0d53372d7b', '54b26de9-2dae-4168-a66c-281b6f03f1b5', '2012-08-13 09:00:00', '2012-08-17 17:00:00')
-	INSERT INTO [TimeAllocation] ([Id], [ConsultantId], [Start], [End]) VALUES ('c81a69b9-40be-4553-abbf-e334b64e5f8a', '54b26de9-2dae-4168-a66c-281b6f03f1b5', '2012-08-07 10:00:00', '2012-08-07 11:00:00')
-	INSERT INTO [TimeAllocation] ([Id], [ConsultantId], [Start], [End]) VALUES ('f346bcc5-b2d1-4b4e-9359-f810d1880fcb', '54b26de9-2dae-4168-a66c-281b6f03f1b5', '2012-08-23 14:00:00', '2012-08-23 17:00:00')
+	INSERT INTO [TimeAllocation] ([Id], [ConsultantId], [Start], [End], [Invalidated], [InvalidatedMessage]) VALUES ('086838fc-76c0-4bf7-afd7-9b0d53372d7b', '54b26de9-2dae-4168-a66c-281b6f03f1b5', '2012-08-13 09:00:00', '2012-08-17 17:00:00', 0, NULL)
+	INSERT INTO [TimeAllocation] ([Id], [ConsultantId], [Start], [End], [Invalidated], [InvalidatedMessage]) VALUES ('c81a69b9-40be-4553-abbf-e334b64e5f8a', '54b26de9-2dae-4168-a66c-281b6f03f1b5', '2012-08-07 10:00:00', '2012-08-07 11:00:00', 0, NULL)
+	INSERT INTO [TimeAllocation] ([Id], [ConsultantId], [Start], [End], [Invalidated], [InvalidatedMessage]) VALUES ('f346bcc5-b2d1-4b4e-9359-f810d1880fcb', '54b26de9-2dae-4168-a66c-281b6f03f1b5', '2012-08-23 14:00:00', '2012-08-23 17:00:00', 0, NULL)
 END
 GO
 

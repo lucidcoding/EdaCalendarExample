@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Web.Mvc;
-using Calendar.Messages.Commands;
 using HumanResources.Application.Contracts;
 using HumanResources.Application.Requests;
 using HumanResources.Domain.Global;
@@ -56,16 +55,7 @@ namespace HumanResources.UI.Controllers
                     return View("BookUpdate", viewModel);
                 }
 
-                //todo: Send command on bus to update
-                var updateBookingCommand = new UpdateBooking
-                {
-                    Id = viewModel.HolidayId.Value,
-                    Start = viewModel.Start,
-                    End = viewModel.End
-                };
-
                 _holidayService.Update(updateHolidayRequest);
-                _bus.Send(updateBookingCommand);
             }
             else
             {
@@ -89,17 +79,7 @@ namespace HumanResources.UI.Controllers
                     return View("BookUpdate", viewModel);
                 }
 
-                var makeBookingCommand = new MakeBooking
-                                             {
-                                                 Id = id,
-                                                 EmployeeId = viewModel.EmployeeId.Value,
-                                                 Start = viewModel.Start,
-                                                 End = viewModel.End,
-                                                 BookingTypeId = Constants.HolidayBookingTypeId
-                                             };
-
                 _holidayService.Book(bookHolidayRequest);
-                _bus.Send(makeBookingCommand);
             }
 
             return RedirectToAction("Index", "Employee", new { employeeId = viewModel.EmployeeId });

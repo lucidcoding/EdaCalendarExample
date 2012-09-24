@@ -16,4 +16,5 @@
   <Module PersistentId="08A17AA5-DD63-49E7-96AA-3DCA4490DF5F" ModuleId="Calendar.MessageHandlers" />
   <Module PersistentId="9FE0EFE5-F5D2-4F5F-8FA0-3F821AA30FD4" ModuleId="Calendar.Messages" />
   <Module PersistentId="DF858BBA-78EC-4051-A1E9-A2556C804494" ModuleId="Calendar.Domain.Tests" />
+  <Module PersistentId="8D173561-EF90-4CE1-9583-16412F510A33" ModuleId="MasterData.Domain" />
 </Modules>

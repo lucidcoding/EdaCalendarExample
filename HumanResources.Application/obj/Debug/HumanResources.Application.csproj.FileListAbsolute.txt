@@ -40,3 +40,5 @@ C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.Applicat
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.Application\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.Application\obj\Debug\HumanResources.Application.dll
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.Application\obj\Debug\HumanResources.Application.pdb
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.Application\bin\Debug\Calendar.Messages.dll
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.Application\bin\Debug\Calendar.Messages.pdb

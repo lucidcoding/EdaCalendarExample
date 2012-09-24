@@ -76,17 +76,7 @@ namespace Sales.UI.Controllers
                     return View("BookUpdate", viewModel);
                 }
 
-                //todo: still a problem here.
-                //Some logic has slipped into here on how to raise a command to make a booking.
-                var updateBookingCommand = new UpdateBooking
-                {
-                    Id = viewModel.AppointmentId.Value,
-                    Start = viewModel.Date + viewModel.StartTime,
-                    End = viewModel.Date + viewModel.EndTime,
-                };
-
                 _appointmentService.Update(updateBookingRequest);
-                _bus.Send(updateBookingCommand);
             }
             else
             {
@@ -113,19 +103,7 @@ namespace Sales.UI.Controllers
                     return View("BookUpdate", viewModel);
                 }
 
-                //todo: still a problem here.
-                //Some logic has slipped into here on how to raise a command to make a booking.
-                var makeBookingCommand = new MakeBooking
-                                             {
-                                                 Id = id,
-                                                 EmployeeId = viewModel.ConsultantId.Value,
-                                                 Start = viewModel.Date + viewModel.StartTime,
-                                                 End = viewModel.Date + viewModel.EndTime,
-                                                 BookingTypeId = Constants.SalesAppointmentBookingTypeId
-                                             };
-
                 _appointmentService.Book(makeBookingRequest);
-                _bus.Send(makeBookingCommand);
             }
 
             return RedirectToAction("Index", "Consultant", new { consultantId = viewModel.ConsultantId });

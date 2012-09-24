@@ -50,6 +50,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -70,10 +71,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Requests\BookHolidayRequest.cs" />
     <Compile Include="Requests\BookTimeAllocationRequest.cs" />
+    <Compile Include="Requests\InvalidateTimeAllocationRequest.cs" />
     <Compile Include="Requests\UpdateTimeAllocationRequest.cs" />
     <Compile Include="Requests\UpdateHolidayRequest.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Calendar.Messages\Calendar.Messages.csproj">
+      <Project>{9FE0EFE5-F5D2-4F5F-8FA0-3F821AA30FD4}</Project>
+      <Name>Calendar.Messages</Name>
+    </ProjectReference>
     <ProjectReference Include="..\HumanResources.Data\HumanResources.Data.csproj">
       <Project>{477EDE18-1D79-46E9-95F1-345A34F390A6}</Project>
       <Name>HumanResources.Data</Name>

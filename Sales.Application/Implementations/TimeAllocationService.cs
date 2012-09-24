@@ -80,5 +80,33 @@ namespace Sales.Application.Implementations
         {
             _timeAllocationRepository.Update(@event.Source);
         }
+
+        public void Invalidate(InvalidateTimeAllocationRequest request)
+        {
+            var session = _sessionFactory.OpenSession();
+            CurrentSessionContext.Bind(session);
+
+            try
+            {
+                using (var transaction = session.BeginTransaction())
+                {
+                    var timeAllocation = _timeAllocationRepository.GetById(request.Id);
+                    DomainEvents.Register<TimeAllocationInvalidatedEvent>(TimeAllocationInvalidated);
+                    timeAllocation.Invalidate(request.Message);
+                    transaction.Commit();
+                }
+            }
+            finally
+            {
+                CurrentSessionContext.Unbind(_sessionFactory);
+                DomainEvents.ClearCallbacks();
+                session.Dispose();
+            }
+        }
+
+        private void TimeAllocationInvalidated(TimeAllocationInvalidatedEvent @event)
+        {
+            _timeAllocationRepository.Save(@event.Source);
+        }
     }
 }

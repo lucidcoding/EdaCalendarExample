@@ -9,6 +9,8 @@
     <property name="Start" column="`Start`" type="DateTime"/>
     <property name="End" column="`End`" type="DateTime"/>
     <many-to-one name="Consultant" class="Consultant" column="ConsultantId" />
+    <property name="Invalidated" type="bool" not-null="true"/>
+    <property name="InvalidatedMessage" type="string"/>
 
     <joined-subclass name="Appointment" table="Appointment">
       <key column="Id"/>

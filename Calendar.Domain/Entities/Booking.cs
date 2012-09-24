@@ -57,7 +57,9 @@ namespace Calendar.Domain.Entities
         public static Booking Make(Guid bookingId, Employee employee, DateTime start, DateTime end, BookingType type)
         {
             var validationMessages = ValidateMake(employee, start, end);
-            if (validationMessages.Count > 0) throw new ValidationException(validationMessages);
+
+            if (validationMessages.Count > 0) 
+                DomainEvents.Raise(new MakeBookingInvalidatedEvent(bookingId, validationMessages));
 
             var booking = new Booking
             {
@@ -81,7 +83,10 @@ namespace Calendar.Domain.Entities
         public virtual void Update(DateTime start, DateTime end)
         {
             var validationMessages = ValidateUpdate(start, end);
-            if (validationMessages.Count > 0) throw new ValidationException(validationMessages);
+
+            if (validationMessages.Count > 0)
+                DomainEvents.Raise(new UpdateBookingInvalidatedEvent(this, validationMessages));
+
             Start = start;
             End = end;
             DomainEvents.Raise(new BookingUpdatedEvent(this));

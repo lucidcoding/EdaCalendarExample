@@ -56,3 +56,5 @@ C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.NService
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.NServiceBusServer\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.NServiceBusServer\obj\Debug\HumanResources.NServiceBusServer.dll
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.NServiceBusServer\obj\Debug\HumanResources.NServiceBusServer.pdb
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.NServiceBusServer\bin\Debug\HumanResources.Messages.dll
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.NServiceBusServer\bin\Debug\HumanResources.Messages.pdb

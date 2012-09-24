@@ -9,7 +9,9 @@
     <property name="Start" column="`Start`" type="DateTime"/>
     <property name="End" column="`End`" type="DateTime"/>
     <many-to-one name="Employee" class="Employee" column="EmployeeId" />
-
+    <property name="Invalidated" type="bool" not-null="true"/>
+    <property name="InvalidatedMessage" type="string"/>
+    
     <joined-subclass name="Holiday" table="Holiday">
       <key column="Id"/>
       <property name="Approved"/>
