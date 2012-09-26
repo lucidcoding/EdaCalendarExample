@@ -12,7 +12,7 @@ namespace Calendar.MessageHandlers
                 .StructureMapBuilder()
                 .JsonSerializer();
 
-            ObjectFactory.Container.Configure(x => x.AddRegistry<NServiceBusServerRegistry>());
+            ObjectFactory.Container.Configure(x => x.AddRegistry<MessageHandlersRegistry>());
         }
     }
 }

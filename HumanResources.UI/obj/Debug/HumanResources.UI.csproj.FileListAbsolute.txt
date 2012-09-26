@@ -28,7 +28,6 @@ F:\Experimental\EdaCalendarExample\HumanResources.UI\obj\Debug\HumanResources.UI
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.UI\bin\hibernate.cfg.xml
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.UI\bin\HumanResources.UI.dll
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.UI\bin\HumanResources.UI.pdb
-C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.UI\bin\Calendar.Messages.dll
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.UI\bin\EntityFramework.dll
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.UI\bin\HumanResources.Application.dll
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.UI\bin\HumanResources.Data.dll
@@ -40,17 +39,18 @@ C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.UI\bin\N
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.UI\bin\StructureMap.dll
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.UI\bin\NHibernate.dll
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.UI\bin\AutoMapper.dll
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.UI\bin\Calendar.Messages.dll
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.UI\bin\NHibernate.ByteCode.Castle.dll
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.UI\bin\log4net.dll
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.UI\bin\Iesi.Collections.dll
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.UI\bin\Antlr3.Runtime.dll
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.UI\bin\Castle.Core.dll
-C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.UI\bin\Calendar.Messages.pdb
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.UI\bin\HumanResources.Application.pdb
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.UI\bin\HumanResources.Data.pdb
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.UI\bin\HumanResources.Domain.pdb
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.UI\bin\HumanResources.Messages.pdb
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.UI\bin\EntityFramework.xml
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.UI\bin\Calendar.Messages.pdb
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.UI\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.UI\obj\Debug\HumanResources.UI.dll
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.UI\obj\Debug\HumanResources.UI.pdb

@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using Calendar.Domain.Common;
+﻿using Calendar.Domain.Common;
 using Calendar.Domain.Entities;
 using Calendar.Domain.Events;
 using Calendar.Domain.RepositoryContracts;

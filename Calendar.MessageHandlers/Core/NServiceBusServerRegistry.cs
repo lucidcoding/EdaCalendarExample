@@ -3,9 +3,9 @@ using StructureMap.Configuration.DSL;
 
 namespace Calendar.MessageHandlers.Core
 {
-    class NServiceBusServerRegistry : Registry
+    class MessageHandlersRegistry : Registry
     {
-        public NServiceBusServerRegistry()
+        public MessageHandlersRegistry()
         {
             Configure(x =>
             {

@@ -24,6 +24,7 @@ C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.Applicat
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.Application\bin\Debug\HumanResources.Application.dll
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.Application\bin\Debug\HumanResources.Application.pdb
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.Application\bin\Debug\AutoMapper.dll
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.Application\bin\Debug\Calendar.Messages.dll
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.Application\bin\Debug\HumanResources.Data.dll
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.Application\bin\Debug\HumanResources.Domain.dll
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.Application\bin\Debug\NHibernate.dll
@@ -35,10 +36,9 @@ C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.Applicat
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.Application\bin\Debug\Iesi.Collections.dll
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.Application\bin\Debug\Antlr3.Runtime.dll
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.Application\bin\Debug\Castle.Core.dll
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.Application\bin\Debug\Calendar.Messages.pdb
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.Application\bin\Debug\HumanResources.Data.pdb
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.Application\bin\Debug\HumanResources.Domain.pdb
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.Application\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.Application\obj\Debug\HumanResources.Application.dll
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.Application\obj\Debug\HumanResources.Application.pdb
-C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.Application\bin\Debug\Calendar.Messages.dll
-C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\HumanResources.Application\bin\Debug\Calendar.Messages.pdb

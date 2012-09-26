@@ -12,6 +12,8 @@ namespace Calendar.Domain.Entities
         public virtual DateTime Start { get; set; }
         public virtual DateTime End { get; set; }
         public virtual BookingType BookingType { get; set; }
+        //public virtual bool Invalidated { get; set; }
+        //public virtual string InvalidatedMessage { get; set; }
 
         //Udi always says validation should be done in UI, and domain should just throw unhelful error because if it gets that
         //then it is likely to be a hacker - but how do you account for validation logic like this? Surely it's not the end of
@@ -58,8 +60,11 @@ namespace Calendar.Domain.Entities
         {
             var validationMessages = ValidateMake(employee, start, end);
 
-            if (validationMessages.Count > 0) 
+            if (validationMessages.Count > 0)
+            {
                 DomainEvents.Raise(new MakeBookingInvalidatedEvent(bookingId, validationMessages));
+                return null;
+            }
 
             var booking = new Booking
             {

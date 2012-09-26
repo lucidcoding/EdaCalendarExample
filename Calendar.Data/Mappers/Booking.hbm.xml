@@ -9,6 +9,8 @@
     <property name="Start" column="`Start`" type="DateTime"/>
     <property name="End" column="`End`" type="DateTime"/>
     <many-to-one name="Employee" class="Employee" column="EmployeeId" />
-    <many-to-one name="BookingType" class="BookingType" column="BookingTypeId" />
+    <many-to-one name="BookingType" class="BookingType" column="BookingTypeId" cascade="none"/>
+    <!--<property name="Invalidated" type="bool" not-null="true"/>
+    <property name="InvalidatedMessage" type="string"/>-->
   </class>
 </hibernate-mapping>

@@ -25,14 +25,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sales.Messages", "Sales.Mes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sales.UI", "Sales.UI\Sales.UI.csproj", "{EBD06220-2A7F-426C-920D-DBB22AE71E99}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sales.NServiceBusServer", "Sales.NServiceBusServer\Sales.NServiceBusServer.csproj", "{FECDC5E0-0729-4212-846B-1D36E2D46B2E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sales.MessageHandlers", "Sales.MessageHandlers\Sales.MessageHandlers.csproj", "{FECDC5E0-0729-4212-846B-1D36E2D46B2E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SqlScripts", "SqlScripts", "{E56AECF0-60C5-409C-A03F-5237126570B1}"
 	ProjectSection(SolutionItems) = preProject
 		CreateAll.sql = CreateAll.sql
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HumanResources.NServiceBusServer", "HumanResources.NServiceBusServer\HumanResources.NServiceBusServer.csproj", "{505F657C-4EED-4FFC-BEAF-374AE5ED171D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HumanResources.MessageHandlers", "HumanResources.MessageHandlers\HumanResources.MessageHandlers.csproj", "{505F657C-4EED-4FFC-BEAF-374AE5ED171D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Calendar", "Calendar", "{2B0EE482-871B-4C42-AEF0-939013B9E077}"
 EndProject

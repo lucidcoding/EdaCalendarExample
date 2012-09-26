@@ -25,7 +25,6 @@ F:\Experimental\EdaCalendarExample\Sales.UI\bin\Sales.Data.pdb
 F:\Experimental\EdaCalendarExample\Sales.UI\obj\Debug\ResolveAssemblyReference.cache
 F:\Experimental\EdaCalendarExample\Sales.UI\obj\Debug\Sales.UI.dll
 F:\Experimental\EdaCalendarExample\Sales.UI\obj\Debug\Sales.UI.pdb
-C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.UI\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.UI\bin\hibernate.cfg.xml
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.UI\bin\Sales.UI.dll
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.UI\bin\Sales.UI.pdb
@@ -39,8 +38,8 @@ C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.UI\bin\Sales.Doma
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.UI\bin\Sales.Messages.dll
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.UI\bin\StructureMap.dll
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.UI\bin\NHibernate.dll
-C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.UI\bin\AutoMapper.dll
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.UI\bin\Sales.Data.dll
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.UI\bin\AutoMapper.dll
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.UI\bin\log4net.dll
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.UI\bin\Iesi.Collections.dll
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.UI\bin\Antlr3.Runtime.dll
@@ -52,5 +51,6 @@ C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.UI\bin\Sales.Doma
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.UI\bin\Sales.Messages.pdb
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.UI\bin\EntityFramework.xml
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.UI\bin\Sales.Data.pdb
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.UI\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.UI\obj\Debug\Sales.UI.dll
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.UI\obj\Debug\Sales.UI.pdb

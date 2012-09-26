@@ -13,7 +13,7 @@ namespace Sales.Application.Core
             {
                 For<IAppointmentService>().Use<AppointmentService>();
                 For<IConsultantService>().Use<ConsultantService>();
-                For<ITimeAllocationService>().Use<TimeAllocationService>();
+                //For<ITimeAllocationService>().Use<TimeAllocationService>();
                 x.ImportRegistry(typeof(DataRegistry));
             });
         }

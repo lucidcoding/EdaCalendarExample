@@ -9,12 +9,11 @@
   <Module PersistentId="AD735CA4-F617-40CC-A1F1-DE3F608A6C9D" ModuleId="Sales.Application" />
   <Module PersistentId="9A2441B1-F3BA-4E9E-A21D-2D0DB61E86EA" ModuleId="Sales.Messages" />
   <Module PersistentId="EBD06220-2A7F-426C-920D-DBB22AE71E99" ModuleId="Sales.UI" />
-  <Module PersistentId="FECDC5E0-0729-4212-846B-1D36E2D46B2E" ModuleId="Sales.NServiceBusServer" />
-  <Module PersistentId="505F657C-4EED-4FFC-BEAF-374AE5ED171D" ModuleId="HumanResources.NServiceBusServer" />
   <Module PersistentId="99B03EE2-E9B8-422D-92D2-C21B87CBAE85" ModuleId="Calendar.Domain" />
   <Module PersistentId="4B038E23-C270-4338-8382-D2978F7EA3BF" ModuleId="Calendar.Data" />
   <Module PersistentId="08A17AA5-DD63-49E7-96AA-3DCA4490DF5F" ModuleId="Calendar.MessageHandlers" />
   <Module PersistentId="9FE0EFE5-F5D2-4F5F-8FA0-3F821AA30FD4" ModuleId="Calendar.Messages" />
   <Module PersistentId="DF858BBA-78EC-4051-A1E9-A2556C804494" ModuleId="Calendar.Domain.Tests" />
-  <Module PersistentId="8D173561-EF90-4CE1-9583-16412F510A33" ModuleId="MasterData.Domain" />
+  <Module PersistentId="FECDC5E0-0729-4212-846B-1D36E2D46B2E" ModuleId="Sales.NServiceBusServer" />
+  <Module PersistentId="505F657C-4EED-4FFC-BEAF-374AE5ED171D" ModuleId="HumanResources.MessageHandlers" />
 </Modules>

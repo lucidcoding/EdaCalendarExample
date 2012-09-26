@@ -21,11 +21,19 @@ namespace Calendar.MessageHandlers.Core
 
         public void HandleEndMessage()
         {
-            DomainEvents.ClearCallbacks();    
+            Cleardown();
         }
 
         public void HandleError()
         {
+            Cleardown();
+        }
+
+        private void Cleardown()
+        {
+            DomainEvents.ClearCallbacks();
+            _sessionFactory.GetCurrentSession().Dispose();
+            CurrentSessionContext.Unbind(_sessionFactory);
         }
     }
 }

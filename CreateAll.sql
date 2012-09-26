@@ -188,6 +188,29 @@ BEGIN
 END
 GO
 
+--IF NOT EXISTS(SELECT * FROM INFORMATION_SCHEMA.TABLES
+--	WHERE TABLE_NAME = 'Booking')
+--BEGIN
+--	CREATE TABLE [dbo].[Booking](
+--		[Id] uniqueidentifier NOT NULL,
+--		[EmployeeId] uniqueidentifier NOT NULL,
+--		[Start] datetime  NOT NULL,
+--		[End] datetime NOT NULL,
+--		[BookingTypeId] uniqueidentifier NOT NULL,
+--		[Invalidated] bit NOT NULL,
+--		[InvalidatedMessage] nvarchar(500) NULL
+--		CONSTRAINT [PK_Booking] PRIMARY KEY CLUSTERED 
+--		(
+--			[Id] ASC
+--		)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+--	) ON [PRIMARY]
+
+--	INSERT INTO [Booking] ([Id], [EmployeeId], [Start], [End], [BookingTypeId], [Invalidated], [InvalidatedMessage]) VALUES ('086838fc-76c0-4bf7-afd7-9b0d53372d7b', '54b26de9-2dae-4168-a66c-281b6f03f1b5', '2012-08-13 09:00:00', '2012-08-17 17:00:00', '851ec921-fe34-47f5-8060-2a592b35266d', 0, NULL)
+--	INSERT INTO [Booking] ([Id], [EmployeeId], [Start], [End], [BookingTypeId], [Invalidated], [InvalidatedMessage]) VALUES ('c81a69b9-40be-4553-abbf-e334b64e5f8a', '54b26de9-2dae-4168-a66c-281b6f03f1b5', '2012-08-07 10:00:00', '2012-08-07 11:00:00', '31b6a4a7-839b-4a29-b762-b671be05ffbd', 0, NULL)
+--	INSERT INTO [Booking] ([Id], [EmployeeId], [Start], [End], [BookingTypeId], [Invalidated], [InvalidatedMessage]) VALUES ('f346bcc5-b2d1-4b4e-9359-f810d1880fcb', '54b26de9-2dae-4168-a66c-281b6f03f1b5', '2012-08-23 14:00:00', '2012-08-23 17:00:00', '31b6a4a7-839b-4a29-b762-b671be05ffbd', 0, NULL)
+--END
+--GO
+
 IF NOT EXISTS(SELECT * FROM INFORMATION_SCHEMA.TABLES
 	WHERE TABLE_NAME = 'Booking')
 BEGIN

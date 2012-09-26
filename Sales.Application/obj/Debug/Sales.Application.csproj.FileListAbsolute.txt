@@ -22,6 +22,7 @@ F:\Experimental\EdaCalendarExample\Sales.Application\obj\Debug\Sales.Application
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.Application\bin\Debug\Sales.Application.dll
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.Application\bin\Debug\Sales.Application.pdb
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.Application\bin\Debug\AutoMapper.dll
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.Application\bin\Debug\Calendar.Messages.dll
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.Application\bin\Debug\NHibernate.dll
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.Application\bin\Debug\NServiceBus.Core.dll
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.Application\bin\Debug\NServiceBus.dll
@@ -34,11 +35,10 @@ C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.Application\bin\D
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.Application\bin\Debug\Iesi.Collections.dll
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.Application\bin\Debug\Antlr3.Runtime.dll
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.Application\bin\Debug\Castle.Core.dll
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.Application\bin\Debug\Calendar.Messages.pdb
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.Application\bin\Debug\Sales.Data.pdb
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.Application\bin\Debug\Sales.Domain.pdb
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.Application\bin\Debug\Sales.Messages.pdb
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.Application\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.Application\obj\Debug\Sales.Application.dll
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.Application\obj\Debug\Sales.Application.pdb
-C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.Application\bin\Debug\Calendar.Messages.dll
-C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.Application\bin\Debug\Calendar.Messages.pdb
