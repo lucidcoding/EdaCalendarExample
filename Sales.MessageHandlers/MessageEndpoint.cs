@@ -4,7 +4,7 @@ using StructureMap;
 
 namespace Sales.MessageHandlers
 {
-    public class MessageEndpoint : IConfigureThisEndpoint, AsA_Server, IWantCustomInitialization
+    public class MessageEndpoint : IConfigureThisEndpoint, AsA_Publisher, IWantCustomInitialization
     {
         public void Init()
         {

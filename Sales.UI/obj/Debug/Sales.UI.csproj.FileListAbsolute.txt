@@ -54,3 +54,5 @@ C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.UI\bin\Sales.Data
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.UI\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.UI\obj\Debug\Sales.UI.dll
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.UI\obj\Debug\Sales.UI.pdb
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.UI\bin\MasterData.Messages.dll
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.UI\bin\MasterData.Messages.pdb

@@ -16,4 +16,8 @@
   <Module PersistentId="DF858BBA-78EC-4051-A1E9-A2556C804494" ModuleId="Calendar.Domain.Tests" />
   <Module PersistentId="FECDC5E0-0729-4212-846B-1D36E2D46B2E" ModuleId="Sales.NServiceBusServer" />
   <Module PersistentId="505F657C-4EED-4FFC-BEAF-374AE5ED171D" ModuleId="HumanResources.MessageHandlers" />
+  <Module PersistentId="19698146-A4A5-4921-964B-FD78E1E53B2A" ModuleId="MasterData.Domain" />
+  <Module PersistentId="6C5C21E4-5416-47F7-916B-503701D417D9" ModuleId="MasterData.Data" />
+  <Module PersistentId="F81DD1CF-71F8-4276-A862-1C3544403575" ModuleId="MasterData.MessageHandlers" />
+  <Module PersistentId="4B582D65-48DF-42F6-B466-AFB32BE4746E" ModuleId="MasterData.Messages" />
 </Modules>

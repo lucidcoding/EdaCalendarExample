@@ -121,7 +121,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Mappers\Consultant.hbm.xml" />
-    <EmbeddedResource Include="Mappers\TimeAllocation.hbm.xml" />
+    <EmbeddedResource Include="Mappers\TimeAllocation.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Sales.Domain\Sales.Domain.csproj">

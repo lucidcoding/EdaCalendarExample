@@ -61,7 +61,9 @@
   <ItemGroup>
     <Compile Include="CommandHandlers\UpdateBookingHandler.cs" />
     <Compile Include="CommandHandlers\MakeBookingHandler.cs" />
-    <Compile Include="Core\NServiceBusServerRegistry.cs" />
+    <Compile Include="Core\MessageHandlersRegistry.cs" />
+    <Compile Include="Core\SubscriberEndpoint.cs" />
+    <Compile Include="EventHandlers\EmployeeRegisteredHandler.cs" />
     <Compile Include="MessageEndpoint.cs" />
     <Compile Include="Core\MessageModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -79,6 +81,10 @@
     <ProjectReference Include="..\Calendar.Messages\Calendar.Messages.csproj">
       <Project>{9FE0EFE5-F5D2-4F5F-8FA0-3F821AA30FD4}</Project>
       <Name>Calendar.Messages</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MasterData.Messages\MasterData.Messages.csproj">
+      <Project>{4B582D65-48DF-42F6-B466-AFB32BE4746E}</Project>
+      <Name>MasterData.Messages</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

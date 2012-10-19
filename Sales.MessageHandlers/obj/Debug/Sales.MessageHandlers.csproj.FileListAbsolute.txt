@@ -28,3 +28,5 @@ C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.MessageHandlers\b
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.MessageHandlers\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.MessageHandlers\obj\Debug\Sales.MessageHandlers.dll
 C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.MessageHandlers\obj\Debug\Sales.MessageHandlers.pdb
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.MessageHandlers\bin\Debug\MasterData.Messages.dll
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Sales.MessageHandlers\bin\Debug\MasterData.Messages.pdb

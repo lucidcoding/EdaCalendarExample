@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   namespace="HumanResources.Domain.Entities"
+                   assembly="HumanResources.Domain">
+  <class name="Employee" table="Employee">
+    <id name="Id" column="Id" type="guid">
+      <generator class="assigned"/>
+    </id>
+    <property name="Forename" />
+    <property name="Surname" />
+    <property name="Joined" type="DateTime"/>
+    <property name="Left" column="`Left`" type="DateTime"/>
+    <many-to-one name="Department" class="Department" column="DepartmentId" />
+  </class>
+</hibernate-mapping>

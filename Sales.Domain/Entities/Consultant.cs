@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Sales.Domain.Common;
+using Sales.Domain.Events;
 
 namespace Sales.Domain.Entities
 {
@@ -10,6 +11,7 @@ namespace Sales.Domain.Entities
         public virtual string Forename { get; set; }
         public virtual string Surname { get; set; }
         public virtual IList<TimeAllocation> TimeAllocations { get; set; }
+        public virtual bool ServiceValidated { get; set; }
 
         public virtual string FullName
         {
@@ -25,6 +27,24 @@ namespace Sales.Domain.Entities
                         select timeAllocation as Appointment)
                     .ToList();
             }
+        }
+
+        public static void Add(Guid id, string forename, string surname, DateTime joined)
+        {
+            var consultant = new Consultant
+            {
+                Id = id,
+                Forename = forename,
+                Surname = surname
+            };
+
+            DomainEvents.Raise(new ConsultantAddedEvent(consultant));
+        }
+
+        public virtual void ServerValidate()
+        {
+            ServiceValidated = true;
+            DomainEvents.Raise(new ConsultantServerValidatedEvent(this));
         }
     }
 }

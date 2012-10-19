@@ -1,5 +1,6 @@
 ﻿using Calendar.Messages.Events;
 using NServiceBus;
+using MasterData.Messages.Events;
 
 namespace HumanResources.MessageHandlers.Core
 {
@@ -18,6 +19,7 @@ namespace HumanResources.MessageHandlers.Core
             _bus.Subscribe<BookingUpdated>();
             _bus.Subscribe<MakeBookingInvalidated>();
             _bus.Subscribe<UpdateBookingInvalidated>();
+            _bus.Subscribe<EmployeeRegistered>();
         }
 
         public void Stop()
@@ -26,6 +28,7 @@ namespace HumanResources.MessageHandlers.Core
             _bus.Unsubscribe<BookingUpdated>();
             _bus.Unsubscribe<MakeBookingInvalidated>();
             _bus.Unsubscribe<UpdateBookingInvalidated>();
+            _bus.Unsubscribe<EmployeeRegistered>();
         }
     }
 }

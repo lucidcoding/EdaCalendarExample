@@ -8,7 +8,7 @@
     </id>
     <property name="Forename" />
     <property name="Surname" />
-    
+    <property name="ServiceValidated"/>
     <bag name="TimeAllocations" table="TimeAllocation" inverse="true" cascade="all" >
       <key column="ConsultantId"></key>
       <one-to-many class="TimeAllocation" />

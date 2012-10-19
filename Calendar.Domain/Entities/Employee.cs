@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using Calendar.Domain.Common;
+using Calendar.Domain.Events;
 
 namespace Calendar.Domain.Entities
 {
@@ -14,6 +14,17 @@ namespace Calendar.Domain.Entities
         public virtual string FullName
         {
             get { return Forename + " " + Surname; }
+        }
+
+        public static void Register(string forename, string surname)
+        {
+            var employee = new Employee
+            {
+                Forename = forename,
+                Surname = surname
+            };
+
+            DomainEvents.Raise(new EmployeeRegisteredEvent(employee));
         }
     }
 }

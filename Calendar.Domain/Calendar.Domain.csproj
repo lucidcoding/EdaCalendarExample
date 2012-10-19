@@ -51,6 +51,7 @@
     <Compile Include="Entities\Booking.cs" />
     <Compile Include="Entities\BookingType.cs" />
     <Compile Include="Entities\Employee.cs" />
+    <Compile Include="Events\EmployeeRegisteredEvent.cs" />
     <Compile Include="Events\MakeBookingInvalidatedEvent.cs" />
     <Compile Include="Events\BookingMadeEvent.cs" />
     <Compile Include="Events\BookingUpdatedEvent.cs" />

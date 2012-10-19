@@ -11,7 +11,7 @@
     <property name="Joined" type="DateTime"/>
     <property name="Left" column="`Left`" type="DateTime"/>
     <property name="HolidayEntitlement"/>
-    
+    <property name="ServiceValidated"/>
     <bag name="TimeAllocations" table="TimeAllocation" inverse="true" cascade="all" >
       <key column="EmployeeId"></key>
       <one-to-many class="TimeAllocation" />

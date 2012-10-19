@@ -66,6 +66,7 @@
     <Compile Include="Core\MessageHandlersRegistry.cs" />
     <Compile Include="EventHandlers\BookingMadeHandler.cs" />
     <Compile Include="EventHandlers\BookingUpdatedHandler.cs" />
+    <Compile Include="EventHandlers\EmployeeRegisteredHandler.cs" />
     <Compile Include="EventHandlers\UpdateBookingInvalidatedHandler.cs" />
     <Compile Include="EventHandlers\MakeBookingInvalidatedHandler.cs" />
     <Compile Include="MessageEndpoint.cs" />
@@ -96,6 +97,10 @@
     <ProjectReference Include="..\HumanResources.Messages\HumanResources.Messages.csproj">
       <Project>{8B5B36C1-85A9-4FB2-B20A-A8E690CAFB9D}</Project>
       <Name>HumanResources.Messages</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MasterData.Messages\MasterData.Messages.csproj">
+      <Project>{4B582D65-48DF-42F6-B466-AFB32BE4746E}</Project>
+      <Name>MasterData.Messages</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

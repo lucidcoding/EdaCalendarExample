@@ -53,6 +53,8 @@
     <Compile Include="Entities\TimeAllocation.cs" />
     <Compile Include="Events\AppointmentBookedEvent.cs" />
     <Compile Include="Events\AppointmentUpdatedEvent.cs" />
+    <Compile Include="Events\ConsultantAddedEvent.cs" />
+    <Compile Include="Events\ConsultantServerValidatedEvent.cs" />
     <Compile Include="Events\TimeAllocationInvalidatedEvent.cs" />
     <Compile Include="Events\TimeAllocationUpdatedEvent.cs" />
     <Compile Include="Events\TimeAllocationBookedEvent.cs" />
