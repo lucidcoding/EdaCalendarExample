@@ -1,5 +1,4 @@
-﻿using MasterData.Messages.Events;
-using NServiceBus;
+﻿using NServiceBus;
 
 namespace Calendar.MessageHandlers.Core
 {
@@ -14,12 +13,12 @@ namespace Calendar.MessageHandlers.Core
 
         public void Run()
         {
-            _bus.Subscribe<EmployeeRegistered>();
+            //_bus.Subscribe<EmployeeRegistered>();
         }
 
         public void Stop()
         {
-            _bus.Unsubscribe<EmployeeRegistered>();
+            //_bus.Unsubscribe<EmployeeRegistered>();
         }
     }
 }

@@ -12,18 +12,15 @@ namespace Calendar.MessageHandlers.CommandHandlers
     {
         private readonly IBus _bus;
         private readonly IBookingRepository _bookingRepository;
-        private readonly IEmployeeRepository _employeeRepository;
         private readonly IBookingTypeRepository _bookingTypeRepository;
 
         public MakeBookingHandler(
             IBus bus,
             IBookingRepository bookingRepository,
-            IEmployeeRepository employeeRepository,
             IBookingTypeRepository bookingTypeRepository)
         {
             _bus = bus;
             _bookingRepository = bookingRepository;
-            _employeeRepository = employeeRepository;
             _bookingTypeRepository = bookingTypeRepository;
             DomainEvents.Register<BookingMadeEvent>(BookingMade);
             DomainEvents.Register<MakeBookingInvalidatedEvent>(MakeBookingInvalidated);
@@ -31,9 +28,10 @@ namespace Calendar.MessageHandlers.CommandHandlers
 
         public void Handle(MakeBooking command)
         {
-            var employee = _employeeRepository.GetById(command.EmployeeId);
+            //todo: limit this to ones in possible range.
+            var otherBookings = _bookingRepository.GetByEmployeeId(command.EmployeeId);
             var bookingType = _bookingTypeRepository.GetById(command.BookingTypeId);
-            Booking.Make(command.Id, employee, command.Start, command.End, bookingType);
+            Booking.Make(command.Id, command.EmployeeId, otherBookings, command.Start, command.End, bookingType);
         }
 
         public void BookingMade(BookingMadeEvent @event)
@@ -43,7 +41,7 @@ namespace Calendar.MessageHandlers.CommandHandlers
             var bookingMade = new BookingMade
             {
                 Id = @event.Source.Id.Value,
-                EmployeeId = @event.Source.Employee.Id.Value,
+                EmployeeId = @event.Source.EmployeeId,
                 Start = @event.Source.Start,
                 End = @event.Source.End,
                 BookingTypeId = @event.Source.BookingType.Id.Value

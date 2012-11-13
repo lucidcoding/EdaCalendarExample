@@ -1,0 +1,5 @@
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Calendar.WCF\bin\Calendar.WCF.dll
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Calendar.WCF\bin\Calendar.WCF.pdb
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Calendar.WCF\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Calendar.WCF\obj\Debug\Calendar.WCF.dll
+C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\Calendar.WCF\obj\Debug\Calendar.WCF.pdb

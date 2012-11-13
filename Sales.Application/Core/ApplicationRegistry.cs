@@ -12,8 +12,6 @@ namespace Sales.Application.Core
             Configure(x =>
             {
                 For<IAppointmentService>().Use<AppointmentService>();
-                For<IConsultantService>().Use<ConsultantService>();
-                //For<ITimeAllocationService>().Use<TimeAllocationService>();
                 x.ImportRegistry(typeof(DataRegistry));
             });
         }

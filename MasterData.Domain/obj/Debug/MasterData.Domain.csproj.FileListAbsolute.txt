@@ -1,5 +1,0 @@
-C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\MasterData.Domain\bin\Debug\MasterData.Domain.dll
-C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\MasterData.Domain\bin\Debug\MasterData.Domain.pdb
-C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\MasterData.Domain\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\MasterData.Domain\obj\Debug\MasterData.Domain.dll
-C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\MasterData.Domain\obj\Debug\MasterData.Domain.pdb

@@ -59,13 +59,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contracts\IHolidayService.cs" />
-    <Compile Include="Contracts\ITimeAllocationService.cs" />
     <Compile Include="Core\ApplicationRegistry.cs" />
     <Compile Include="Contracts\IEmployeeService.cs" />
-    <Compile Include="DataTransferObjects\EmployeeDto.cs" />
-    <Compile Include="DataTransferObjects\HolidayDto.cs" />
-    <Compile Include="DataTransferObjects\TimeAllocationDto.cs" />
-    <Compile Include="Implementations\TimeAllocationService.cs" />
     <Compile Include="Implementations\HolidayService.cs" />
     <Compile Include="Implementations\EmployeeService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

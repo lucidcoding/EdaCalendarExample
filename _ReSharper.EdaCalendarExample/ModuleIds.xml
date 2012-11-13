@@ -20,4 +20,6 @@
   <Module PersistentId="6C5C21E4-5416-47F7-916B-503701D417D9" ModuleId="MasterData.Data" />
   <Module PersistentId="F81DD1CF-71F8-4276-A862-1C3544403575" ModuleId="MasterData.MessageHandlers" />
   <Module PersistentId="4B582D65-48DF-42F6-B466-AFB32BE4746E" ModuleId="MasterData.Messages" />
+  <Module PersistentId="861D623F-4D80-44BF-BB6C-699722A3839F" ModuleId="Calendar.WCF" />
+  <Module PersistentId="1E9D5875-A7A1-4ECB-A4EB-FBBE34BDE8D9" ModuleId="Calendar.Application" />
 </Modules>

@@ -14,9 +14,8 @@ namespace Calendar.Data.Core
             {
                 For<IBookingRepository>().Use<BookingRepository>();
                 For<IBookingTypeRepository>().Use<BookingTypeRepository>();
-                For<IEmployeeRepository>().Use<EmployeeRepository>();
-                For<ISessionFactory>().HybridHttpOrThreadLocalScoped().Use(
-                    SessionFactoryFactory.GetSessionFactory());
+                For<ISessionProvider>().Use<SessionProvider>();
+                For<ISessionFactory>().Singleton().Use(SessionFactoryFactory.GetSessionFactory());
             });
         }
     }

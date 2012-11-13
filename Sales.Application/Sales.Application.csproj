@@ -58,16 +58,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Contracts\ITimeAllocationService.cs" />
     <Compile Include="Contracts\IAppointmentService.cs" />
     <Compile Include="Core\ApplicationRegistry.cs" />
-    <Compile Include="Contracts\IConsultantService.cs" />
-    <Compile Include="DataTransferObjects\AppointmentDto.cs" />
-    <Compile Include="DataTransferObjects\ConsultantDto.cs" />
-    <Compile Include="DataTransferObjects\TimeAllocationDto.cs" />
-    <Compile Include="Implementations\ConsultantService.cs" />
     <Compile Include="Implementations\AppointmentService.cs" />
-    <Compile Include="Implementations\TimeAllocationService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Requests\BookAppointmentRequest.cs" />
     <Compile Include="Requests\BookTimeAllocationRequest.cs" />

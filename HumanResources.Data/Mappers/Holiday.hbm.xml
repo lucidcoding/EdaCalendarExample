@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   namespace="HumanResources.Domain.Entities"
+                   assembly="HumanResources.Domain">
+  <class name="Holiday" table="Holiday">
+    <id name="Id" column="Id" type="guid">
+      <generator class="assigned"/>
+    </id>
+    <many-to-one name="Employee" class="Employee" column="EmployeeId" />
+    <property name="Approved"/>
+    <property name="Start" column="`Start`" type="DateTime"/>
+    <property name="End" column="`End`" type="DateTime"/>
+    <property name="Invalidated" type="bool" not-null="true"/>
+    <property name="InvalidatedMessage" type="string"/>
+  </class>
+</hibernate-mapping>

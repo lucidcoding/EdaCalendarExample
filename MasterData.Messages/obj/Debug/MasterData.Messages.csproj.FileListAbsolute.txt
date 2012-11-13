@@ -1,7 +1,0 @@
-C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\MasterData.Messages\bin\Debug\MasterData.Messages.dll
-C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\MasterData.Messages\bin\Debug\MasterData.Messages.pdb
-C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\MasterData.Messages\bin\Debug\NServiceBus.dll
-C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\MasterData.Messages\bin\Debug\log4net.dll
-C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\MasterData.Messages\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\MasterData.Messages\obj\Debug\MasterData.Messages.dll
-C:\Users\paul.davies\Documents\GitHub\EdaCalendarExample\MasterData.Messages\obj\Debug\MasterData.Messages.pdb

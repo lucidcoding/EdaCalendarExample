@@ -1,14 +1,18 @@
 ﻿using System;
-using System.Linq;
 using Sales.Domain.Common;
 using Sales.Domain.Events;
 
 namespace Sales.Domain.Entities
 {
-    public class Appointment : TimeAllocation
+    public class Appointment 
     {
+        public virtual Guid ConsultantId { get; set; }
+        public virtual DateTime Start { get; set; }
+        public virtual DateTime End { get; set; }
         public virtual string LeadName { get; set; }
         public virtual string Address { get; set; }
+        public virtual bool Invalidated { get; set; }
+        public virtual string InvalidatedMessage { get; set; }
 
         public virtual DateTime Date
         {
@@ -26,7 +30,7 @@ namespace Sales.Domain.Entities
         }
 
         private static ValidationMessageCollection ValidateBookUpdate(
-            Consultant consultant, 
+            Guid consultantId, 
             DateTime date,
             TimeSpan startTime,
             TimeSpan endTime,
@@ -54,43 +58,44 @@ namespace Sales.Domain.Entities
             var start = date + startTime;
             var end = date + endTime;
 
-            var matchingTimeAllocations = (from timeAllocation in consultant.TimeAllocations
-                                           where (appointmentBeingUpdated == null || appointmentBeingUpdated != timeAllocation)
-                                              && ((start >= timeAllocation.Start && start <= timeAllocation.End)
-                                              || (end >= timeAllocation.Start && end <= timeAllocation.End)
-                                              || (start <= timeAllocation.Start && end >= timeAllocation.End))
-                                           select timeAllocation)
-                .ToList();
+            //todo: need to do this validation a different way now consultant has gone.
+            //var matchingTimeAllocations = (from timeAllocation in consultant.TimeAllocations
+            //                               where (appointmentBeingUpdated == null || appointmentBeingUpdated != timeAllocation)
+            //                                  && ((start >= timeAllocation.Start && start <= timeAllocation.End)
+            //                                  || (end >= timeAllocation.Start && end <= timeAllocation.End)
+            //                                  || (start <= timeAllocation.Start && end >= timeAllocation.End))
+            //                               select timeAllocation)
+            //    .ToList();
 
-            if (matchingTimeAllocations.Any())
-                validationMessages.AddError("Appointment clashes with other time allocations for employee.");
+            //if (matchingTimeAllocations.Any())
+            //    validationMessages.AddError("Appointment clashes with other time allocations for employee.");
 
-            var visitsToLeadInlastMonth = (from appointment in consultant.Appointments
-                                           where (appointmentBeingUpdated == null || appointmentBeingUpdated != appointment)
-                                           && appointment.Start > start.AddMonths(-1)
-                                           && appointment.LeadName == leadName
-                                           select appointment)
-                .ToList();
+            //var visitsToLeadInlastMonth = (from appointment in consultant.Appointments
+            //                               where (appointmentBeingUpdated == null || appointmentBeingUpdated != appointment)
+            //                               && appointment.Start > start.AddMonths(-1)
+            //                               && appointment.LeadName == leadName
+            //                               select appointment)
+            //    .ToList();
 
-            if (visitsToLeadInlastMonth.Any())
-                validationMessages.AddError("Lead has already had a visit in the last month.");
+            //if (visitsToLeadInlastMonth.Any())
+            //    validationMessages.AddError("Lead has already had a visit in the last month.");
 
             return validationMessages;
         }
 
         public static ValidationMessageCollection ValidateBook(
-            Consultant consultant,
+            Guid consultantId,
             DateTime date,
             TimeSpan startTime,
             TimeSpan endTime,
             string leadName,
             string address)
         {
-            return ValidateBookUpdate(consultant, date, startTime, endTime, leadName, address, null);
+            return ValidateBookUpdate(consultantId, date, startTime, endTime, leadName, address, null);
         }
 
         public static void Book(
-            Consultant consultant,
+            Guid consultantId,
             Guid id,
             DateTime date,
             TimeSpan startTime,
@@ -98,7 +103,7 @@ namespace Sales.Domain.Entities
             string leadName,
             string address)
         {
-            var validationMessages = ValidateBook(consultant, date, startTime, endTime, leadName, address);
+            var validationMessages = ValidateBook(consultantId, date, startTime, endTime, leadName, address);
             if (validationMessages.Count > 0) throw new ValidationException(validationMessages);
             var start = date + startTime;
             var end = date + endTime;
@@ -106,14 +111,13 @@ namespace Sales.Domain.Entities
             var appointment = new Appointment
             {
                 Id = id,
-                Consultant = consultant,
+                ConsultantId = consultantId,
                 Start = start,
                 End = end,
                 LeadName = leadName,
                 Address = address
             };
 
-            consultant.TimeAllocations.Add(appointment);
             DomainEvents.Raise(new AppointmentBookedEvent(appointment));
         }
 
@@ -124,7 +128,7 @@ namespace Sales.Domain.Entities
             string leadName,
             string address)
         {
-            return ValidateBookUpdate(Consultant, date, startTime, endTime, leadName, address, this);
+            return ValidateBookUpdate(ConsultantId, date, startTime, endTime, leadName, address, this);
         }
 
         public virtual new void Update(

@@ -48,19 +48,14 @@
     <Compile Include="Common\ValidationException.cs" />
     <Compile Include="Common\ValidationMessage.cs" />
     <Compile Include="Common\ValidationMessageCollection.cs" />
+    <Compile Include="Entities\Department.cs" />
     <Compile Include="Entities\Employee.cs" />
     <Compile Include="Entities\Holiday.cs" />
-    <Compile Include="Entities\TimeAllocation.cs" />
-    <Compile Include="Events\EmployeeServerValidatedEvent.cs" />
-    <Compile Include="Events\EmployeeAddedEvent.cs" />
-    <Compile Include="Events\TimeAllocationInvalidatedEvent.cs" />
-    <Compile Include="Events\TimeAllocationUpdatedEvent.cs" />
+    <Compile Include="Events\EmployeeRegisteredEvent.cs" />
     <Compile Include="Events\HolidayUpdatedEvent.cs" />
     <Compile Include="Events\HolidayBookedEvent.cs" />
-    <Compile Include="Events\TimeAllocationBookedEvent.cs" />
     <Compile Include="Global\Constants.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RepositoryContracts\ITimeAllocationRepository.cs" />
     <Compile Include="RepositoryContracts\IHolidayRepository.cs" />
     <Compile Include="RepositoryContracts\IEmployeeRepository.cs" />
   </ItemGroup>

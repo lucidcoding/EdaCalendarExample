@@ -15,7 +15,7 @@ namespace HumanResources.MessageHandlers.EventHandlers
         public EmployeeRegisteredHandler(IEmployeeRepository employeeRepository)
         {
             _employeeRepository = employeeRepository;
-            DomainEvents.Register<EmployeeAddedEvent>(EmployeeAdded);
+            DomainEvents.Register<EmployeeRegisteredEvent>(EmployeeAdded);
             DomainEvents.Register<EmployeeServerValidatedEvent>(EmployeeServerValidated);
         }
 
@@ -23,7 +23,7 @@ namespace HumanResources.MessageHandlers.EventHandlers
         {
             if (@event.DepartmentId != Constants.HumanResoursesDepartmentId)
             {
-                Employee.Add(@event.Id, @event.Forename, @event.Surname, @event.Joined);
+                Employee.Register(@event.Id, @event.Forename, @event.Surname, @event.Joined);
             }
             else
             {
@@ -32,7 +32,7 @@ namespace HumanResources.MessageHandlers.EventHandlers
             }
         }
 
-        private void EmployeeAdded(EmployeeAddedEvent @event)
+        private void EmployeeAdded(EmployeeRegisteredEvent @event)
         {
             _employeeRepository.Save(@event.Source);
         }

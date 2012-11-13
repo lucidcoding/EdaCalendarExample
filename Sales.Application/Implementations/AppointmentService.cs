@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Transactions;
-using AutoMapper;
 using Calendar.Messages.Commands;
 using NHibernate;
 using NHibernate.Context;
 using NServiceBus;
 using Sales.Application.Contracts;
-using Sales.Application.DataTransferObjects;
 using Sales.Application.Requests;
 using Sales.Domain.Common;
 using Sales.Domain.Entities;
@@ -21,21 +19,18 @@ namespace Sales.Application.Implementations
         private readonly ISessionFactory _sessionFactory;
         private readonly IBus _bus;
         private readonly IAppointmentRepository _appointmentRepository;
-        private readonly IConsultantRepository _consultantRepository;
 
         public AppointmentService(
             ISessionFactory sessionFactory, 
             IBus bus,
-            IAppointmentRepository appointmentRepository,
-            IConsultantRepository consultantRepository)
+            IAppointmentRepository appointmentRepository)
         {
             _sessionFactory = sessionFactory;
             _bus = bus;
             _appointmentRepository = appointmentRepository;
-            _consultantRepository = consultantRepository;
         }
 
-        public AppointmentDto GetById(Guid id)
+        public Appointment GetById(Guid id)
         {
             var session = _sessionFactory.OpenSession();
             CurrentSessionContext.Bind(session);
@@ -50,14 +45,7 @@ namespace Sales.Application.Implementations
                     transaction.Commit();
                 }
 
-                Mapper.Reset();
-                Mapper.CreateMap<TimeAllocation, TimeAllocationDto>()
-                    .ForMember(prop => prop.Consultant, opt => opt.Ignore())
-                    .Include<Appointment, AppointmentDto>();
-                Mapper.CreateMap<Appointment, AppointmentDto>();
-                Mapper.CreateMap<Consultant, ConsultantDto>();
-                var appointmentDto = Mapper.Map<Appointment, AppointmentDto>(appointment);
-                return appointmentDto;
+                return appointment;
             }
             finally
             {
@@ -73,16 +61,8 @@ namespace Sales.Application.Implementations
 
             try
             {
-                Consultant consultant = null;
-
-                using (var transaction = session.BeginTransaction())
-                {
-                    consultant = _consultantRepository.GetById(request.ConsultantId);
-                    transaction.Commit();
-                }
-
                 return Appointment.ValidateBook(
-                    consultant,
+                    request.ConsultantId,
                     request.Date,
                     request.StartTime,
                     request.EndTime,
@@ -105,9 +85,8 @@ namespace Sales.Application.Implementations
             {
                 using (var transactionScope = new TransactionScope())
                 {
-                    var consultant = _consultantRepository.GetById(request.ConsultantId);
                     DomainEvents.Register<AppointmentBookedEvent>(AppointmentBooked);
-                    Appointment.Book(consultant, request.Id, request.Date, request.StartTime, request.EndTime, request.LeadName, request.Address);
+                    Appointment.Book(request.ConsultantId, request.Id, request.Date, request.StartTime, request.EndTime, request.LeadName, request.Address);
                     session.Flush();
                     transactionScope.Complete();
                 }
@@ -129,7 +108,7 @@ namespace Sales.Application.Implementations
             var makeBookingCommand = new MakeBooking
             {
                 Id = @event.Source.Id.Value,
-                EmployeeId = @event.Source.Consultant.Id.Value,
+                EmployeeId = @event.Source.ConsultantId,
                 Start = @event.Source.Date + @event.Source.StartTime,
                 End = @event.Source.Date + @event.Source.EndTime,
                 BookingTypeId = Constants.SalesAppointmentBookingTypeId

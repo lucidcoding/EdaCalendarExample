@@ -11,7 +11,7 @@ namespace Calendar.Data.Common
         where TEntity : Entity<TId>
         where TId : struct
     {
-        private readonly ISessionFactory _sessionFactory;
+        protected readonly ISessionFactory _sessionFactory;
 
         public Repository(ISessionFactory sessionFactory)
         {

@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using HumanResources.Application.DataTransferObjects;
+using HumanResources.Domain.Entities;
 
 namespace HumanResources.Application.Contracts
 {
     public interface IEmployeeService
     {
-        List<EmployeeDto> GetAll();
-        EmployeeDto GetById(Guid id);
+        List<Employee> GetAll();
+        Employee GetById(Guid id);
     }
 }

@@ -69,11 +69,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\ISessionProvider.cs" />
+    <Compile Include="Common\SessionProvider.cs" />
     <Compile Include="Core\DataRegistry.cs" />
     <Compile Include="Common\Repository.cs" />
     <Compile Include="Common\SessionFactoryFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\TimeAllocationRepository.cs" />
     <Compile Include="Repositories\HolidayRepository.cs" />
     <Compile Include="Repositories\EmployeeRepository.cs" />
   </ItemGroup>
@@ -87,7 +88,10 @@
     <EmbeddedResource Include="Mappers\Employee.hbm.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Mappers\TimeAllocation.hbm.xml" />
+    <EmbeddedResource Include="Mappers\Holiday.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappers\Department.hbm.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

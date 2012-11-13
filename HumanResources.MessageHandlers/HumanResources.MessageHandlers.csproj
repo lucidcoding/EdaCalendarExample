@@ -98,10 +98,6 @@
       <Project>{8B5B36C1-85A9-4FB2-B20A-A8E690CAFB9D}</Project>
       <Name>HumanResources.Messages</Name>
     </ProjectReference>
-    <ProjectReference Include="..\MasterData.Messages\MasterData.Messages.csproj">
-      <Project>{4B582D65-48DF-42F6-B466-AFB32BE4746E}</Project>
-      <Name>MasterData.Messages</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

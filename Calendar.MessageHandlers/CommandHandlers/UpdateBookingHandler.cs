@@ -27,7 +27,9 @@ namespace Calendar.MessageHandlers.CommandHandlers
         public void Handle(UpdateBooking command)
         {
             var booking = _bookingRepository.GetById(command.Id);
-            booking.Update(command.Start, command.End);
+            //todo: limit this to ones in possible range.
+            var otherBookings = _bookingRepository.GetByEmployeeId(booking.EmployeeId);
+            booking.Update(otherBookings, command.Start, command.End);
         }
 
         public void BookingUpdated(BookingUpdatedEvent @event)
