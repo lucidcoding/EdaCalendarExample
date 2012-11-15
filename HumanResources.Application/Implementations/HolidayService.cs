@@ -8,7 +8,6 @@ using HumanResources.Domain.Entities;
 using HumanResources.Domain.Events;
 using HumanResources.Domain.Global;
 using HumanResources.Domain.RepositoryContracts;
-using NHibernate;
 using NHibernate.Context;
 using NServiceBus;
 
@@ -16,18 +15,15 @@ namespace HumanResources.Application.Implementations
 {
     public class HolidayService : IHolidayService
     {
-        private readonly ISessionFactory _sessionFactory;
         private readonly IBus _bus;
         private readonly IHolidayRepository _holidayRepository;
         private readonly IEmployeeRepository _employeeRepository;
 
         public HolidayService(
-            ISessionFactory sessionFactory, 
             IBus bus,
             IHolidayRepository holidayRepository,
             IEmployeeRepository employeeRepository)
         {
-            _sessionFactory = sessionFactory;
             _bus = bus;
             _holidayRepository = holidayRepository;
             _employeeRepository = employeeRepository;
@@ -35,49 +31,24 @@ namespace HumanResources.Application.Implementations
 
         public ValidationMessageCollection ValidateBook(BookHolidayRequest request)
         {
-            var session = _sessionFactory.OpenSession();
-            CurrentSessionContext.Bind(session);
-
-            try
+            using (var transactionScope = new TransactionScope())
             {
-                Employee employee;
-
-                using (var transaction = session.BeginTransaction())
-                {
-                    employee = _employeeRepository.GetById(request.EmployeeId);
-                    transaction.Commit();
-                }
-
-                return Holiday.ValidateBook(employee, request.Start, request.End);
-            }
-            finally
-            {
-                CurrentSessionContext.Unbind(_sessionFactory);
-                session.Dispose();
+                var employee = _employeeRepository.GetById(request.EmployeeId);
+                var validationMessages = Holiday.ValidateBook(employee, request.Start, request.End);
+                transactionScope.Complete();
+                return validationMessages;
             }
         }
 
         public void Book(BookHolidayRequest request)
         {
-            var session = _sessionFactory.OpenSession();
-            CurrentSessionContext.Bind(session);
-
-            try
+            using (var transactionScope = new TransactionScope())
             {
-                using (var transactionScope = new TransactionScope())
-                {
-                    var employee = _employeeRepository.GetById(request.EmployeeId);
-                    DomainEvents.Register<HolidayBookedEvent>(HolidayBooked);
-                    Holiday.Book(request.Id, employee, request.Start, request.End);
-                    session.Flush();
-                    transactionScope.Complete();
-                }
-            }
-            finally
-            {
-                CurrentSessionContext.Unbind(_sessionFactory);
-                DomainEvents.ClearCallbacks();
-                session.Dispose();
+                var employee = _employeeRepository.GetById(request.EmployeeId);
+                DomainEvents.Register<HolidayBookedEvent>(HolidayBooked);
+                Holiday.Book(request.Id, employee, request.Start, request.End);
+                _employeeRepository.Flush();
+                transactionScope.Complete();
             }
         }
 

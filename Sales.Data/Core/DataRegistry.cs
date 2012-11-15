@@ -13,7 +13,6 @@ namespace Sales.Data.Core
             Configure(x =>
             {
                 For<IAppointmentRepository>().Use<AppointmentRepository>();
-                For<ITimeAllocationRepository>().Use<TimeAllocationRepository>();
                 For<ISessionProvider>().Use<SessionProvider>();
                 For<ISessionFactory>().Singleton().Use(SessionFactoryFactory.GetSessionFactory());
             });

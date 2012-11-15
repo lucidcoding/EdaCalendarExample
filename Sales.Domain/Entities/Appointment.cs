@@ -4,7 +4,7 @@ using Sales.Domain.Events;
 
 namespace Sales.Domain.Entities
 {
-    public class Appointment 
+    public class Appointment : Entity<Guid>
     {
         public virtual Guid ConsultantId { get; set; }
         public virtual DateTime Start { get; set; }

@@ -12,5 +12,6 @@ namespace Calendar.Domain.Common
         TEntity LoadById(TId id);
         List<TEntity> GetAll();
         List<TEntity> GetByIds(List<TId> ids);
+        void Flush();
     }
 }

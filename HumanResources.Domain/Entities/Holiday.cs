@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using HumanResources.Domain.Common;
 using HumanResources.Domain.Events;
 
